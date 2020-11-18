@@ -1,11 +1,11 @@
 ﻿<Window
-    x:Class="AnimalSavior.login"
+    x:Class="AnimalSavior.register"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:AnimalSavior"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="login"
+    Title="Register"
     Width="311"
     Height="253.833"
     mc:Ignorable="d">
@@ -14,14 +14,13 @@
         VerticalAlignment="Top"
         Background="#FF20D0CE">
         <Label
-            x:Name="label"
             Margin="10,10,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Register"
             FontSize="30" />
         <TextBox
-            x:Name="username"
+            x:Name="reg_username"
             Width="283"
             Margin="10,65,0,0"
             HorizontalAlignment="Left"
@@ -31,7 +30,7 @@
             Text="loremipsum@gmail.com"
             TextWrapping="Wrap" />
         <TextBox
-            x:Name="password"
+            x:Name="reg_password"
             Width="283"
             Height="30"
             Margin="10,100,0,0"
@@ -48,13 +47,14 @@
             BorderThickness="1"
             CornerRadius="20">
             <Button
-                x:Name="button"
+                x:Name="reg_button"
                 Width="283"
                 Height="38"
                 Margin="-1"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Background="#FF125873"
+                Click="reg_button_Click"
                 Content="Register"
                 Foreground="White"
                 IsDefault="True" />

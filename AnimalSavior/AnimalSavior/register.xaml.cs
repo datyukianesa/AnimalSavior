@@ -23,5 +23,10 @@ namespace AnimalSavior
         {
             InitializeComponent();
         }
+
+        private void reg_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

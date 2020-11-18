@@ -21,7 +21,7 @@ namespace AnimalSavior
     {
         public login()
         {
-            InitializeComponent();
+           
         }
     }
 }

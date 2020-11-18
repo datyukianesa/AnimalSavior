@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\AnimalSavior",
+    "\\AnimalSavior\\AnimalSavior"
   ],
+  "SelectedNode": "\\AnimalSavior\\AnimalSavior.sln",
   "PreviewInSolutionExplorer": false
 }
