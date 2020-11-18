@@ -1,12 +1,64 @@
-﻿<Window x:Class="AnimalSavior.login"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimalSavior"
-        mc:Ignorable="d"
-        Title="login" Height="450" Width="800">
-    <Grid>
-        
+﻿<Window
+    x:Class="AnimalSavior.login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AnimalSavior"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="login"
+    Width="311"
+    Height="218.5"
+    mc:Ignorable="d">
+    <Grid
+        Height="188"
+        Margin="0,0,0,-1"
+        VerticalAlignment="Top"
+        Background="#FF20D0CE">
+        <Label
+            x:Name="label"
+            Margin="10,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Login"
+            FontSize="30" />
+        <TextBox
+            x:Name="username"
+            Width="283"
+            Margin="10,65,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            AutomationProperties.IsRequiredForForm="True"
+            FontSize="20"
+            Text="loremipsum@gmail.com"
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="password"
+            Width="283"
+            Height="30"
+            Margin="10,100,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            AutomationProperties.IsRequiredForForm="True"
+            FontSize="20"
+            Text="loremipsum@gmail.com"
+            TextWrapping="Wrap" />
+        <Border
+            Margin="10,135,10,0"
+            VerticalAlignment="Top"
+            BorderBrush="#FF000000"
+            BorderThickness="1"
+            CornerRadius="20">
+            <Button
+                x:Name="button"
+                Width="283"
+                Height="38"
+                Margin="-1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="#FF125873"
+                Content="Button"
+                Foreground="White"
+                IsDefault="True" />
+        </Border>
     </Grid>
 </Window>
