@@ -56,7 +56,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Background="#FF125873"
-                Content="Button"
+                Content="Login"
                 Foreground="White"
                 IsDefault="True" />
         </Border>
