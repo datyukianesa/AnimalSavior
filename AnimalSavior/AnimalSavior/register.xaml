@@ -7,22 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="Register"
     Width="311"
-    Height="253.833"
+    Height="525"
     mc:Ignorable="d">
     <Grid
-        Height="223"
+        Height="493"
         VerticalAlignment="Top"
-        Background="#FF20D0CE">
+        Background="#FF50D7F5">
         <Label
-            Margin="10,10,0,0"
+            Margin="12,86,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Register"
-            FontSize="30" />
+            FontSize="30" FontWeight="Bold" />
         <TextBox
             x:Name="reg_username"
-            Width="283"
-            Margin="10,65,0,0"
+            Width="282"
+            Margin="12,142,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
@@ -31,17 +31,17 @@
             TextWrapping="Wrap" />
         <TextBox
             x:Name="reg_password"
-            Width="283"
+            Width="282"
             Height="30"
-            Margin="10,100,0,0"
+            Margin="12,176,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontSize="20"
-            Text="loremipsum@gmail.com"
-            TextWrapping="Wrap" />
+            Text="**************"
+            TextWrapping="Wrap" TextChanged="reg_password_TextChanged" />
         <Border
-            Margin="10,175,10,0"
+            Margin="12,252,9,0"
             VerticalAlignment="Top"
             BorderBrush="#FF000000"
             BorderThickness="1"
@@ -57,7 +57,7 @@
                 Click="reg_button_Click"
                 Content="Register"
                 Foreground="White"
-                IsDefault="True" />
+                IsDefault="True" FontSize="16" />
         </Border>
     </Grid>
 </Window>
