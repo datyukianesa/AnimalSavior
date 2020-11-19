@@ -40,7 +40,7 @@
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontSize="20"
-            Text="loremipsum@gmail.com"
+            Text="**************"
             TextWrapping="Wrap" />
         <Border
             Margin="10,135,10,0"

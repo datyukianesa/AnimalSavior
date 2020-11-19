@@ -28,5 +28,10 @@ namespace AnimalSavior
         {
 
         }
+
+        private void reg_password_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -38,8 +38,8 @@
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontSize="20"
-            Text="loremipsum@gmail.com"
-            TextWrapping="Wrap" />
+            Text="**************"
+            TextWrapping="Wrap" TextChanged="reg_password_TextChanged" />
         <Border
             Margin="10,175,10,0"
             VerticalAlignment="Top"
