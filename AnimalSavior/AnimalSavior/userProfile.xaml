@@ -108,12 +108,23 @@
             VerticalAlignment="Top"
             RenderTransformOrigin="0.714,0.702"
             Stroke="Black" />
-        <Image Margin="79,12,78,18" Grid.Row="1" Grid.Column="1">
+        <Image
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="79,12,78,18">
             <Image.Source>
                 <BitmapImage DecodePixelWidth="300" UriSource="/images/user.png" />
             </Image.Source>
         </Image>
-        <Rectangle HorizontalAlignment="Left" Height="79" Margin="11,186,0,0" Grid.Row="2" VerticalAlignment="Top" Width="232" Grid.Column="1" Fill="#FFE0E0E0"/>
+        <Rectangle
+            Grid.Row="2"
+            Grid.Column="1"
+            Width="232"
+            Height="79"
+            Margin="11,186,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Fill="#FFE0E0E0" />
         <TextBlock
             x:Name="textBlock"
             Grid.Row="2"
