@@ -6,12 +6,12 @@
     xmlns:local="clr-namespace:AnimalSavior"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="kuesioner"
-    Width="254"
-    Height="333"
+    Width="311"
+    Height="525"
     Background="#FF20D0CE"
     mc:Ignorable="d">
     <Grid
-        Height="302"
+        Height="492"
         Margin="0,0,2,0"
         VerticalAlignment="Top" Background="#FF50D7F5">
         <Grid.ColumnDefinitions>
@@ -21,46 +21,47 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="100" />
+            <RowDefinition Height="26.5" />
+            <RowDefinition Height="24.5"/>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="73" />
         </Grid.RowDefinitions>
         <Label
             x:Name="label"
-            Width="80"
-            Height="30"
-            Margin="10,10,0,0"
+            Width="112"
+            Height="36"
+            Margin="12,32,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Kuesioner"
-            FontSize="15" />
+            FontSize="20" FontFamily="Arial rounded" FontWeight="Bold" Grid.RowSpan="2" />
         <Label
             x:Name="label_Copy"
-            Width="143"
-            Height="16"
-            Margin="10,34,0,0"
+            Width="248"
+            Height="20"
+            Margin="12,9,0,0"
             Padding="5,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             VerticalContentAlignment="Center"
             Content="Silahkan isikan agar dokter dapat mengerti apa yang terjadi"
-            FontSize="5" />
+            FontSize="9" Grid.Row="1" />
         <Label
             x:Name="label_Copy1"
             Grid.Row="1"
-            Width="143"
-            Height="23"
-            Margin="10,0,0,0"
+            Width="150"
+            Height="28"
+            Margin="12,50,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Jenis Hewan Peliharaan"
-            FontSize="10" />
+            FontSize="10" Grid.RowSpan="2" />
         <ComboBox
             x:Name="comboBox"
-            Grid.Row="1"
-            Width="143"
-            Height="17"
-            Margin="10,23,0,0"
+            Grid.Row="3"
+            Width="248"
+            Height="20"
+            Margin="12,0,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             BorderBrush="#FF125873" SelectionChanged="comboBox_SelectionChanged">
@@ -77,20 +78,20 @@
         </ComboBox>
         <Label
             x:Name="label_Copy2"
-            Grid.Row="3"
-            Width="143"
-            Height="23"
-            Margin="10,0,0,0"
+            Grid.Row="5"
+            Width="150"
+            Height="26"
+            Margin="11,10,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Gejala yang Dialami"
             FontSize="10" />
         <TextBlock
             x:Name="textBlock"
-            Grid.Row="3"
-            Width="143"
-            Height="67"
-            Margin="10,23,0,0"
+            Grid.Row="5"
+            Width="248"
+            Height="78"
+            Margin="12,32,0,-36"
             Padding="5,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
@@ -99,31 +100,31 @@
             TextWrapping="Wrap" Background="White" ><Run Text="- "/><Run Text="Lorem Ipsum dolor sit amet"/><LineBreak/><Run Text="- Lorem Ipsum dolor sit"/><Run Text=" "/><Run Text="amet"/><LineBreak/><Run Text="- "/><Run Text="Lorem Ipsum dolor sit amet"/></TextBlock>
         <Label
             x:Name="label_Copy3"
-            Grid.Row="2"
-            Width="143"
-            Height="23"
-            Margin="10,0,0,0"
+            Grid.Row="4"
+            Width="150"
+            Height="26"
+            Margin="12,4,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Umur"
             FontSize="10" />
         <TextBox
             x:Name="textBox"
-            Grid.Row="2"
-            Width="143"
-            Height="23"
-            Margin="10,23,0,0"
+            Grid.Row="4"
+            Width="248"
+            Height="28"
+            Margin="12,30,0,0"
             Padding="2,0,5,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             VerticalContentAlignment="Center"
-            TextWrapping="Wrap" />
+            TextWrapping="Wrap" Text="23 Tahun" />
         <Button
             x:Name="button"
-            Grid.Row="4"
-            Width="99"
-            Height="32"
-            Margin="135,10,0,0"
+            Grid.Row="5"
+             Width="248"
+                Height="38"
+            Margin="12,134,0,-98"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF125873"
