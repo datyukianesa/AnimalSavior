@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Width="311"
     Height="525"
-    Background="#FF20D0CE"
+    Background="#FF5956"
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -20,54 +20,325 @@
             <ColumnDefinition Width="133*" />
             <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
-        <Rectangle
+        <Border
             Grid.Row="1"
             Grid.Column="1"
-            Width="263"
-            Height="30"
+            Margin="0,0,0,420"
+            Background="#4CFFE2C7"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="15">
+            <Label
+                x:Name="label"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="My Pets" />
+        </Border>
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,60,0,310"
+            Background="#9BFCBA7D"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="15">
+            <Ellipse
+                Width="45"
+                Height="45"
+                Margin="10,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="#FFF4F4F5" />
+        </Border>
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10,118,10,318"
+            Background="#FFFFE2C7"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="5" />
+        <Ellipse
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="15"
+            Height="15"
+            Margin="238,69,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FFF4F4F5"
-            Stroke="Black" />
-        <Rectangle
+            RenderTransformOrigin="2.233,2" />
+        <Label
+            x:Name="label1"
             Grid.Row="1"
             Grid.Column="1"
-            Width="263"
-            Height="55"
-            Margin="0,65,0,0"
+            Width="70"
+            Height="44"
+            Margin="61,69,0,0"
+            Padding="5,5,0,5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="Haes"
+            FontSize="24" />
+        <Label
+            x:Name="label1_Copy"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="70"
+            Height="17"
+            Margin="119,91,0,0"
+            Padding="0,5,5,5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="Kucing(F)"
+            FontSize="5" />
+        <Label
+            x:Name="label2"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="243"
+            Height="14"
+            Margin="10,118,10,0"
+            Padding="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Bottom"
+            Content=" Berat 5Kg / Umur 2 Thn / Betina / Anggora / Putih / 4 Kaki&#xA;"
+            FontSize="4" />
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,145,0,225"
+            Background="#9BFCBA7D"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="15">
+            <Ellipse
+                Width="45"
+                Height="45"
+                Margin="10,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="#FFF4F4F5" />
+        </Border>
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10,203,10,233"
+            Background="#FFFFE2C7"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="5" />
+        <Ellipse
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="15"
+            Height="15"
+            Margin="238,154,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FFF4F4F5"
-            Stroke="Black" />
-        <Rectangle
+            RenderTransformOrigin="2.233,2" />
+        <Label
+            x:Name="label1_Copy1"
             Grid.Row="1"
             Grid.Column="1"
-            Width="263"
-            Height="56"
-            Margin="0,125,0,0"
+            Width="70"
+            Height="44"
+            Margin="61,154,0,0"
+            Padding="5,5,0,5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="Haes"
+            FontSize="24" />
+        <Label
+            x:Name="label1_Copy2"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="70"
+            Height="17"
+            Margin="119,176,0,0"
+            Padding="0,5,5,5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="Kucing(F)"
+            FontSize="5" />
+        <Label
+            x:Name="label2_Copy"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="243"
+            Height="14"
+            Margin="10,203,10,0"
+            Padding="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Bottom"
+            Content=" Berat 5Kg / Umur 2 Thn / Betina / Anggora / Putih / 4 Kaki&#xA;"
+            FontSize="4" />
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,231,0,139"
+            Background="#9BFCBA7D"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="15">
+            <Ellipse
+                Width="45"
+                Height="45"
+                Margin="10,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="#FFF4F4F5" />
+        </Border>
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10,289,10,147"
+            Background="#FFFFE2C7"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="5" />
+        <Ellipse
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="15"
+            Height="15"
+            Margin="238,240,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FFF4F4F5"
-            Stroke="Black" />
-        <Rectangle
+            RenderTransformOrigin="2.233,2" />
+        <Label
+            x:Name="label1_Copy3"
             Grid.Row="1"
             Grid.Column="1"
-            Width="263"
-            Height="55"
-            Margin="0,186,0,0"
+            Width="70"
+            Height="44"
+            Margin="61,240,0,0"
+            Padding="5,5,0,5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="Haes"
+            FontSize="24" />
+        <Label
+            x:Name="label1_Copy4"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="70"
+            Height="17"
+            Margin="119,262,0,0"
+            Padding="0,5,5,5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="Kucing(F)"
+            FontSize="5" />
+        <Label
+            x:Name="label2_Copy1"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="243"
+            Height="14"
+            Margin="10,289,10,0"
+            Padding="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Bottom"
+            Content=" Berat 5Kg / Umur 2 Thn / Betina / Anggora / Putih / 4 Kaki&#xA;"
+            FontSize="4" />
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0,316,0,54"
+            Background="#9BFCBA7D"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="15">
+            <Ellipse
+                Width="45"
+                Height="45"
+                Margin="10,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="#FFF4F4F5" />
+        </Border>
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10,374,10,62"
+            Background="#FFFFE2C7"
+            BorderBrush="#FF000000"
+            BorderThickness="0"
+            CornerRadius="5" />
+        <Ellipse
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="15"
+            Height="15"
+            Margin="238,325,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FFF4F4F5"
-            Stroke="Black" />
-        <Rectangle
+            RenderTransformOrigin="2.233,2" />
+        <Label
+            x:Name="label1_Copy5"
             Grid.Row="1"
             Grid.Column="1"
-            Width="263"
-            Height="55"
-            Margin="0,246,0,0"
+            Width="70"
+            Height="44"
+            Margin="61,325,0,0"
+            Padding="5,5,0,5"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Fill="#FFF4F4F5"
-            Stroke="Black" />
+            VerticalContentAlignment="Center"
+            Content="Haes"
+            FontSize="24" />
+        <Label
+            x:Name="label1_Copy6"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="70"
+            Height="17"
+            Margin="119,347,0,0"
+            Padding="0,5,5,5"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Content="Kucing(F)"
+            FontSize="5" />
+        <Label
+            x:Name="label2_Copy2"
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="243"
+            Height="14"
+            Margin="10,374,10,0"
+            Padding="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Bottom"
+            Content=" Berat 5Kg / Umur 2 Thn / Betina / Anggora / Putih / 4 Kaki&#xA;"
+            FontSize="4" />
+        <Ellipse
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="42"
+            Height="42"
+            Margin="211,401,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Fill="White"
+            RenderTransformOrigin="0.714,0.702" />
     </Grid>
 </Window>
