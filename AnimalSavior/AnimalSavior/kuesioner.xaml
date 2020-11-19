@@ -13,7 +13,8 @@
     <Grid
         Height="492"
         Margin="0,0,2,0"
-        VerticalAlignment="Top" Background="#FF50D7F5">
+        VerticalAlignment="Top"
+        Background="#FF50D7F5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="270" />
             <ColumnDefinition />
@@ -22,21 +23,25 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="26.5" />
-            <RowDefinition Height="24.5"/>
+            <RowDefinition Height="24.5" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="73" />
         </Grid.RowDefinitions>
         <Label
             x:Name="label"
+            Grid.RowSpan="2"
             Width="112"
             Height="36"
             Margin="12,32,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Kuesioner"
-            FontSize="20" FontFamily="Arial rounded" FontWeight="Bold" Grid.RowSpan="2" />
+            FontFamily="Arial rounded"
+            FontSize="20"
+            FontWeight="Bold" />
         <Label
             x:Name="label_Copy"
+            Grid.Row="1"
             Width="248"
             Height="20"
             Margin="12,9,0,0"
@@ -45,17 +50,18 @@
             VerticalAlignment="Top"
             VerticalContentAlignment="Center"
             Content="Silahkan isikan agar dokter dapat mengerti apa yang terjadi"
-            FontSize="9" Grid.Row="1" />
+            FontSize="9" />
         <Label
             x:Name="label_Copy1"
             Grid.Row="1"
+            Grid.RowSpan="2"
             Width="150"
             Height="28"
             Margin="12,50,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Jenis Hewan Peliharaan"
-            FontSize="10" Grid.RowSpan="2" />
+            FontSize="10" />
         <ComboBox
             x:Name="comboBox"
             Grid.Row="3"
@@ -64,7 +70,8 @@
             Margin="12,0,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            BorderBrush="#FF125873" SelectionChanged="comboBox_SelectionChanged">
+            BorderBrush="#FF125873"
+            SelectionChanged="comboBox_SelectionChanged">
             <ComboBox.Background>
                 <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Offset="0" Color="#FF20D0CE" />
@@ -95,9 +102,10 @@
             Padding="5,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            Background="White"
             FontSize="10"
             Foreground="#FF125873"
-            TextWrapping="Wrap" Background="White" ><Run Text="- "/><Run Text="Lorem Ipsum dolor sit amet"/><LineBreak/><Run Text="- Lorem Ipsum dolor sit"/><Run Text=" "/><Run Text="amet"/><LineBreak/><Run Text="- "/><Run Text="Lorem Ipsum dolor sit amet"/></TextBlock>
+            TextWrapping="Wrap"><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /><LineBreak /><Run Text="- Lorem Ipsum dolor sit" /><Run Text=" " /><Run Text="amet" /><LineBreak /><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /></TextBlock>
         <Label
             x:Name="label_Copy3"
             Grid.Row="4"
@@ -118,12 +126,13 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             VerticalContentAlignment="Center"
-            TextWrapping="Wrap" Text="23 Tahun" />
+            Text="23 Tahun"
+            TextWrapping="Wrap" />
         <Button
             x:Name="button"
             Grid.Row="5"
-             Width="248"
-                Height="38"
+            Width="248"
+            Height="38"
             Margin="12,134,0,-98"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"

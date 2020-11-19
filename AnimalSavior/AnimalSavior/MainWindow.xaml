@@ -11,7 +11,7 @@
     Background="#FF20D0CE"
     mc:Ignorable="d">
     <Grid>
-        <Grid Width="900" HorizontalAlignment="Left">
+        <Grid Width="833" HorizontalAlignment="Left">
             <Label
                 x:Name="label"
                 Margin="10,10,0,0"
