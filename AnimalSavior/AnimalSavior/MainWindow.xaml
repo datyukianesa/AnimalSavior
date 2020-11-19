@@ -6,113 +6,34 @@
     xmlns:local="clr-namespace:AnimalSavior"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="840.833"
-    Height="277.5"
+    Width="311"
+    Height="525"
     Background="#FF20D0CE"
     mc:Ignorable="d">
     <Grid>
-        <Grid Width="900" HorizontalAlignment="Left">
+        <Grid Width="900" HorizontalAlignment="Left" Background="#FF50D7F5">
             <Label
                 x:Name="label"
                 Margin="10,10,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Main Menu"
-                FontSize="15" />
-            <Button
-                x:Name="button"
-                Width="155"
-                Height="155"
-                Margin="16,45,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#FF125873"
-                Content="Button"
-                Foreground="White" />
-            <Label
-                x:Name="label_Copy"
-                Margin="46,205,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Look for Vets"
-                FontSize="15" />
-            <Button
-                x:Name="button_Copy"
-                Width="155"
-                Height="155"
-                Margin="178,45,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#FF125873"
-                Content="Button"
-                Foreground="White" />
-            <Label
-                x:Name="label_Copy1"
-                Margin="212,205,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Community"
-                FontSize="15" />
-            <Button
-                x:Name="button_Copy1"
-                Width="155"
-                Height="155"
-                Margin="341,45,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#FF125873"
-                Content="Button"
-                Foreground="White" />
-            <Label
-                x:Name="label_Copy2"
-                Margin="392,205,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Profile"
-                FontSize="15" />
-            <Button
-                x:Name="button_Copy2"
-                Width="155"
-                Height="155"
-                Margin="503,45,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#FF125873"
-                Content="Button"
-                Foreground="White" />
-            <Label
-                x:Name="label_Copy3"
-                Margin="550,205,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="My Pets"
-                FontSize="15" />
+                FontSize="15" FontWeight="Bold" />
             <Button
                 x:Name="button1"
                 Width="75"
-                Margin="747,10,0,0"
+                Margin="206,20,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Background="#FF125873"
+                Background="#FFD85C4F"
                 Content="Log Out"
                 Foreground="White" />
-            <Button
-                x:Name="button_Copy3"
-                Width="155"
-                Height="155"
-                Margin="667,45,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#FF125873"
-                Content="Button"
-                Foreground="White" />
-            <Label
-                x:Name="label_Copy4"
-                Margin="699,205,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Tips &amp; Tricks"
-                FontSize="15" />
         </Grid>
+        <Button Content="Look for Vets" HorizontalAlignment="Left" Height="41" Margin="26,117,0,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD"/>
+        <Button Content="Community" HorizontalAlignment="Left" Height="40" Margin="26,182,0,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD" Click="Button_Click"/>
+        <Button Content="Profile" HorizontalAlignment="Left" Height="41" Margin="26,246,0,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD"/>
+        <Button Content="My Pets" HorizontalAlignment="Left" Height="41" Margin="26,306,0,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD"/>
+        <Button Content="Tips &amp; Trick" HorizontalAlignment="Left" Height="41" Margin="26,366,0,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD"/>
+        <TextBlock HorizontalAlignment="Left" Height="30" Margin="29,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontSize="22" FontWeight="Bold" FontFamily="Hobo Std"><Run Text="         "/><Run Text="Animal Savior"/></TextBlock>
     </Grid>
 </Window>

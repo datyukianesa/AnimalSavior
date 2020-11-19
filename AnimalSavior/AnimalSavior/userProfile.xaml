@@ -136,5 +136,10 @@
             VerticalAlignment="Top"
             TextAlignment="Center"
             TextWrapping="Wrap"><Run Text="Jl. Lorem ipsum Dolor Sit Amet " /><LineBreak /><Run Text="Rt 4 Rw3, Free Day Fun, " /><LineBreak /><Run Text="Yogyakarta." /></TextBlock>
+        <Image Margin="200,278,9,19" Grid.Row="2" Grid.Column="1" RenderTransformOrigin="0.705,0.9">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/images/pencil.png"/>
+            </Image.Source>
+        </Image>
     </Grid>
 </Window>
