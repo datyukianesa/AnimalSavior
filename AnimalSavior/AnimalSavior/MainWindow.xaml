@@ -11,11 +11,7 @@
     Background="#FF20D0CE"
     mc:Ignorable="d">
     <Grid>
-<<<<<<< HEAD
         <Grid Width="900" HorizontalAlignment="Left" Background="#FF50D7F5">
-=======
-        <Grid Width="833" HorizontalAlignment="Left">
->>>>>>> 3fcd7c94a0d60e96f3b2c0f9cd59de4cc8cfcab9
             <Label
                 x:Name="label"
                 Margin="10,10,0,0"
