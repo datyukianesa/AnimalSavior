@@ -119,5 +119,10 @@
             VerticalAlignment="Top"
             RenderTransformOrigin="0.714,0.702"
             Stroke="Black" />
+        <Image Margin="79,12,78,18" Grid.Row="1" Grid.Column="1">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/images/user.png" />
+            </Image.Source>
+        </Image>
     </Grid>
 </Window>

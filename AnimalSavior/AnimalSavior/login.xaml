@@ -7,24 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="login"
     Width="311"
-    Height="218.5"
+    Height="525"
     mc:Ignorable="d">
     <Grid
-        Height="188"
-        Margin="0,0,0,-1"
+        Height="534"
+        Margin="0,0,0,-347"
         VerticalAlignment="Top"
-        Background="#FF20D0CE">
+        Background="#FF50D7F5">
         <Label
             x:Name="label"
-            Margin="10,10,0,0"
+            Margin="12,106,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Login"
             FontSize="30" />
         <TextBox
             x:Name="username"
-            Width="283"
-            Margin="10,65,0,0"
+            Width="282"
+            Margin="12,162,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
@@ -33,32 +33,36 @@
             TextWrapping="Wrap" />
         <TextBox
             x:Name="password"
-            Width="283"
+            Width="282"
             Height="30"
-            Margin="10,100,0,0"
+            Margin="12,196,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontSize="20"
             Text="**************"
             TextWrapping="Wrap" />
-        <Border
-            Margin="10,135,10,0"
+        <Button
+            x:Name="reg_button"
+            Width="282"
+            Height="38"
+            Margin="0,374,11,0"
+            HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            BorderBrush="#FF000000"
-            BorderThickness="1"
-            CornerRadius="20">
-            <Button
-                x:Name="button"
-                Width="283"
-                Height="38"
-                Margin="-1"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Background="#FF125873"
-                Content="Login"
-                Foreground="White"
-                IsDefault="True" />
-        </Border>
+            Background="#FF125873"
+            Click="reg_button_Click"
+            Content="Login"
+            Foreground="White"
+            IsDefault="True" FontSize="16" />
+        <Image Margin="10,260,210,209">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/images/google.png"/>
+            </Image.Source>
+        </Image>
+        <Image Margin="202,267,32,212">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/images/fb.png"/>
+            </Image.Source>
+        </Image>
     </Grid>
 </Window>

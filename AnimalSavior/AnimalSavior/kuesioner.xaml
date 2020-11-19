@@ -63,7 +63,7 @@
             Margin="10,23,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            BorderBrush="#FF125873">
+            BorderBrush="#FF125873" SelectionChanged="comboBox_SelectionChanged">
             <ComboBox.Background>
                 <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Offset="0" Color="#FF20D0CE" />
@@ -96,8 +96,7 @@
             VerticalAlignment="Top"
             FontSize="10"
             Foreground="#FF125873"
-            Text="Lorem Ipsum dolor sit amet"
-            TextWrapping="Wrap" />
+            TextWrapping="Wrap" Background="White" ><Run Text="- "/><Run Text="Lorem Ipsum dolor sit amet"/><LineBreak/><Run Text="- Lorem Ipsum dolor sit"/><Run Text=" "/><Run Text="amet"/><LineBreak/><Run Text="- "/><Run Text="Lorem Ipsum dolor sit amet"/></TextBlock>
         <Label
             x:Name="label_Copy3"
             Grid.Row="2"
