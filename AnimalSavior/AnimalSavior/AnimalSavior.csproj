@@ -55,23 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="kuesioner.xaml.cs">
-      <DependentUpon>kuesioner.xaml</DependentUpon>
+    <Compile Include="kuesioner_Dekstop.xaml.cs">
+      <DependentUpon>kuesioner_Dekstop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="petProfile.xaml.cs">
-      <DependentUpon>petProfile.xaml</DependentUpon>
+    <Compile Include="register_Dekstop.xaml.cs">
+      <DependentUpon>register_Dekstop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="register.xaml.cs">
-      <DependentUpon>register.xaml</DependentUpon>
+    <Compile Include="login _Dekstop.xaml.cs">
+      <DependentUpon>login _Dekstop.xaml</DependentUpon>
     </Compile>
-    <Compile Include="userProfile.xaml.cs">
-      <DependentUpon>userProfile.xaml</DependentUpon>
+    <Compile Include="petProfile_Dekstop.xaml.cs">
+      <DependentUpon>petProfile_Dekstop.xaml</DependentUpon>
     </Compile>
-    <Page Include="kuesioner.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="login.xaml">
+    <Compile Include="userProfile_Dekstop.xaml.cs">
+      <DependentUpon>userProfile_Dekstop.xaml</DependentUpon>
+    </Compile>
+    <Page Include="kuesioner_Dekstop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -83,22 +82,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="login.xaml.cs">
-      <DependentUpon>login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="petProfile.xaml">
+    <Page Include="register_Dekstop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="register.xaml">
+    <Page Include="login _Dekstop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="userProfile.xaml">
+    <Page Include="petProfile_Dekstop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="userProfile_Dekstop.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +128,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="baseline_edit_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pnda peenge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon pink panther.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

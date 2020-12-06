@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace AnimalSavior
 {
     /// <summary>
-    /// Interaction logic for login.xaml
+    /// Interaction logic for register_Dekstop.xaml
     /// </summary>
-    public partial class login : Window
+    public partial class register_Dekstop : Window
     {
-        public login()
+        public register_Dekstop()
         {
-           
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            InitializeComponent();
         }
     }
 }
