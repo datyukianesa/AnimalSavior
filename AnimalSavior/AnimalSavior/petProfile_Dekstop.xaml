@@ -314,20 +314,5 @@
             FontSize="24"
             FontWeight="Bold" />
         <Image Margin="155,98,154,181" Source="icon pink panther.png" Stretch="Fill"/>
-        <Grid Width="293" HorizontalAlignment="Left" Background="#FF50D7F5" Margin="406,-22,-355,-53" Grid.Column="1">
-            <Label
-                x:Name="label"
-                Margin="10,10,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Main Menu"
-                FontSize="15" FontWeight="Bold" />
-        </Grid>
-        <Button Content="Look for Vets" HorizontalAlignment="Left" Height="41" Margin="432,95,-345,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD" Grid.Column="1"/>
-        <Button Content="Community" HorizontalAlignment="Left" Height="40" Margin="432,160,-345,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD" Click="Button_Click" Grid.Column="1"/>
-        <Button Content="Profile" HorizontalAlignment="Left" Height="41" Margin="432,224,-345,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD" Grid.Column="1"/>
-        <Button Content="My Pets" HorizontalAlignment="Left" Height="41" Margin="432,284,-345,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD" Grid.Column="1"/>
-        <Button Content="Tips &amp; Trick" HorizontalAlignment="Left" Height="41" Margin="432,344,-345,0" VerticalAlignment="Top" Width="257" Background="#FFFDFDFD" Grid.Column="1"/>
-        <TextBlock HorizontalAlignment="Left" Height="30" Margin="435,45,-348,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257" FontSize="22" FontWeight="Bold" FontFamily="Hobo Std" Grid.Column="1"><Run Text="         "/><Run Text="Animal Savior"/></TextBlock>
     </Grid>
 </Window>
