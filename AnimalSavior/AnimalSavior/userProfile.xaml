@@ -68,7 +68,7 @@
             VerticalAlignment="Top"
             IsReadOnly="True"
             Text="author@ygmail.com"
-            TextWrapping="Wrap" />
+            TextWrapping="Wrap" TextChanged="textBox_TextChanged" />
         <Label
             x:Name="label_Copy"
             Grid.Row="2"
