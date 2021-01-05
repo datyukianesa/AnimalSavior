@@ -3,52 +3,49 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using AnimalSavior.Model;
+using MySql.Data.MySqlClient;
 
 namespace AnimalSavior.DAO
 {
-    public class petDAO
+    public class klinikDAO
     {
         private MySqlConnection conn;
         private string str = string.Empty;
 
-        public petDAO(MySqlConnection conn)
+        public klinikDAO(MySqlConnection conn)
         {
             this.conn = conn;
         }
 
-        public int save(petModel pet)
+        public int save(klinikModel klinik)
         {
-            str = "insert into pet(pet_nama, pet_info, pet_jenis, id_user) values (@1, @2, @3, @4)";
+            str = "insert into klinik(klinik_nama, klinik_alamat) values (@1, @2)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");
                 cmd.Parameters.AddWithValue("@2", "a");
-                cmd.Parameters.AddWithValue("@3", "a");
-                cmd.Parameters.AddWithValue("@4", "a");
 
                 return cmd.ExecuteNonQuery();
             }
         }
 
-        public int update(petModel pet)
+        public int update(klinikModel klinik)
         {
-            str = "update pet set pet_nama = @1, pet_info = @2, pet_jenis = @3 where id_pet = @4";
+            str = "update klinik set klinik_nama = @1, klinik_alamat = @2 where id_klinik = @3";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");
                 cmd.Parameters.AddWithValue("@2", "a");
                 cmd.Parameters.AddWithValue("@3", "a");
-                cmd.Parameters.AddWithValue("@4", "a");
 
                 return cmd.ExecuteNonQuery();
             }
         }
 
-        public int delete(petModel pet)
+        public int delete(klinikModel klinik)
         {
-            str = "delete from pet where id_pet = @1";
+            str = "delete from klinik where id_klinik = @1";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");

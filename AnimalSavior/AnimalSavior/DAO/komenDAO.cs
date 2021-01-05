@@ -8,19 +8,19 @@ using AnimalSavior.Model;
 
 namespace AnimalSavior.DAO
 {
-    public class petDAO
+    public class komenDAO
     {
         private MySqlConnection conn;
         private string str = string.Empty;
 
-        public petDAO(MySqlConnection conn)
+        public komenDAO(MySqlConnection conn)
         {
             this.conn = conn;
         }
 
-        public int save(petModel pet)
+        public int save(komenDAO komen)
         {
-            str = "insert into pet(pet_nama, pet_info, pet_jenis, id_user) values (@1, @2, @3, @4)";
+            str = "insert into komen(komen_isi, komen_timestamp, id_user, id_post) values (@1, @2, @3, @4)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");
@@ -32,9 +32,9 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int update(petModel pet)
+        public int delete(komenDAO komen)
         {
-            str = "update pet set pet_nama = @1, pet_info = @2, pet_jenis = @3 where id_pet = @4";
+            str = "";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");
@@ -45,18 +45,5 @@ namespace AnimalSavior.DAO
                 return cmd.ExecuteNonQuery();
             }
         }
-
-        public int delete(petModel pet)
-        {
-            str = "delete from pet where id_pet = @1";
-            using (MySqlCommand cmd = new MySqlCommand(str, conn))
-            {
-                cmd.Parameters.AddWithValue("@1", "a");
-
-                return cmd.ExecuteNonQuery();
-            }
-        }
-
-        //method getAll tergantung dari front end
     }
 }

@@ -8,19 +8,19 @@ using AnimalSavior.Model;
 
 namespace AnimalSavior.DAO
 {
-    public class petDAO
+    class postDAO
     {
         private MySqlConnection conn;
         private string str = string.Empty;
 
-        public petDAO(MySqlConnection conn)
+        public postDAO(MySqlConnection conn)
         {
             this.conn = conn;
         }
 
-        public int save(petModel pet)
+        public int save(postDAO komen)
         {
-            str = "insert into pet(pet_nama, pet_info, pet_jenis, id_user) values (@1, @2, @3, @4)";
+            str = "insert into post(post_judul, post_isi, post_waktu, id_user) values (@1, @2, @3, @4)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");
@@ -32,9 +32,9 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int update(petModel pet)
+        public int update(postDAO komen)
         {
-            str = "update pet set pet_nama = @1, pet_info = @2, pet_jenis = @3 where id_pet = @4";
+            str = "update post set post_judul = @1, post_isi = @2, post_waktu = @3 where id_post = @4";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");
@@ -46,9 +46,9 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int delete(petModel pet)
+        public int delete(postDAO komen)
         {
-            str = "delete from pet where id_pet = @1";
+            str = "delete from post where post_id = @1";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", "a");
@@ -57,6 +57,6 @@ namespace AnimalSavior.DAO
             }
         }
 
-        //method getAll tergantung dari front end
+        //put getall here
     }
 }

@@ -102,7 +102,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="connection.cs" />
+    <Compile Include="DAO\klinikDAO.cs" />
+    <Compile Include="DAO\komenDAO.cs" />
+    <Compile Include="DAO\pemeriksaanDAO.cs" />
     <Compile Include="DAO\petDAO.cs" />
+    <Compile Include="DAO\postDAO.cs" />
     <Compile Include="DAO\userDAO.cs" />
     <Compile Include="kuesioner.xaml.cs">
       <DependentUpon>kuesioner.xaml</DependentUpon>
