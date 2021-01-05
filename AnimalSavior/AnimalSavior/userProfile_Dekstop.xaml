@@ -1,0 +1,127 @@
+﻿<Window x:Class="AnimalSavior.userProfile_Dekstop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimalSavior"
+        mc:Ignorable="d"
+        Title="userProfile_Dekstop" Height="468" Width="735.5">
+    <Grid Background="#FF4CBDD6">
+        <Ellipse
+            Width="133"
+            Height="137"
+            Margin="112,103,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Fill="White" />
+        <Ellipse
+            Width="40"
+            Height="43"
+            Margin="295,357,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="0.714,0.702"
+            Stroke="Black" Fill="White" />
+        <Image
+            Margin="122,111,494,216">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/images/user.png" />
+            </Image.Source>
+        </Image>
+        <Image Margin="295,364,391,47" RenderTransformOrigin="0.705,0.9">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="300" UriSource="/images/pencil.png"/>
+            </Image.Source>
+        </Image>
+        <Label
+            x:Name="label_Copy2"
+            Width="150"
+            Height="34"
+            Margin="18,14,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="User Profile"
+            FontFamily="Arial rounded"
+            FontSize="24"
+            FontWeight="Bold" />
+        <Button
+            x:Name="button"
+            Width="256"
+            Height="42"
+            Margin="424,364,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#FF125873"
+            BorderBrush="White"
+            Content="Submit"
+            Foreground="White" />
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="356" Stroke="Black" VerticalAlignment="Top" Width="4" Margin="381,48,0,0"/>
+        <Label
+            x:Name="label_Copy7"
+            Width="253"
+            Height="50"
+            Margin="59,256,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Keanu Reeves"
+            FontFamily="Hobo Std"
+            FontSize="36"
+            FontWeight="Bold" />
+        <Label
+            x:Name="label_Copy3"
+            Margin="432,52,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Alamat Email"
+            FontSize="16" FontWeight="Bold" Height="33" Width="110" />
+        <TextBox
+            x:Name="textBox_Copy1"
+            Width="238"
+            Height="25"
+            Margin="432,83,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            IsReadOnly="True"
+            Text="author@ygmail.com"
+            TextWrapping="Wrap" />
+        <Label
+            x:Name="label_Copy4"
+            Margin="430,127,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Jenis Hewan Peliharaan"
+            FontSize="16" FontWeight="Bold" Height="34" Width="191" />
+        <TextBox
+            x:Name="textBox_Copy2"
+            Width="238"
+            Height="24"
+            Margin="432,160,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="Kelinci"
+            TextWrapping="Wrap" />
+        <Label
+            x:Name="label_Copy5"
+            Margin="430,195,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Alamat"
+            FontSize="16" FontWeight="Bold" Height="34" Width="66" />
+        <Rectangle
+            Width="238"
+            Height="86"
+            Margin="432,229,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Fill="#FFE0E0E0" />
+        <TextBlock
+            x:Name="textBlock_Copy"
+            Width="239"
+            Height="69"
+            Margin="424,238,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            TextAlignment="Center"
+            TextWrapping="Wrap"><Run Text="Jl. Lorem ipsum Dolor Sit Amet " /><LineBreak /><Run Text="Rt 4 Rw3, Free Day Fun, " /><LineBreak /><Run Text="Yogyakarta." /></TextBlock>
+    </Grid>
+</Window>

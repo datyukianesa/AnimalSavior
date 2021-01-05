@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace AnimalSavior
 {
     /// <summary>
-    /// Interaction logic for petProfile.xaml
+    /// Interaction logic for userProfile_Dekstop.xaml
     /// </summary>
-    public partial class petProfile : Window
+    public partial class userProfile_Dekstop : Window
     {
-        public petProfile()
+        public userProfile_Dekstop()
         {
             InitializeComponent();
         }

@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace AnimalSavior
 {
     /// <summary>
-    /// Interaction logic for register.xaml
+    /// Interaction logic for Window2.xaml
     /// </summary>
-    public partial class register : Window
+    public partial class Window2 : Window
     {
-        public register()
+        public Window2()
         {
             InitializeComponent();
-        }
-
-        private void reg_button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void reg_password_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

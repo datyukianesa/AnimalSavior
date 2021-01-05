@@ -15,16 +15,16 @@ using System.Windows.Shapes;
 namespace AnimalSavior
 {
     /// <summary>
-    /// Interaction logic for kuesioner.xaml
+    /// Interaction logic for register_Dekstop.xaml
     /// </summary>
-    public partial class kuesioner : Window
+    public partial class register_Dekstop : Window
     {
-        public kuesioner()
+        public register_Dekstop()
         {
             InitializeComponent();
         }
 
-        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

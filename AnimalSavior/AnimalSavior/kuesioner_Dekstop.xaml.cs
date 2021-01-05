@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace AnimalSavior
 {
     /// <summary>
-    /// Interaction logic for userProfile.xaml
+    /// Interaction logic for kuesioner_Dekstop.xaml
     /// </summary>
-    public partial class userProfile : Window
+    public partial class kuesioner_Dekstop : Window
     {
-        public userProfile()
+        public kuesioner_Dekstop()
         {
             InitializeComponent();
-        }
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
