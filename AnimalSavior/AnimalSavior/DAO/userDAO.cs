@@ -17,7 +17,5 @@ namespace AnimalSavior.DAO
         {
             this.conn = conn;
         }
-
-
     }
 }

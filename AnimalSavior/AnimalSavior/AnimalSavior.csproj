@@ -108,7 +108,11 @@
       <DependentUpon>kuesioner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\klinikModel.cs" />
+    <Compile Include="Model\komenModel.cs" />
+    <Compile Include="Model\pemeriksaanModel.cs" />
     <Compile Include="Model\petModel.cs" />
+    <Compile Include="Model\postModel.cs" />
+    <Compile Include="Model\roleModel.cs" />
     <Compile Include="Model\userModel.cs" />
     <Compile Include="petProfile.xaml.cs">
       <DependentUpon>petProfile.xaml</DependentUpon>

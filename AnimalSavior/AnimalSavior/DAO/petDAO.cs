@@ -8,8 +8,16 @@ using AnimalSavior.Model;
 
 namespace AnimalSavior.DAO
 {
-    class petDAO
+    public class petDAO
     {
+        private MySqlConnection conn;
+        private string str = string.Empty;
+
+        public petDAO(MySqlConnection conn)
+        {
+            this.conn = conn;
+        }
+
 
     }
 }
