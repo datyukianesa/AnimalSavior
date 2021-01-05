@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:AnimalSavior"
         mc:Ignorable="d"
         Title="kuesioner_Dekstop" Height="468" Width="735.5">
-    <Grid Background="#FF4CBDD6">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="173*"/>
             <RowDefinition Height="34*"/>
             <RowDefinition Height="212*"/>
         </Grid.RowDefinitions>
         <Label
-            x:Name="label"
+            x:Name="lbl_kuesioner"
             Width="120"
             Height="40"
             Margin="34,4,0,0"
@@ -34,7 +34,6 @@
             VerticalContentAlignment="Center"
             Content="Silahkan isikan agar dokter dapat mengerti apa yang terjadi" FontWeight="Bold" />
         <Label
-            x:Name="label_Copy1"
             Width="191"
             Height="32"
             Margin="393,97,0,0"
@@ -103,20 +102,19 @@
             Text="23 Tahun"
             TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" />
         <Button
-            x:Name="button"
+            x:Name="kuesioner_button"
             Width="248"
             Height="38"
             Margin="406,154,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Background="#FF125873"
+            Background="#FF0097E6"
             BorderBrush="White"
             Content="Submit"
             Foreground="White" Grid.Row="2" />
         <Rectangle Fill="Black" HorizontalAlignment="Left" Height="328" Stroke="Black" VerticalAlignment="Top" Width="4" Margin="364,79,0,0" Grid.RowSpan="3"/>
-        <Image Margin="57,36,446,139" Source="pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
         <Label
-            x:Name="label_Copy4"
+            x:Name="lbl_animalSavior_2"
             Width="167"
             Height="40"
             Margin="85,30,0,0"
@@ -126,5 +124,6 @@
             FontFamily="Arial rounded"
             FontSize="24"
             FontWeight="Bold" Grid.Row="2" />
+        <Image Margin="85,84,485,180" Source="/AnimalSavior;component/pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
     </Grid>
 </Window>

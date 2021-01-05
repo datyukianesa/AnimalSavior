@@ -6,23 +6,23 @@
         xmlns:local="clr-namespace:AnimalSavior"
         mc:Ignorable="d"
         Title="Window1" Height="401" Width="407">
-    <Grid Background="#FF4CBDD6">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="63*"/>
             <RowDefinition Height="87*"/>
             <RowDefinition Height="220*"/>
         </Grid.RowDefinitions>
         <Label
-            x:Name="label"
-            Margin="10,23,0,0"
+            x:Name="lbl_mendaftar"
+            Margin="9,17,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Login"
+            Content="Mendaftar"
             FontSize="25" FontFamily="Hobo Std" Opacity="0.7" />
         <TextBox
-            x:Name="username"
+            x:Name="reg_username"
             Width="282"
-            Margin="62,0,0,0"
+            Margin="64,54,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
@@ -30,39 +30,28 @@
             Text="loremipsum@gmail.com"
             TextWrapping="Wrap" FontFamily="Bahnschrift Light" Grid.Row="2" />
         <TextBox
-            x:Name="password"
+            x:Name="reg_password"
             Width="282"
             Height="30"
-            Margin="62,34,0,0"
+            Margin="64,88,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontSize="20"
             Text="**************"
-            TextWrapping="Wrap" Grid.Row="2" TextChanged="password_TextChanged" />
-        <Ellipse Fill="#FFFDFDFD" HorizontalAlignment="Left" Height="46" Margin="100,83,0,0" VerticalAlignment="Top" Width="47" Grid.Row="2"/>
+            TextWrapping="Wrap" Grid.Row="2" />
         <Button
             x:Name="reg_button"
             Width="282"
             Height="38"
-            Margin="0,150,57,0"
+            Margin="0,162,53,0"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Background="#FF335F70"
+            Background="#FF0097E6"
             Click="reg_button_Click"
             Content="Login"
             Foreground="White"
             IsDefault="True" FontSize="16" OpacityMask="Black" Grid.Row="2" />
-        <Image Margin="93,83,244,91" Grid.Row="2">
-            <Image.Source>
-                <BitmapImage DecodePixelWidth="300" UriSource="/images/google.png"/>
-            </Image.Source>
-        </Image>
-        <Image Margin="236,88,111,93" Grid.Row="2">
-            <Image.Source>
-                <BitmapImage DecodePixelWidth="300" UriSource="/images/fb.png"/>
-            </Image.Source>
-        </Image>
-        <Image Margin="115,0,126,197" Source="pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
+        <Image Margin="116,57,125,140" Source="/AnimalSavior;component/pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
     </Grid>
 </Window>

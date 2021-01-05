@@ -108,9 +108,6 @@
     <Compile Include="DAO\petDAO.cs" />
     <Compile Include="DAO\postDAO.cs" />
     <Compile Include="DAO\userDAO.cs" />
-    <Compile Include="kuesioner.xaml.cs">
-      <DependentUpon>kuesioner.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Model\klinikModel.cs" />
     <Compile Include="Model\komenModel.cs" />
     <Compile Include="Model\pemeriksaanModel.cs" />
@@ -118,23 +115,6 @@
     <Compile Include="Model\postModel.cs" />
     <Compile Include="Model\roleModel.cs" />
     <Compile Include="Model\userModel.cs" />
-    <Compile Include="petProfile.xaml.cs">
-      <DependentUpon>petProfile.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="register.xaml.cs">
-      <DependentUpon>register.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="userProfile.xaml.cs">
-      <DependentUpon>userProfile.xaml</DependentUpon>
-    </Compile>
-    <Page Include="kuesioner.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="login.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -143,22 +123,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="login.xaml.cs">
-      <DependentUpon>login.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="petProfile.xaml">
+    <Page Include="VIew\kuisionerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="register.xaml">
+    <Page Include="VIew\loginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="userProfile.xaml">
+    <Page Include="VIew\registerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VIew\userProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,7 +172,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="View\" />
+    <Resource Include="pnda peenge.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
