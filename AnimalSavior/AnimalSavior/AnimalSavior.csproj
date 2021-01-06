@@ -121,6 +121,9 @@
     <Compile Include="View\cariDokterView.xaml.cs">
       <DependentUpon>cariDokterView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\editProfileView.xaml.cs">
+      <DependentUpon>editProfileView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\hewanSakitView.xaml.cs">
       <DependentUpon>hewanSakitView.xaml</DependentUpon>
     </Compile>
@@ -149,6 +152,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\cariDokterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\editProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

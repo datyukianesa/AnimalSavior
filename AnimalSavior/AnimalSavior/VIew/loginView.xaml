@@ -31,19 +31,6 @@
             FontSize="20"
             Text="loremipsum@gmail.com"
             TextWrapping="Wrap" Grid.RowSpan="2" />
-            <TextBox
-            x:Name="log_password"
-            Grid.Row="2"
-            Grid.ColumnSpan="2"
-            Width="282"
-            Height="30"
-            Margin="63,33,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            AutomationProperties.IsRequiredForForm="True"
-            FontSize="20"
-            Text="**************"
-            TextWrapping="Wrap" />
             <Button
             x:Name="log_button"
             Grid.Row="3"
@@ -55,7 +42,7 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             Click="reg_button_Click"
-            Content="Sign in"
+            Content="Masuk"
             FontSize="16"
             Foreground="White"
             IsDefault="True"
@@ -69,14 +56,15 @@
             CornerRadius="0,0,20,20" />
             <Label
             x:Name="lbl_userProfile"
-            Width="156"
+            Width="119"
             Height="46"
             Margin="154,10,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Masuk"
             FontFamily="Sogoe ui"
-            FontSize="28" FontWeight="Bold" Foreground="White" Grid.ColumnSpan="2" />
+            FontSize="28" FontWeight="Bold" Foreground="White" />
+            <PasswordBox HorizontalAlignment="Left" Margin="63,36,0,0" VerticalAlignment="Top" Width="282" Height="26" Password="akwjdnaw" Grid.Row="2"/>
         </Grid>
     </Border>
 </Page>
