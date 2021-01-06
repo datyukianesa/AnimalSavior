@@ -47,10 +47,9 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
-            Click="button_Click"
             Content="Lanjut"
             Foreground="White" FontSize="16" />
-        <PasswordBox HorizontalAlignment="Left" Margin="80,184,0,0" VerticalAlignment="Top" Width="232" Height="24" Password="akwjdnaw"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="80,183,0,0" VerticalAlignment="Top" Width="232" Height="24" Password="akwjdnaw"/>
 
     </Grid>
 </Page>
