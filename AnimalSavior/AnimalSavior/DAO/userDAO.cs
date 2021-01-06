@@ -56,13 +56,23 @@ namespace AnimalSavior.DAO
 
         public int login(userModel user)
         {
-            str = "select * from user where username = @1 and password = @2";
+            str = "SELECT count(*) as num from user where username = @1 and password = @2";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", user.IdUser);
                 cmd.Parameters.AddWithValue("@2", user.Password);
 
-                return cmd.ExecuteNonQuery();
+                var reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+                
             }
         }
 

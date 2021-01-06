@@ -44,14 +44,14 @@ namespace AnimalSavior.View
             user.Password = log_password.Text;
 
             result = userDAO.login(user);
-            if(result > 0)
+            if(result == 1)
             {
                 MessageBox.Show("Selamat datang "+ user.Username);
                 clear();
             }
             else
             {
-                MessageBox.Show("Pengguna tidak ditemukan!");
+                MessageBox.Show("Pengguna tidak ditemukan!") ;
                 clear();
                 log_username.Focus();
             }
