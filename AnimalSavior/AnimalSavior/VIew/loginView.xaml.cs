@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AnimalSavior.VIew
+namespace AnimalSavior
 {
     /// <summary>
     /// Interaction logic for loginNew.xaml
     /// </summary>
-    public partial class loginNew : Page
+    public partial class loginView : Page
     {
-        public loginNew()
+        public loginView()
         {
             InitializeComponent();
         }

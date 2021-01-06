@@ -54,6 +54,18 @@ namespace AnimalSavior.DAO
             }
         }
 
+        public int login(userModel user)
+        {
+            str = "select * from user where username = @1 and password = @2";
+            using (MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@1", "a");
+                cmd.Parameters.AddWithValue("@2", "a");
+
+                return cmd.ExecuteNonQuery();
+            }
+        }
+
         //method getAll tergantung dari front end
     }
 }
