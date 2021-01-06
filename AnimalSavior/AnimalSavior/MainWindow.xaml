@@ -126,17 +126,17 @@
             x:Name="lbl_kuesioner"
             Width="232"
             Height="40"
-            Margin="37,191,0,0"
+            Margin="32,174,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Rekomendasi Dokter"
             FontFamily="Arial rounded"
             FontSize="22"
-            FontWeight="Bold" Grid.RowSpan="2" />
+            FontWeight="Bold" />
         <Button
-            Margin="39,16,559,142"
+            Margin="34,224,564,158"
             Content=""
-            Style="{StaticResource InformButton}" Grid.Row="1">
+            Style="{StaticResource InformButton}" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />
@@ -144,13 +144,13 @@
             </Button.Background>
         </Button>
         <Image
-            Margin="70,36,591,209"
+            Margin="66,19,596,226"
             Source="doctor.png"
             Stretch="Fill" Grid.Row="1" />
         <Button
-            Margin="225,16,373,142"
+            Margin="220,224,378,158"
             Content=""
-            Style="{StaticResource InformButton}" Grid.Row="1">
+            Style="{StaticResource InformButton}" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />
@@ -158,14 +158,14 @@
             </Button.Background>
         </Button>
         <Image
-            Margin="260,36,402,209"
+            Margin="256,19,406,226"
             Source="doctor (1).png"
             Stretch="Fill" Grid.Row="1" />
         <Label
             Grid.Row="1"
-            Width="115"
-            Height="25"
-            Margin="49,136,0,0"
+            Width="116"
+            Height="26"
+            Margin="44,119,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Dr. Deddy Cahyadi"
@@ -173,14 +173,14 @@
         <Label
             Grid.Row="1"
             Width="116"
-            Height="25"
-            Margin="236,137,0,0"
+            Height="24"
+            Margin="232,121,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Dr. Deddy Cahyadi"
             FontWeight="Bold" />
         <Button
-            Margin="56,113,399,81"
+            Margin="44,92,412,101"
             Click="Button_Click"
             Content="Cari dokter hewan terdekat"
             FontSize="14"
@@ -193,6 +193,8 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Image Margin="671,10,10,162" Source="User_icon_BLACK-01.png" Stretch="Fill"/>
+        <Label Content="Hai Budy..!!" HorizontalAlignment="Left" Margin="592,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
 
     </Grid>
 </Page>

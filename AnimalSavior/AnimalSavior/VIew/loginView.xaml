@@ -6,22 +6,19 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="loginView"
-    d:DesignHeight="401"
-    d:DesignWidth="407"
+    Height="401"
+    Width="407"
     mc:Ignorable="d">
 
-    <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*" />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="63*" />
-            <RowDefinition Height="87*" />
-            <RowDefinition Height="129*" />
-            <RowDefinition Height="91*" />
-        </Grid.RowDefinitions>
-        <TextBox
+    <Border BorderBrush="Black" BorderThickness="0.8">
+        <Grid Background="White" OpacityMask="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="63*" />
+                <RowDefinition Height="87*" />
+                <RowDefinition Height="129*" />
+                <RowDefinition Height="91*" />
+            </Grid.RowDefinitions>
+            <TextBox
             x:Name="log_username"
             Grid.Row="1"
             Grid.ColumnSpan="2"
@@ -34,7 +31,7 @@
             FontSize="20"
             Text="loremipsum@gmail.com"
             TextWrapping="Wrap" Grid.RowSpan="2" />
-        <TextBox
+            <TextBox
             x:Name="log_password"
             Grid.Row="2"
             Grid.ColumnSpan="2"
@@ -47,16 +44,7 @@
             FontSize="20"
             Text="**************"
             TextWrapping="Wrap" />
-        <Ellipse
-            Grid.Row="2"
-            Grid.ColumnSpan="2"
-            Width="37"
-            Height="34"
-            Margin="126,64,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Fill="#FFFDFDFD" />
-        <Button
+            <Button
             x:Name="log_button"
             Grid.Row="3"
             Grid.ColumnSpan="2"
@@ -72,14 +60,14 @@
             Foreground="White"
             IsDefault="True"
             OpacityMask="Black" />
-        <Border
+            <Border
             Grid.Row="0"
-            Margin="-2,-2,0,12"
+            Margin="0,-2,0,12"
             Background="#FF0097E6"
             BorderBrush="Black"
             BorderThickness="1"
-            CornerRadius="0,0,20,20" Grid.ColumnSpan="2" />
-        <Label
+            CornerRadius="0,0,20,20" />
+            <Label
             x:Name="lbl_userProfile"
             Width="156"
             Height="46"
@@ -89,5 +77,6 @@
             Content="Masuk"
             FontFamily="Sogoe ui"
             FontSize="28" FontWeight="Bold" Foreground="White" Grid.ColumnSpan="2" />
-    </Grid>
+        </Grid>
+    </Border>
 </Page>

@@ -265,9 +265,9 @@
             Fill="#FFE0E0E0" />
         <TextBlock
             x:Name="textBlock_Copy"
-            Width="252"
+            Width="234"
             Height="68"
-            Margin="428,260,0,0"
+            Margin="446,260,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"

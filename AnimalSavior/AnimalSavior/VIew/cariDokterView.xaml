@@ -154,7 +154,7 @@
             Grid.Row="1"
             Grid.RowSpan="2"
             Grid.ColumnSpan="2"
-            Margin="200,14,185,29"
+            Margin="204,0,180,43"
             Source="/AnimalSavior;component/thumbnail.jpg"
             Stretch="Fill" />
         <Label

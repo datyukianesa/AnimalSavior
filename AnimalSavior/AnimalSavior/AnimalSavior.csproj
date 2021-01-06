@@ -212,5 +212,14 @@
   <ItemGroup>
     <Resource Include="thumbnail.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="User_icon_BLACK-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="user-alt-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
