@@ -1,11 +1,13 @@
-﻿<Window x:Class="AnimalSavior.kuesioner_Dekstop"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimalSavior"
-        mc:Ignorable="d"
-        Title="kuesioner_Dekstop" Height="468" Width="735.5">
+﻿<Page x:Class="AnimalSavior.View.kuisionerView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnimalSavior.VIew"
+      mc:Ignorable="d" 
+      d:DesignHeight="468" d:DesignWidth="735.5"
+      Title="kuisionerView">
+
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="173*"/>
@@ -64,7 +66,7 @@
         <Label
             x:Name="label_Copy2"
             Width="161"
-            Height="28"
+            Height="33"
             Margin="388,13,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
@@ -73,7 +75,7 @@
             x:Name="textBlock"
             Width="266"
             Height="88"
-            Margin="393,44,0,0"
+            Margin="393,51,0,0"
             Padding="5,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
@@ -124,6 +126,6 @@
             FontFamily="Arial rounded"
             FontSize="24"
             FontWeight="Bold" Grid.Row="2" />
-        <Image Margin="85,84,485,180" Source="/AnimalSavior;component/pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
+        <Image Margin="88,89,482,175" Source="/AnimalSavior;component/pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
     </Grid>
-</Window>
+</Page>

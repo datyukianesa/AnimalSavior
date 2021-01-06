@@ -115,6 +115,18 @@
     <Compile Include="Model\postModel.cs" />
     <Compile Include="Model\roleModel.cs" />
     <Compile Include="Model\userModel.cs" />
+    <Compile Include="View\kuisionerView.xaml.cs">
+      <DependentUpon>kuisionerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\loginView.xaml.cs">
+      <DependentUpon>loginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\registerView.xaml.cs">
+      <DependentUpon>registerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\userProfileView.xaml.cs">
+      <DependentUpon>userProfileView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -127,19 +139,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="VIew\kuisionerView.xaml">
+    <Page Include="View\kuisionerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VIew\loginView.xaml">
+    <Page Include="View\loginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VIew\registerView.xaml">
+    <Page Include="View\registerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VIew\userProfileView.xaml">
+    <Page Include="View\userProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,5 +186,6 @@
   <ItemGroup>
     <Resource Include="pnda peenge.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

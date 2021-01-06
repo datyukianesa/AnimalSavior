@@ -1,11 +1,13 @@
-﻿<Window x:Class="AnimalSavior.Window1"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimalSavior"
-        mc:Ignorable="d"
-        Title="Window1" Height="401" Width="407">
+﻿<Page x:Class="AnimalSavior.View.registerView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AnimalSavior.VIew"
+      mc:Ignorable="d" 
+      d:DesignHeight="401" d:DesignWidth="407"
+      Title="registerView">
+
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="63*"/>
@@ -13,45 +15,44 @@
             <RowDefinition Height="220*"/>
         </Grid.RowDefinitions>
         <Label
-            x:Name="lbl_mendaftar"
-            Margin="9,17,0,0"
+            x:Name="lbl_login"
+            Margin="133,45,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Mendaftar"
-            FontSize="25" FontFamily="Hobo Std" Opacity="0.7" />
+            Content="Register" FontFamily="Hobo Std" Opacity="0.7" Grid.RowSpan="2" FontSize="36" />
         <TextBox
-            x:Name="reg_username"
+            x:Name="log_username"
             Width="282"
-            Margin="64,54,0,0"
+            Margin="64,69,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontSize="20"
             Text="loremipsum@gmail.com"
-            TextWrapping="Wrap" FontFamily="Bahnschrift Light" Grid.Row="2" />
+            TextWrapping="Wrap" FontFamily="Bahnschrift Light" Grid.Row="1" Grid.RowSpan="2" />
         <TextBox
-            x:Name="reg_password"
+            x:Name="log_password"
             Width="282"
             Height="30"
-            Margin="64,88,0,0"
+            Margin="64,33,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontSize="20"
             Text="**************"
-            TextWrapping="Wrap" Grid.Row="2" />
+            TextWrapping="Wrap" Grid.Row="2" TextChanged="password_TextChanged" />
+        <Ellipse Fill="#FFFDFDFD" HorizontalAlignment="Left" Height="34" Margin="127,64,0,0" VerticalAlignment="Top" Width="37" Grid.Row="2"/>
         <Button
-            x:Name="reg_button"
+            x:Name="log_button"
             Width="282"
             Height="38"
-            Margin="0,162,53,0"
+            Margin="0,129,53,0"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Background="#FF0097E6"
             Click="reg_button_Click"
-            Content="Login"
+            Content="Sign in"
             Foreground="White"
             IsDefault="True" FontSize="16" OpacityMask="Black" Grid.Row="2" />
-        <Image Margin="116,57,125,140" Source="/AnimalSavior;component/pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
     </Grid>
-</Window>
+</Page>
