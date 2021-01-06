@@ -23,9 +23,9 @@ namespace AnimalSavior.DAO
             str = "insert into user(username, password, id_role) values (@1, @2, @3)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
-                cmd.Parameters.AddWithValue("@2", "a");
-                cmd.Parameters.AddWithValue("@3", "a");
+                cmd.Parameters.AddWithValue("@1", user.Username);
+                cmd.Parameters.AddWithValue("@2", user.Password);
+                cmd.Parameters.AddWithValue("@3", "1");
 
                 return cmd.ExecuteNonQuery();
             }
@@ -36,8 +36,8 @@ namespace AnimalSavior.DAO
             str = "update user set password = @1 where id_user = @2";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
-                cmd.Parameters.AddWithValue("@2", "a");
+                cmd.Parameters.AddWithValue("@1", user.Password);
+                cmd.Parameters.AddWithValue("@2", user.IdUser);
 
                 return cmd.ExecuteNonQuery();
             }
@@ -48,7 +48,7 @@ namespace AnimalSavior.DAO
             str = "delete from user where id_user = @1";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
+                cmd.Parameters.AddWithValue("@1", user.IdUser);
 
                 return cmd.ExecuteNonQuery();
             }
@@ -59,8 +59,8 @@ namespace AnimalSavior.DAO
             str = "select * from user where username = @1 and password = @2";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
-                cmd.Parameters.AddWithValue("@2", "a");
+                cmd.Parameters.AddWithValue("@1", user.IdUser);
+                cmd.Parameters.AddWithValue("@2", user.Password);
 
                 return cmd.ExecuteNonQuery();
             }

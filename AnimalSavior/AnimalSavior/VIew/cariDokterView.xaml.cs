@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AnimalSavior.View
+namespace AnimalSavior
 {
     /// <summary>
     /// Interaction logic for cariDokterView.xaml

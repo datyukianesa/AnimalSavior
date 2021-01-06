@@ -1,20 +1,31 @@
-﻿<Page x:Class="AnimalSavior.View.cariDokterView"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:AnimalSavior.View"
-      mc:Ignorable="d" 
-      d:DesignHeight="550" d:DesignWidth="735.5"
-      Title="cariDokterView">
+﻿<Page
+    x:Class="AnimalSavior.hewanSakitView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AnimalSavior.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="cariDokterView"
+    d:DesignHeight="550"
+    d:DesignWidth="735.5"
+    mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="MyFocusVisual">
             <Setter Property="Control.Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Control}">
-                        <Grid Margin="3 2">
-                            <Rectangle x:Name="r1" StrokeThickness="1" Stroke="Black" StrokeDashArray="2 2"/>
-                            <Border x:Name="border" Width="{TemplateBinding ActualWidth}" Height="{TemplateBinding ActualHeight}"  CornerRadius="2" BorderThickness="1" />
+                        <Grid Margin="3,2">
+                            <Rectangle
+                                x:Name="r1"
+                                Stroke="Black"
+                                StrokeDashArray="2 2"
+                                StrokeThickness="1" />
+                            <Border
+                                x:Name="border"
+                                Width="{TemplateBinding ActualWidth}"
+                                Height="{TemplateBinding ActualHeight}"
+                                BorderThickness="1"
+                                CornerRadius="2" />
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -26,40 +37,45 @@
         </Style>
 
         <Style x:Key="InformButton" TargetType="{x:Type Button}">
-            <Setter Property="OverridesDefaultStyle" Value="True"/>
-            <Setter Property="Margin" Value="2"/>
-            <Setter Property="FontFamily" Value="Verdana"/>
-            <Setter Property="FontSize" Value="11px"/>
-            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="11px" />
+            <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
-            <Setter Property="Background" >
+            <Setter Property="Background">
                 <Setter.Value>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
-                        <GradientStop Color="#FFFFD190" Offset="0.2"/>
-                        <GradientStop Color="Orange" Offset="0.85"/>
-                        <GradientStop Color="#FFFFD190" Offset="1"/>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Offset="0.2" Color="#FFFFD190" />
+                        <GradientStop Offset="0.85" Color="Orange" />
+                        <GradientStop Offset="1" Color="#FFFFD190" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" 
+                        <Border
+                            x:Name="border"
+                            Padding="4,2"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="DarkGray"
                             BorderThickness="1"
-                            Padding="4,2" 
-                            BorderBrush="DarkGray" 
-                            CornerRadius="15" 
-                            Background="{TemplateBinding Background}">
-                            <Grid >
-                                <ContentPresenter HorizontalAlignment="Center" 
-                                    VerticalAlignment="Center" x:Name="contentShadow" 
+                            CornerRadius="15">
+                            <Grid>
+                                <ContentPresenter
+                                    x:Name="contentShadow"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
                                     Style="{StaticResource ShadowStyle}">
                                     <ContentPresenter.RenderTransform>
                                         <TranslateTransform X="1.0" Y="1.0" />
                                     </ContentPresenter.RenderTransform>
                                 </ContentPresenter>
-                                <ContentPresenter HorizontalAlignment="Center" 
-                                    VerticalAlignment="Center" x:Name="content"/>
+                                <ContentPresenter
+                                    x:Name="content"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center" />
                             </Grid>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -68,16 +84,16 @@
                                 <Setter Property="Foreground" Value="#FF4788c8" />
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" >
+                                <Setter Property="Background">
                                     <Setter.Value>
-                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
-                                            <GradientStop Color="#FFFFD190" Offset="0.35"/>
-                                            <GradientStop Color="Orange" Offset="0.95"/>
-                                            <GradientStop Color="#FFFFD190" Offset="1"/>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Offset="0.35" Color="#FFFFD190" />
+                                            <GradientStop Offset="0.95" Color="Orange" />
+                                            <GradientStop Offset="1" Color="#FFFFD190" />
                                         </LinearGradientBrush>
                                     </Setter.Value>
                                 </Setter>
-                                <Setter TargetName="content" Property="RenderTransform" >
+                                <Setter TargetName="content" Property="RenderTransform">
                                     <Setter.Value>
                                         <TranslateTransform Y="1.0" />
                                     </Setter.Value>
@@ -103,30 +119,55 @@
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="173*"/>
-            <RowDefinition Height="34*"/>
-            <RowDefinition Height="212*"/>
+            <RowDefinition Height="173*" />
+            <RowDefinition Height="34*" />
+            <RowDefinition Height="212*" />
         </Grid.RowDefinitions>
-        <Button Style="{StaticResource InformButton}" IsDefault="True" Content="Pengobatan Mandiri" Margin="198,96,206,128" Click="Button_Click" FontSize="18" Grid.Row="2">
+        <Button
+            Grid.Row="2"
+            Margin="198,96,206,128"
+            Click="Button_Click"
+            Content="Pengobatan Mandiri"
+            FontSize="18"
+            IsDefault="True"
+            Style="{StaticResource InformButton}">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFCFCFCF" Offset="1"/>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="1" Color="#FFCFCFCF" />
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Style="{StaticResource InformButton}" IsDefault="True" Content="Cari Dokter " Margin="198,208,206,10" Click="Button_Click" FontSize="18" Grid.RowSpan="2">
+        <Button
+            Grid.RowSpan="2"
+            Margin="198,208,206,10"
+            Click="Button_Click"
+            Content="Cari Dokter "
+            FontSize="18"
+            IsDefault="True"
+            Style="{StaticResource InformButton}">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFCFCFCF" Offset="1"/>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="1" Color="#FFCFCFCF" />
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Border BorderThickness="1" Grid.Row="0" CornerRadius="0,0,50,50" 
-            BorderBrush="Black" Background="#FF0097E6" Margin="-2,-2,2,128"/>
-        <Button Style="{StaticResource InformButton}" IsDefault="True" Content="&lt;- Kembali" Margin="37,48,562,143" Click="Button_Click" FontSize="18">
+        <Border
+            Grid.Row="0"
+            Margin="-2,-2,2,128"
+            Background="#FF0097E6"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="0,0,50,50" />
+        <Button
+            Margin="37,48,562,143"
+            Click="Button_Click"
+            Content="&lt;- Kembali"
+            FontSize="18"
+            IsDefault="True"
+            Style="{StaticResource InformButton}">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="White" Offset="1"/>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="1" Color="White" />
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
