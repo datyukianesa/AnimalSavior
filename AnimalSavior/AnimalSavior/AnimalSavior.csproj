@@ -115,6 +115,12 @@
     <Compile Include="Model\postModel.cs" />
     <Compile Include="Model\roleModel.cs" />
     <Compile Include="Model\userModel.cs" />
+    <Compile Include="View\cariDokterView.xaml.cs">
+      <DependentUpon>cariDokterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\hewanSakitView.xaml.cs">
+      <DependentUpon>hewanSakitView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\kuisionerView.xaml.cs">
       <DependentUpon>kuisionerView.xaml</DependentUpon>
     </Compile>
@@ -139,6 +145,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\cariDokterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\hewanSakitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\kuisionerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -186,6 +200,14 @@
   <ItemGroup>
     <Resource Include="pnda peenge.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="thumbnail.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

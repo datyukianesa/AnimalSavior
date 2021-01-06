@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AnimalSavior
+namespace AnimalSavior.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for cariDokterView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class cariDokterView : Page
     {
-        public MainWindow()
+        public cariDokterView()
         {
             InitializeComponent();
         }

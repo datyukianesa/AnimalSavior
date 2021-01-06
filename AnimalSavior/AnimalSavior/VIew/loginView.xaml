@@ -24,7 +24,7 @@
             Margin="153,45,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Login" FontFamily="Hobo Std" Opacity="0.7" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="36" />
+            Content="Login" FontFamily="Arial rounded" Opacity="0.7" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="36" FontWeight="Bold" />
         <TextBox
             x:Name="log_username"
             Width="282"

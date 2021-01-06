@@ -10,7 +10,7 @@
 
     <Grid Background="White">
         <!--Round button-->
-        <Button Margin="274,330,386,40">
+        <Button Margin="276,362,403,48">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Grid>
@@ -32,26 +32,26 @@
             </Button.Template>
         </Button>
         <Ellipse
-            Width="133"
+            Width="135"
             Height="137"
-            Margin="112,103,0,0"
+            Margin="113,103,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="White" />
         <Image
-            Margin="122,111,494,216">
+            Margin="123,111,491,216">
             <Image.Source>
                 <BitmapImage DecodePixelWidth="300" UriSource="/images/user.png" />
             </Image.Source>
         </Image>
-        <Image Margin="286,346,395,54" RenderTransformOrigin="0.705,0.9">
+        <Image Margin="286,372,410,56" RenderTransformOrigin="0.705,0.9">
             <Image.Source>
                 <BitmapImage DecodePixelWidth="300" UriSource="/images/pencil.png"/>
             </Image.Source>
         </Image>
         <Label
             x:Name="lbl_userProfile"
-            Width="150"
+            Width="152"
             Height="34"
             Margin="18,14,0,0"
             HorizontalAlignment="Left"
@@ -62,21 +62,21 @@
             FontWeight="Bold" />
         <Button
             x:Name="button"
-            Width="256"
+            Width="259"
             Height="42"
-            Margin="424,364,0,0"
+            Margin="418,364,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
             Content="Submit"
             Foreground="White" Click="button_Click" />
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="356" Stroke="Black" VerticalAlignment="Top" Width="4" Margin="381,48,0,0"/>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="356" Stroke="Black" VerticalAlignment="Top" Width="4" Margin="374,48,0,0"/>
         <Label
             x:Name="lbl_keanu"
-            Width="253"
+            Width="256"
             Height="50"
-            Margin="59,256,0,0"
+            Margin="60,256,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Keanu Reeves"
@@ -85,16 +85,16 @@
             FontWeight="Bold" />
         <Label
             x:Name="lbl_alamatEmail"
-            Margin="432,52,0,0"
+            Margin="426,52,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Email Address"
-            FontSize="16" FontWeight="Bold" Height="33" Width="118" />
+            FontSize="16" FontWeight="Bold" Height="33" Width="119" />
         <TextBox
             x:Name="textBox_Copy1"
-            Width="238"
+            Width="241"
             Height="25"
-            Margin="432,83,0,0"
+            Margin="426,83,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             IsReadOnly="True"
@@ -102,39 +102,39 @@
             TextWrapping="Wrap" />
         <Label
             x:Name="lbl_jenisHewan"
-            Margin="430,127,0,0"
+            Margin="424,127,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Kind of Pet"
-            FontSize="16" FontWeight="Bold" Height="34" Width="106" />
+            FontSize="16" FontWeight="Bold" Height="34" Width="107" />
         <TextBox
             x:Name="textBox_Copy2"
-            Width="238"
+            Width="241"
             Height="24"
-            Margin="432,160,0,0"
+            Margin="426,160,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Text="Kelinci"
             TextWrapping="Wrap" />
         <Label
             x:Name="lbl_alamat"
-            Margin="430,195,0,0"
+            Margin="424,195,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Address"
-            FontSize="16" FontWeight="Bold" Height="34" Width="81" />
+            FontSize="16" FontWeight="Bold" Height="34" Width="82" />
         <Rectangle
-            Width="238"
+            Width="241"
             Height="86"
-            Margin="432,229,0,0"
+            Margin="426,229,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FFE0E0E0" />
         <TextBlock
             x:Name="textBlock_Copy"
-            Width="239"
+            Width="242"
             Height="69"
-            Margin="424,238,0,0"
+            Margin="418,238,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
