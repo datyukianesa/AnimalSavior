@@ -66,6 +66,7 @@ namespace AnimalSavior.DAO
 
                 if (reader.HasRows)
                 {
+                    user.IdUser = (string)reader["id_user"];
                     return 1;
                 }
                 else

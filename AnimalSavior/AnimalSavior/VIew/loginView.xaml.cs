@@ -63,7 +63,7 @@ namespace AnimalSavior.View
             log_password.Text = "";
         }
 
-        private void log_daftar_Click(object sender, RoutedEventArgs e)
+        private void log_regist_Click(object sender, RoutedEventArgs e)
         {
             
         }

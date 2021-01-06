@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="loginView"
-    Height="401"
     Width="407"
+    Height="401"
     mc:Ignorable="d">
 
     <Border BorderBrush="Black" BorderThickness="0.8">
@@ -19,52 +19,78 @@
                 <RowDefinition Height="91*" />
             </Grid.RowDefinitions>
             <TextBox
-            x:Name="log_username"
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
-            Width="282"
-            Margin="63,69,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            AutomationProperties.IsRequiredForForm="True"
-            FontFamily="Bahnschrift Light"
-            FontSize="20"
-            Text="loremipsum@gmail.com"
-            TextWrapping="Wrap" Grid.RowSpan="2" />
+                x:Name="log_username"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="2"
+                Width="282"
+                Margin="63,69,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                AutomationProperties.IsRequiredForForm="True"
+                FontFamily="Bahnschrift Light"
+                FontSize="20"
+                Text="loremipsum@gmail.com"
+                TextWrapping="Wrap" />
             <Button
-            x:Name="log_button"
-            Grid.Row="3"
-            Width="282"
-            Height="38"
-            Margin="0,0,60,0"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Top"
-            Background="#FF0097E6"
-            Click="reg_button_Click"
-            Content="Masuk"
-            FontSize="16"
-            Foreground="White"
-            IsDefault="True"
-            OpacityMask="Black" />
+                x:Name="log_button"
+                Grid.Row="3"
+                Width="282"
+                Height="38"
+                Margin="0,0,60,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="#FF0097E6"
+                Click="reg_button_Click"
+                Content="Masuk"
+                FontSize="16"
+                Foreground="White"
+                IsDefault="True"
+                OpacityMask="Black" />
             <Border
-            Grid.Row="0"
-            Margin="0,-2,0,12"
-            Background="#FF0097E6"
-            BorderBrush="Black"
-            BorderThickness="1"
-            CornerRadius="0,0,20,20" />
+                Grid.Row="0"
+                Margin="0,-2,0,12"
+                Background="#FF0097E6"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="0,0,20,20" />
             <Label
-            x:Name="lbl_userProfile"
-            Width="119"
-            Height="46"
-            Margin="154,10,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Masuk"
-            FontFamily="Sogoe ui"
-            FontSize="28" FontWeight="Bold" Foreground="White" />
-            <TextBlock HorizontalAlignment="Left" Margin="63,36,0,0" Grid.Row="2" TextWrapping="Wrap" Text="****************" VerticalAlignment="Top" Width="282" Height="25" FontSize="20"
-                       x:Name="log_password"/>
+                x:Name="lbl_userProfile"
+                Width="119"
+                Height="46"
+                Margin="154,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Masuk"
+                FontFamily="Sogoe ui"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="White" />
+            <TextBlock
+                x:Name="log_password"
+                Grid.Row="2"
+                Width="282"
+                Height="25"
+                Margin="63,36,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="20"
+                Text="****************"
+                TextWrapping="Wrap" />
+            <Button
+                x:Name="log_regist"
+                Grid.Row="3"
+                Width="282"
+                Height="38"
+                Margin="0,50,60,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="#FF0097E6"
+                Content="Daftar"
+                FontSize="16"
+                Foreground="White"
+                IsDefault="True"
+                OpacityMask="Black" Click="log_regist_Click" />
         </Grid>
     </Border>
 </Page>

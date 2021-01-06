@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="userProfileView"
-    Height="468"
     Width="735.5"
+    Height="468"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="MyFocusVisual">
@@ -120,20 +120,21 @@
     <Border BorderBrush="Black" BorderThickness="0.8">
         <Grid Background="White">
             <Grid.RowDefinitions>
-                <RowDefinition Height="27*"/>
-                <RowDefinition Height="440*"/>
+                <RowDefinition Height="27*" />
+                <RowDefinition Height="440*" />
             </Grid.RowDefinitions>
             <!--  Round button  -->
             <Border
-            Grid.Row="0"
-            Margin="0,-2,0,412"
-            Background="#FF0097E6"
-            BorderBrush="Black"
-            BorderThickness="1"
-            CornerRadius="0,0,20,20" Grid.RowSpan="2" />
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Margin="0,-2,0,412"
+                Background="#FF0097E6"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="0,0,20,20" />
 
             <!--  Round button  -->
-            <Button Margin="278,357.5,398,26" Grid.Row="1">
+            <Button Grid.Row="1" Margin="278,357.5,398,26" Click="Button_Click_1">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -153,134 +154,159 @@
                         </Grid>
                     </ControlTemplate>
                 </Button.Template>
+                <Image
+                Source="/AnimalSavior;component/pencil.png"
+                Stretch="Fill" Height="39" Width="40" />
             </Button>
             <Ellipse
-            Width="142"
-            Height="138"
-            Margin="108,97.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Fill="White" Grid.Row="1" />
+                Grid.Row="1"
+                Width="142"
+                Height="138"
+                Margin="108,97.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="White" />
             <Label
-            x:Name="lbl_userProfile"
-            Width="156"
-            Height="34"
-            Margin="306,10,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Profil Anda"
-            FontFamily="Sogoe ui"
-            FontSize="28" FontWeight="Bold" Foreground="White" Grid.RowSpan="2" />
+                x:Name="lbl_userProfile"
+                Grid.RowSpan="2"
+                Width="156"
+                Height="34"
+                Margin="306,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Profil Anda"
+                FontFamily="Sogoe ui"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="White" />
             <Button
-            x:Name="button"
-            Width="270"
-            Height="42"
-            Margin="428,359.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF0097E6"
-            BorderBrush="White"
-            Click="button_Click"
-            Content="Lanjut"
-            Foreground="White" Grid.Row="1" />
+                x:Name="button"
+                Grid.Row="1"
+                Width="270"
+                Height="42"
+                Margin="428,359.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="#FF0097E6"
+                BorderBrush="White"
+                Click="button_Click"
+                Content="Lanjut"
+                Foreground="White" />
             <Rectangle
-            Width="4"
-            Height="356"
-            Margin="382,43.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Fill="Black"
-            Stroke="Black" Grid.Row="1" />
+                Grid.Row="1"
+                Width="4"
+                Height="356"
+                Margin="382,43.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="Black"
+                Stroke="Black" />
             <Label
-            x:Name="lbl_keanu"
-            Width="266"
-            Height="50"
-            Margin="54,251.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Keanu Reeves"
-            FontFamily="Hobo Std"
-            FontSize="36"
-            FontWeight="Bold" Grid.Row="1" />
+                x:Name="lbl_keanu"
+                Grid.Row="1"
+                Width="266"
+                Height="50"
+                Margin="54,251.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Keanu Reeves"
+                FontFamily="Hobo Std"
+                FontSize="36"
+                FontWeight="Bold" />
             <Label
-            x:Name="lbl_alamatEmail"
-            Width="124"
-            Height="32"
-            Margin="436,47.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Email Address"
-            FontSize="16"
-            FontWeight="Bold" Grid.Row="1" />
+                x:Name="lbl_alamatEmail"
+                Grid.Row="1"
+                Width="124"
+                Height="32"
+                Margin="436,47.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Email Address"
+                FontSize="16"
+                FontWeight="Bold" />
             <TextBox
-            x:Name="textBox_Copy1"
-            Width="252"
-            Height="26"
-            Margin="436,77.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            IsReadOnly="True"
-            Text="author@ygmail.com"
-            TextWrapping="Wrap" Grid.Row="1" />
+                x:Name="textBox_Copy1"
+                Grid.Row="1"
+                Width="252"
+                Height="26"
+                Margin="436,77.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                IsReadOnly="True"
+                Text="author@ygmail.com"
+                TextWrapping="Wrap" />
             <Label
-            x:Name="lbl_jenisHewan"
-            Width="110"
-            Height="34"
-            Margin="434,121.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Kind of Pet"
-            FontSize="16"
-            FontWeight="Bold" Grid.Row="1" />
+                x:Name="lbl_jenisHewan"
+                Grid.Row="1"
+                Width="110"
+                Height="34"
+                Margin="434,121.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Kind of Pet"
+                FontSize="16"
+                FontWeight="Bold" />
             <TextBox
-            x:Name="textBox_Copy2"
-            Width="252"
-            Height="24"
-            Margin="436,155.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Text="Kelinci"
-            TextWrapping="Wrap" Grid.Row="1" />
+                x:Name="textBox_Copy2"
+                Grid.Row="1"
+                Width="252"
+                Height="24"
+                Margin="436,155.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="Kelinci"
+                TextWrapping="Wrap" />
             <Label
-            x:Name="lbl_alamat"
-            Width="86"
-            Height="34"
-            Margin="434,189.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Address"
-            FontSize="16"
-            FontWeight="Bold" Grid.Row="1" />
+                x:Name="lbl_alamat"
+                Grid.Row="1"
+                Width="86"
+                Height="34"
+                Margin="434,189.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Address"
+                FontSize="16"
+                FontWeight="Bold" />
             <Rectangle
-            Width="252"
-            Height="86"
-            Margin="436,223.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Fill="#FFE0E0E0" Grid.Row="1" />
+                Grid.Row="1"
+                Width="252"
+                Height="86"
+                Margin="436,223.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="#FFE0E0E0" />
             <TextBlock
-            x:Name="textBlock_Copy"
-            Width="234"
-            Height="68"
-            Margin="446,233.5,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            TextAlignment="Center"
-            TextWrapping="Wrap" Grid.Row="1"><Run Text="Jl. Lorem ipsum Dolor Sit Amet " /><LineBreak /><Run Text="Rt 4 Rw3, Free Day Fun, " /><LineBreak /><Run Text="Yogyakarta." /></TextBlock>
+                x:Name="textBlock_Copy"
+                Grid.Row="1"
+                Width="234"
+                Height="68"
+                Margin="446,233.5,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                TextAlignment="Center"
+                TextWrapping="Wrap"><Run Text="Jl. Lorem ipsum Dolor Sit Amet " /><LineBreak /><Run Text="Rt 4 Rw3, Free Day Fun, " /><LineBreak /><Run Text="Yogyakarta." /></TextBlock>
             <Button
-            Margin="37,11,606,423"
-            Content="&lt;- Kembali"
-            FontSize="15"
-            IsDefault="True"
-            Style="{StaticResource InformButton}" FontFamily="Sogoe ui" Grid.RowSpan="2">
+                Grid.RowSpan="2"
+                Margin="37,11,606,423"
+                Content="&lt;- Kembali"
+                FontFamily="Sogoe ui"
+                FontSize="15"
+                IsDefault="True"
+                Style="{StaticResource InformButton}">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                         <GradientStop Offset="1" Color="White" />
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Image HorizontalAlignment="Left" Height="126" Margin="150,97,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Source="/AnimalSavior;component/user.png"/>
-            <Image Margin="289,365,405,35" Grid.Row="1" Source="/AnimalSavior;component/pencil.png" Stretch="Fill"/>
+            <Image
+                Grid.Row="1"
+                Width="100"
+                Height="126"
+                Margin="150,97,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Source="/AnimalSavior;component/user.png" />
 
             <!--  Round button  -->
         </Grid>
