@@ -16,35 +16,24 @@
             <RowDefinition Height="87*" />
             <RowDefinition Height="220*" />
         </Grid.RowDefinitions>
-        <Label
-            x:Name="lbl_login"
-            Grid.RowSpan="2"
-            Margin="133,45,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Register"
-            FontFamily="Hobo Std"
-            FontSize="36"
-            Opacity="0.7" />
         <TextBox
             x:Name="log_username"
             Grid.Row="1"
-            Grid.RowSpan="2"
             Width="282"
-            Margin="64,69,0,0"
+            Margin="60,87,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
             FontFamily="Bahnschrift Light"
             FontSize="20"
             Text="loremipsum@gmail.com"
-            TextWrapping="Wrap" />
+            TextWrapping="Wrap" Grid.RowSpan="2" />
         <TextBox
             x:Name="log_password"
             Grid.Row="2"
             Width="282"
             Height="30"
-            Margin="64,33,0,0"
+            Margin="60,51,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutomationProperties.IsRequiredForForm="True"
@@ -55,7 +44,7 @@
             Grid.Row="2"
             Width="37"
             Height="34"
-            Margin="127,64,0,0"
+            Margin="123,82,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FFFDFDFD" />
@@ -64,7 +53,7 @@
             Grid.Row="2"
             Width="282"
             Height="38"
-            Margin="0,129,53,0"
+            Margin="0,147,57,0"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
             Background="#FF0097E6"
@@ -73,5 +62,22 @@
             Foreground="White"
             IsDefault="True"
             OpacityMask="Black" />
+        <Border
+            Grid.Row="0"
+            Margin="-2,-2,0,12"
+            Background="#FF0097E6"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="0,0,20,20" />
+        <Label
+            x:Name="lbl_userProfile"
+            Width="156"
+            Height="46"
+            Margin="123,10,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Mendaftar"
+            FontFamily="Sogoe ui"
+            FontSize="28" FontWeight="Bold" Foreground="White" />
     </Grid>
 </Page>

@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="cariDokterView"
-    d:DesignHeight="550"
+    d:DesignHeight="468"
     d:DesignWidth="735.5"
     mc:Ignorable="d">
     <Page.Resources>
@@ -123,9 +123,17 @@
             <RowDefinition Height="34*" />
             <RowDefinition Height="212*" />
         </Grid.RowDefinitions>
+        <Border
+            Grid.Row="0"
+            Margin="-2,-2,2,137"
+            Background="#FF0097E6"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="0,0,20,20" />
+
         <Button
             Grid.Row="2"
-            Margin="198,96,206,128"
+            Margin="250,75,246,113"
             Click="Button_Click"
             Content="Pengobatan Mandiri"
             FontSize="18"
@@ -138,33 +146,25 @@
             </Button.Background>
         </Button>
         <Button
-            Grid.RowSpan="2"
-            Margin="198,208,206,10"
+            Margin="250,172,246,10"
             Click="Button_Click"
             Content="Cari Dokter "
             FontSize="18"
             IsDefault="True"
-            Style="{StaticResource InformButton}">
+            Style="{StaticResource InformButton}" Grid.RowSpan="2">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="#FFCFCFCF" />
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Border
-            Grid.Row="0"
-            Margin="-2,-2,2,128"
-            Background="#FF0097E6"
-            BorderBrush="Black"
-            BorderThickness="1"
-            CornerRadius="0,0,50,50" />
+        <Label Content="Pengobatan" HorizontalAlignment="Left" Margin="284,1,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="28"/>
         <Button
-            Margin="37,48,562,143"
-            Click="Button_Click"
+            Margin="37,11,606,148"
             Content="&lt;- Kembali"
-            FontSize="18"
+            FontSize="15"
             IsDefault="True"
-            Style="{StaticResource InformButton}">
+            Style="{StaticResource InformButton}" FontFamily="Sogoe ui">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />

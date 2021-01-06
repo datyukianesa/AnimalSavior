@@ -126,18 +126,17 @@
             x:Name="lbl_kuesioner"
             Width="232"
             Height="40"
-            Margin="39,105,0,0"
+            Margin="37,191,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Rekomendasi Dokter"
             FontFamily="Arial rounded"
             FontSize="22"
-            FontWeight="Bold" />
+            FontWeight="Bold" Grid.RowSpan="2" />
         <Button
-            Grid.RowSpan="2"
-            Margin="41,155,557,228"
+            Margin="39,16,559,142"
             Content=""
-            Style="{StaticResource InformButton}">
+            Style="{StaticResource InformButton}" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />
@@ -145,15 +144,13 @@
             </Button.Background>
         </Button>
         <Image
-            Grid.RowSpan="2"
-            Margin="72,175,589,295"
+            Margin="70,36,591,209"
             Source="doctor.png"
-            Stretch="Fill" />
+            Stretch="Fill" Grid.Row="1" />
         <Button
-            Grid.RowSpan="2"
-            Margin="243,155,355,228"
+            Margin="225,16,373,142"
             Content=""
-            Style="{StaticResource InformButton}">
+            Style="{StaticResource InformButton}" Grid.Row="1">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />
@@ -161,15 +158,14 @@
             </Button.Background>
         </Button>
         <Image
-            Grid.RowSpan="2"
-            Margin="278,175,384,295"
+            Margin="260,36,402,209"
             Source="doctor (1).png"
-            Stretch="Fill" />
+            Stretch="Fill" Grid.Row="1" />
         <Label
             Grid.Row="1"
             Width="115"
             Height="25"
-            Margin="51,50,0,0"
+            Margin="49,136,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Dr. Deddy Cahyadi"
@@ -178,13 +174,13 @@
             Grid.Row="1"
             Width="116"
             Height="25"
-            Margin="254,51,0,0"
+            Margin="236,137,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Dr. Deddy Cahyadi"
             FontWeight="Bold" />
         <Button
-            Margin="58,27,397,167"
+            Margin="56,113,399,81"
             Click="Button_Click"
             Content="Cari dokter hewan terdekat"
             FontSize="14"

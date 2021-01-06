@@ -9,22 +9,138 @@
     d:DesignHeight="468"
     d:DesignWidth="735.5"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="MyFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Control}">
+                        <Grid Margin="3,2">
+                            <Rectangle
+                                x:Name="r1"
+                                Stroke="Black"
+                                StrokeDashArray="2 2"
+                                StrokeThickness="1" />
+                            <Border
+                                x:Name="border"
+                                Width="{TemplateBinding ActualWidth}"
+                                Height="{TemplateBinding ActualHeight}"
+                                BorderThickness="1"
+                                CornerRadius="2" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ShadowStyle">
+            <Setter Property="Control.Foreground" Value="LightGray" />
+        </Style>
+
+        <Style x:Key="InformButton" TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="11px" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Offset="0.2" Color="#FFFFD190" />
+                        <GradientStop Offset="0.85" Color="Orange" />
+                        <GradientStop Offset="1" Color="#FFFFD190" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name="border"
+                            Padding="4,2"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="DarkGray"
+                            BorderThickness="1"
+                            CornerRadius="15">
+                            <Grid>
+                                <ContentPresenter
+                                    x:Name="contentShadow"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Style="{StaticResource ShadowStyle}">
+                                    <ContentPresenter.RenderTransform>
+                                        <TranslateTransform X="1.0" Y="1.0" />
+                                    </ContentPresenter.RenderTransform>
+                                </ContentPresenter>
+                                <ContentPresenter
+                                    x:Name="content"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                                <Setter Property="Foreground" Value="#FF4788c8" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Offset="0.35" Color="#FFFFD190" />
+                                            <GradientStop Offset="0.95" Color="Orange" />
+                                            <GradientStop Offset="1" Color="#FFFFD190" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="content" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <TranslateTransform Y="1.0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="Gray" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="White">
         <!--  Round button  -->
-        <Button Margin="276,362,403,48">
+        <Border
+            Grid.Row="0"
+            Margin="-2,-2,2,412"
+            Background="#FF0097E6"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="0,0,20,20" />
+
+        <!--  Round button  -->
+        <Button Margin="278,384,398,26">
             <Button.Template>
-                <ControlTemplate TargetType="Button">
+                <ControlTemplate TargetType="{x:Type Button}">
                     <Grid>
                         <Ellipse Stroke="Black" StrokeThickness="0">
                             <Ellipse.Fill>
                                 <RadialGradientBrush>
-                                    <GradientStop Offset="1" Color="#FF0097E6" />
                                     <RadialGradientBrush.Transform>
                                         <TransformGroup>
                                             <ScaleTransform ScaleY="0.65" />
                                         </TransformGroup>
                                     </RadialGradientBrush.Transform>
+                                    <GradientStop Offset="1" Color="#FF0097E6" />
                                 </RadialGradientBrush>
                             </Ellipse.Fill>
                         </Ellipse>
@@ -34,58 +150,57 @@
             </Button.Template>
         </Button>
         <Ellipse
-            Width="135"
-            Height="137"
-            Margin="113,103,0,0"
+            Width="142"
+            Height="138"
+            Margin="108,124,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="White" />
-        <Image Margin="123,111,491,216">
+        <Image Margin="120,132,488,194">
             <Image.Source>
                 <BitmapImage DecodePixelWidth="300" UriSource="/images/user.png" />
             </Image.Source>
         </Image>
-        <Image Margin="286,372,410,56" RenderTransformOrigin="0.705,0.9">
+        <Image Margin="288,394,406,34" RenderTransformOrigin="0.705,0.9">
             <Image.Source>
                 <BitmapImage DecodePixelWidth="300" UriSource="/images/pencil.png" />
             </Image.Source>
         </Image>
         <Label
             x:Name="lbl_userProfile"
-            Width="152"
+            Width="156"
             Height="34"
-            Margin="18,14,0,0"
+            Margin="306,10,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="User Profile"
-            FontFamily="Arial rounded"
-            FontSize="24"
-            FontWeight="Bold" />
+            Content="Profil Anda"
+            FontFamily="Sogoe ui"
+            FontSize="28" FontWeight="Bold" Foreground="White" />
         <Button
             x:Name="button"
-            Width="259"
+            Width="270"
             Height="42"
-            Margin="418,364,0,0"
+            Margin="428,386,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
             Click="button_Click"
-            Content="Submit"
+            Content="Lanjut"
             Foreground="White" />
         <Rectangle
             Width="4"
             Height="356"
-            Margin="374,48,0,0"
+            Margin="382,70,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="Black"
             Stroke="Black" />
         <Label
             x:Name="lbl_keanu"
-            Width="256"
+            Width="266"
             Height="50"
-            Margin="60,256,0,0"
+            Margin="54,278,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Keanu Reeves"
@@ -94,9 +209,9 @@
             FontWeight="Bold" />
         <Label
             x:Name="lbl_alamatEmail"
-            Width="119"
-            Height="33"
-            Margin="426,52,0,0"
+            Width="124"
+            Height="32"
+            Margin="436,74,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Email Address"
@@ -104,9 +219,9 @@
             FontWeight="Bold" />
         <TextBox
             x:Name="textBox_Copy1"
-            Width="241"
-            Height="25"
-            Margin="426,83,0,0"
+            Width="252"
+            Height="26"
+            Margin="436,104,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             IsReadOnly="True"
@@ -114,9 +229,9 @@
             TextWrapping="Wrap" />
         <Label
             x:Name="lbl_jenisHewan"
-            Width="107"
+            Width="110"
             Height="34"
-            Margin="424,127,0,0"
+            Margin="434,148,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Kind of Pet"
@@ -124,39 +239,51 @@
             FontWeight="Bold" />
         <TextBox
             x:Name="textBox_Copy2"
-            Width="241"
+            Width="252"
             Height="24"
-            Margin="426,160,0,0"
+            Margin="436,182,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Text="Kelinci"
             TextWrapping="Wrap" />
         <Label
             x:Name="lbl_alamat"
-            Width="82"
+            Width="86"
             Height="34"
-            Margin="424,195,0,0"
+            Margin="434,216,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Address"
             FontSize="16"
             FontWeight="Bold" />
         <Rectangle
-            Width="241"
+            Width="252"
             Height="86"
-            Margin="426,229,0,0"
+            Margin="436,250,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Fill="#FFE0E0E0" />
         <TextBlock
             x:Name="textBlock_Copy"
-            Width="242"
-            Height="69"
-            Margin="418,238,0,0"
+            Width="252"
+            Height="68"
+            Margin="428,260,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             TextAlignment="Center"
             TextWrapping="Wrap"><Run Text="Jl. Lorem ipsum Dolor Sit Amet " /><LineBreak /><Run Text="Rt 4 Rw3, Free Day Fun, " /><LineBreak /><Run Text="Yogyakarta." /></TextBlock>
+        <Button
+            Margin="37,11,606,423"
+            Content="&lt;- Kembali"
+            FontSize="15"
+            IsDefault="True"
+            Style="{StaticResource InformButton}" FontFamily="Sogoe ui">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="1" Color="White" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
         <!--  Round button  -->
     </Grid>

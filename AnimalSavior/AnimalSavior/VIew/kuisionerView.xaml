@@ -18,25 +18,14 @@
         </Grid.RowDefinitions>
         <Label
             x:Name="lbl_kuesioner"
-            Width="120"
+            Width="198"
             Height="40"
-            Margin="34,4,0,0"
+            Margin="364,19,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Kuesioner"
+            Content="Apa yang terjadi ?"
             FontFamily="Arial rounded"
             FontSize="22"
-            FontWeight="Bold" />
-        <Label
-            x:Name="label_Copy"
-            Width="352"
-            Height="22"
-            Margin="34,36,0,0"
-            Padding="5,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            VerticalContentAlignment="Center"
-            Content="Silahkan isikan agar dokter dapat mengerti apa yang terjadi"
             FontWeight="Bold" />
         <Label
             Width="191"
