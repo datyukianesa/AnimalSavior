@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="registerView"
-    Height="401"
     Width="407"
+    Height="401"
     mc:Ignorable="d">
 
     <Border BorderBrush="Black" BorderThickness="0.8">
@@ -18,68 +18,72 @@
                 <RowDefinition Height="220*" />
             </Grid.RowDefinitions>
             <TextBox
-            x:Name="log_username"
-            Grid.Row="1"
-            Width="282"
-            Margin="60,87,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            AutomationProperties.IsRequiredForForm="True"
-            FontFamily="Bahnschrift Light"
-            FontSize="20"
-            Text="loremipsum@gmail.com"
-            TextWrapping="Wrap" Grid.RowSpan="2" />
+                x:Name="log_username"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Width="282"
+                Margin="60,87,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                AutomationProperties.IsRequiredForForm="True"
+                FontFamily="Bahnschrift Light"
+                FontSize="20"
+                Text="loremipsum@gmail.com"
+                TextWrapping="Wrap" />
             <TextBox
-            x:Name="log_password"
-            Grid.Row="2"
-            Width="282"
-            Height="30"
-            Margin="60,51,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            AutomationProperties.IsRequiredForForm="True"
-            FontSize="20"
-            Text="**************"
-            TextWrapping="Wrap" />
+                x:Name="log_password"
+                Grid.Row="2"
+                Width="282"
+                Height="30"
+                Margin="60,51,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                AutomationProperties.IsRequiredForForm="True"
+                FontSize="20"
+                Text="**************"
+                TextWrapping="Wrap" />
             <Ellipse
-            Grid.Row="2"
-            Width="37"
-            Height="34"
-            Margin="123,82,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Fill="#FFFDFDFD" />
+                Grid.Row="2"
+                Width="37"
+                Height="34"
+                Margin="123,82,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Fill="#FFFDFDFD" />
             <Button
-            x:Name="log_button"
-            Grid.Row="2"
-            Width="282"
-            Height="38"
-            Margin="0,147,57,0"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Top"
-            Background="#FF0097E6"
-            Content="Sign in"
-            FontSize="16"
-            Foreground="White"
-            IsDefault="True"
-            OpacityMask="Black" />
+                x:Name="log_button"
+                Grid.Row="2"
+                Width="282"
+                Height="38"
+                Margin="0,147,57,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="#FF0097E6"
+                Click="log_button_Click"
+                Content="Daftar!"
+                FontSize="16"
+                Foreground="White"
+                IsDefault="True"
+                OpacityMask="Black" />
             <Border
-            Grid.Row="0"
-            Margin="-2,-2,0,12"
-            Background="#FF0097E6"
-            BorderBrush="Black"
-            BorderThickness="1"
-            CornerRadius="0,0,20,20" />
+                Grid.Row="0"
+                Margin="-2,-2,0,12"
+                Background="#FF0097E6"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="0,0,20,20" />
             <Label
-            x:Name="lbl_userProfile"
-            Width="156"
-            Height="46"
-            Margin="123,10,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Mendaftar"
-            FontFamily="Sogoe ui"
-            FontSize="28" FontWeight="Bold" Foreground="White" />
+                x:Name="lbl_userProfile"
+                Width="156"
+                Height="46"
+                Margin="123,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Mendaftar"
+                FontFamily="Sogoe ui"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="White" />
         </Grid>
     </Border>
 </Page>

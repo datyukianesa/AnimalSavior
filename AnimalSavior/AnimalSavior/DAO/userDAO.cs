@@ -25,7 +25,7 @@ namespace AnimalSavior.DAO
             {
                 cmd.Parameters.AddWithValue("@1", user.Username);
                 cmd.Parameters.AddWithValue("@2", user.Password);
-                cmd.Parameters.AddWithValue("@3", "1");
+                cmd.Parameters.AddWithValue("@3", "2");
 
                 return cmd.ExecuteNonQuery();
             }
@@ -71,11 +71,9 @@ namespace AnimalSavior.DAO
                 else
                 {
                     return 0;
-                }
-                
+                }                
             }
         }
-
         //method getAll tergantung dari front end
     }
 }

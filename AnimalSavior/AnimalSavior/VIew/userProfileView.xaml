@@ -175,7 +175,9 @@
             VerticalAlignment="Top"
             Content="Profil Anda"
             FontFamily="Sogoe ui"
-            FontSize="28" FontWeight="Bold" Foreground="White" />
+            FontSize="28"
+            FontWeight="Bold"
+            Foreground="White" />
         <Button
             x:Name="button"
             Width="270"
@@ -275,9 +277,10 @@
         <Button
             Margin="37,11,606,423"
             Content="&lt;- Kembali"
+            FontFamily="Sogoe ui"
             FontSize="15"
             IsDefault="True"
-            Style="{StaticResource InformButton}" FontFamily="Sogoe ui">
+            Style="{StaticResource InformButton}">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />
