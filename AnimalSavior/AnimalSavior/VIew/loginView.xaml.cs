@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using AnimalSavior.Model;
 using AnimalSavior.DAO;
 
-namespace AnimalSavior
+namespace AnimalSavior.View
 {
     /// <summary>
     /// Interaction logic for loginNew.xaml

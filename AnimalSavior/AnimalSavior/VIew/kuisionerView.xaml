@@ -1,18 +1,20 @@
-﻿<Page x:Class="AnimalSavior.View.kuisionerView"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:AnimalSavior.VIew"
-      mc:Ignorable="d" 
-      d:DesignHeight="468" d:DesignWidth="735.5"
-      Title="kuisionerView">
+﻿<Page
+    x:Class="AnimalSavior.View.kuisionerView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AnimalSavior.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="kuisionerView"
+    d:DesignHeight="468"
+    d:DesignWidth="735.5"
+    mc:Ignorable="d">
 
     <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="173*"/>
-            <RowDefinition Height="34*"/>
-            <RowDefinition Height="212*"/>
+            <RowDefinition Height="173*" />
+            <RowDefinition Height="34*" />
+            <RowDefinition Height="212*" />
         </Grid.RowDefinitions>
         <Label
             x:Name="lbl_kuesioner"
@@ -34,7 +36,8 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             VerticalContentAlignment="Center"
-            Content="Silahkan isikan agar dokter dapat mengerti apa yang terjadi" FontWeight="Bold" />
+            Content="Silahkan isikan agar dokter dapat mengerti apa yang terjadi"
+            FontWeight="Bold" />
         <Label
             Width="191"
             Height="32"
@@ -42,7 +45,8 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Jenis Hewan Peliharaan"
-            FontSize="16" FontWeight="Bold" />
+            FontSize="16"
+            FontWeight="Bold" />
         <ComboBox
             x:Name="comboBox"
             Width="266"
@@ -50,8 +54,7 @@
             Margin="393,129,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            BorderBrush="#FF125873"
-            SelectionChanged="comboBox_SelectionChanged">
+            BorderBrush="#FF125873">
             <ComboBox.Background>
                 <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Offset="0" Color="#FF20D0CE" />
@@ -65,14 +68,18 @@
         </ComboBox>
         <Label
             x:Name="label_Copy2"
+            Grid.Row="2"
             Width="161"
             Height="33"
             Margin="388,13,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Gejala yang Dialami" FontWeight="Bold" Grid.Row="2" FontSize="16" />
+            Content="Gejala yang Dialami"
+            FontSize="16"
+            FontWeight="Bold" />
         <TextBlock
             x:Name="textBlock"
+            Grid.Row="2"
             Width="266"
             Height="88"
             Margin="393,51,0,0"
@@ -82,18 +89,22 @@
             Background="White"
             FontSize="10"
             Foreground="#FF125873"
-            TextWrapping="Wrap" Grid.Row="2"><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /><LineBreak /><Run Text="- Lorem Ipsum dolor sit" /><Run Text=" " /><Run Text="amet" /><LineBreak /><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /></TextBlock>
+            TextWrapping="Wrap"><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /><LineBreak /><Run Text="- Lorem Ipsum dolor sit" /><Run Text=" " /><Run Text="amet" /><LineBreak /><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /></TextBlock>
         <Label
             x:Name="label_Copy3"
+            Grid.RowSpan="2"
             Width="161"
             Height="30"
             Margin="389,161,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Umur"
-            FontSize="16" FontWeight="Bold" Grid.RowSpan="2" />
+            FontSize="16"
+            FontWeight="Bold" />
         <TextBox
             x:Name="textBox"
+            Grid.Row="1"
+            Grid.RowSpan="2"
             Width="266"
             Height="32"
             Margin="393,10,0,0"
@@ -102,9 +113,10 @@
             VerticalAlignment="Top"
             VerticalContentAlignment="Center"
             Text="23 Tahun"
-            TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2" />
+            TextWrapping="Wrap" />
         <Button
             x:Name="kuesioner_button"
+            Grid.Row="2"
             Width="248"
             Height="38"
             Margin="406,154,0,0"
@@ -113,10 +125,19 @@
             Background="#FF0097E6"
             BorderBrush="White"
             Content="Submit"
-            Foreground="White" Grid.Row="2" />
-        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="328" Stroke="Black" VerticalAlignment="Top" Width="4" Margin="364,79,0,0" Grid.RowSpan="3"/>
+            Foreground="White" />
+        <Rectangle
+            Grid.RowSpan="3"
+            Width="4"
+            Height="328"
+            Margin="364,79,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Fill="Black"
+            Stroke="Black" />
         <Label
             x:Name="lbl_animalSavior_2"
+            Grid.Row="2"
             Width="167"
             Height="40"
             Margin="85,30,0,0"
@@ -125,7 +146,12 @@
             Content="Animal Savior"
             FontFamily="Arial rounded"
             FontSize="24"
-            FontWeight="Bold" Grid.Row="2" />
-        <Image Margin="88,89,482,175" Source="/AnimalSavior;component/pnda peenge.png" Stretch="Fill" RenderTransformOrigin="0.678,-0.485" Grid.RowSpan="3"/>
+            FontWeight="Bold" />
+        <Image
+            Grid.RowSpan="3"
+            Margin="88,89,482,175"
+            RenderTransformOrigin="0.678,-0.485"
+            Source="/AnimalSavior;component/pnda peenge.png"
+            Stretch="Fill" />
     </Grid>
 </Page>
