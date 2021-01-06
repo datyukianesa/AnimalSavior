@@ -10,16 +10,16 @@
       Height="401"
       Width="407">
 
-    <Grid Background="White">
-
-        <Border
+    <Border BorderBrush="Black" BorderThickness="0.8">
+        <Grid Background="White">
+            <Border
             Grid.Row="0"
-            Margin="0,-2,2,345"
+            Margin="0,-2,0,345"
             Background="#FF0097E6"
             BorderBrush="Black"
             BorderThickness="1"
             CornerRadius="0,0,20,20" />
-        <Label
+            <Label
             x:Name="lbl_userProfile"
             Width="210"
             Height="46"
@@ -29,7 +29,7 @@
             Content="Sunting Profile"
             FontFamily="Sogoe ui"
             FontSize="28" FontWeight="Bold" Foreground="White" />
-        <Label
+            <Label
             x:Name="lbl_alamatEmail"
             Width="124"
             Height="32"
@@ -38,7 +38,7 @@
             VerticalAlignment="Top"
             Content="Password"
             FontSize="16" FontWeight="Bold" />
-        <Button
+            <Button
             x:Name="button"
             Width="252"
             Height="42"
@@ -49,7 +49,7 @@
             BorderBrush="White"
             Content="Lanjut"
             Foreground="White" FontSize="16" />
-        <PasswordBox HorizontalAlignment="Left" Margin="80,183,0,0" VerticalAlignment="Top" Width="232" Height="24" Password="akwjdnaw"/>
-
-    </Grid>
+            <PasswordBox HorizontalAlignment="Left" Margin="80,183,0,0" VerticalAlignment="Top" Width="232" Height="24" Password="akwjdnaw"/>
+        </Grid>
+    </Border>
 </Page>
