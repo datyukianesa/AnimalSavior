@@ -56,23 +56,26 @@ namespace AnimalSavior.DAO
 
         public int login(userModel user)
         {
-            str = "SELECT count(*) as num from user where username = @1 and password = @2";
+            str = "SELECT * from user where username = @1 and password = @2";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", user.IdUser);
+                cmd.Parameters.AddWithValue("@1", user.Username);
                 cmd.Parameters.AddWithValue("@2", user.Password);
 
                 var reader = cmd.ExecuteReader();
 
-                if (reader.HasRows)
+
+                if (reader.Read())
                 {
-                    user.IdUser = (string)reader["id_user"];
+                    user.IdUser = reader["id_user"].ToString();
+                    reader.Close();
                     return 1;
                 }
                 else
                 {
+                    reader.Close();
                     return 0;
-                }                
+                }
             }
         }
         //method getAll tergantung dari front end

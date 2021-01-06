@@ -66,7 +66,7 @@
                 FontSize="28"
                 FontWeight="Bold"
                 Foreground="White" />
-            <TextBlock
+            <TextBox
                 x:Name="log_password"
                 Grid.Row="2"
                 Width="282"
@@ -75,6 +75,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontSize="20"
+                IsEnabled="True"
                 Text="****************"
                 TextWrapping="Wrap" />
             <Button
@@ -86,11 +87,12 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Background="#FF0097E6"
+                Click="log_regist_Click"
                 Content="Daftar"
                 FontSize="16"
                 Foreground="White"
                 IsDefault="True"
-                OpacityMask="Black" Click="log_regist_Click" />
+                OpacityMask="Black" />
         </Grid>
     </Border>
 </Page>

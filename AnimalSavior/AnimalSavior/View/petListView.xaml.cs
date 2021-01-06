@@ -12,28 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AnimalSavior.DAO;
+using AnimalSavior.Model;
 
 namespace AnimalSavior.View
 {
     /// <summary>
-    /// Interaction logic for userProfileNew.xaml
+    /// Interaction logic for petListView.xaml
     /// </summary>
-    public partial class userProfileView : Page
+    public partial class petListView : Page
     {
-        public userProfileView()
+        private connection conn = null;
+        private petDAO petDAO = null;
+
+        private int result = 0;
+        public petListView()
         {
             InitializeComponent();
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Uri uri = new Uri("View/petlistview.xaml", UriKind.Relative);
-            this.NavigationService.Navigate(uri);
         }
     }
 }

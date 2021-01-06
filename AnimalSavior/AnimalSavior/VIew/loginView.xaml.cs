@@ -47,7 +47,9 @@ namespace AnimalSavior.View
             if(result == 1)
             {
                 MessageBox.Show("Selamat datang "+ user.Username);
-                clear();
+
+                Uri uri = new Uri("View/editprofileview.xaml", UriKind.Relative);
+                this.NavigationService.Navigate(uri);
             }
             else
             {
@@ -65,7 +67,8 @@ namespace AnimalSavior.View
 
         private void log_regist_Click(object sender, RoutedEventArgs e)
         {
-            
+            Uri uri = new Uri("View/registerView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
     }
 }

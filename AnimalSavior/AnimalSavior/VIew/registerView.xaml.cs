@@ -45,6 +45,8 @@ namespace AnimalSavior.View
             if(result > 0)
             {
                 MessageBox.Show("Pendaftaran berhasil!");
+                Uri uri = new Uri("View/loginView.xaml", UriKind.Relative);
+                this.NavigationService.Navigate(uri);
             }
             else
             {

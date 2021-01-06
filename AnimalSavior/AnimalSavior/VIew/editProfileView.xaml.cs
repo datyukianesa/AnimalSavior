@@ -38,7 +38,6 @@ namespace AnimalSavior.View
         {
             userModel user = new userModel();
 
-            user.IdUser = "1";
             user.Password = passfield.Password;
 
             result = userDAO.update(user);
