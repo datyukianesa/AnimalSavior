@@ -30,5 +30,15 @@ namespace AnimalSavior.View
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void filltolst(petModel pet)
+        {
+            
+        }
     }
 }

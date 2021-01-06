@@ -57,6 +57,33 @@ namespace AnimalSavior.DAO
             }
         }
 
-        //method getAll tergantung dari front end
+        private petModel Mapping (MySqlDataReader read)
+        {
+            petModel pet = new petModel();
+            pet.Petnama = read["pet_nama"] is DBNull ?
+                string.Empty : read["pet_nama"].ToString();
+            pet.PetJenis = read["pet_jenis"] is DBNull ?
+                string.Empty : read["pet_jenis"].ToString();
+
+            return pet;
+        }
+
+        public List<petModel> GetAll()
+        {
+            List<petModel> petlist = new List<petModel>();
+            str = "select pet_nama, pet_info, pet_jenis from pet where id_user = @1";
+
+            using (MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                using(MySqlDataReader read = cmd.ExecuteReader())
+                {
+                    while (read.Read())
+                    {
+                        petlist.Add(Mapping(read));
+                    }
+                }
+            }
+            return petlist;
+        }
     }
 }

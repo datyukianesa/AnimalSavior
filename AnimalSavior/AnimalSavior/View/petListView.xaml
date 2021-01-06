@@ -33,6 +33,7 @@
             FontWeight="Bold"
             Foreground="White" />
         <ListView
+            x:Name="lst_pet"
             Width="210"
             Height="201"
             Margin="65,114,0,0"
@@ -63,6 +64,7 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
+            Click="button_Click"
             Content="Tampilkan"
             FontSize="16"
             Foreground="White" />

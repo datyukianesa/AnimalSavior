@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AnimalSavior.DAO;
 using AnimalSavior.Model;
+using System.Configuration;
 
 namespace AnimalSavior.View
 {
@@ -38,6 +39,7 @@ namespace AnimalSavior.View
         {
             userModel user = new userModel();
 
+            user.IdUser = ConfigurationManager.AppSettings["userid"];
             user.Password = passfield.Password;
 
             result = userDAO.update(user);

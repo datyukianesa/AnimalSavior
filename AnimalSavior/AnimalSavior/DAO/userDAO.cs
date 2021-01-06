@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AnimalSavior.Model;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace AnimalSavior.DAO
 {
@@ -67,7 +68,7 @@ namespace AnimalSavior.DAO
 
                 if (reader.Read())
                 {
-                    user.IdUser = reader["id_user"].ToString();
+                    ConfigurationManager.AppSettings["userid"] = reader["id_user"].ToString();
                     reader.Close();
                     return 1;
                 }
@@ -78,6 +79,30 @@ namespace AnimalSavior.DAO
                 }
             }
         }
-        //method getAll tergantung dari front end
+
+        public int getUsername(userModel user)
+        {
+            str = "select * from user where id_user = @1";
+            using(MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@1", user.IdUser);
+
+                var reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (reader.HasRows)
+                    {
+                        user.Username = reader["username"].ToString();
+                        reader.Close();
+                        return 1;
+                    }
+                    else
+                    {
+                        reader.Close();
+                        return 0;
+                    }
+                }
+            }
+        }
     }
 }

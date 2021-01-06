@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AnimalSavior.DAO;
+using AnimalSavior.Model;
+using System.Configuration;
 
 namespace AnimalSavior.View
 {
@@ -20,9 +23,16 @@ namespace AnimalSavior.View
     /// </summary>
     public partial class userProfileView : Page
     {
+        private connection conn = null;
+        private userDAO userDAO = null;
+
+        private int result = 0;
         public userProfileView()
         {
             InitializeComponent();
+            conn = connection.GetInstance();
+
+            userDAO = new userDAO(conn.GetConnection());
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -34,6 +44,14 @@ namespace AnimalSavior.View
         {
             Uri uri = new Uri("View/petlistview.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
+        }
+
+        private void getInfo()
+        {
+            userModel user = new userModel();
+
+            user.IdUser = ConfigurationManager.AppSettings["userid"];
+            
         }
     }
 }
