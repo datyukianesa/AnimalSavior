@@ -122,6 +122,14 @@
             <RowDefinition Height="9*" />
             <RowDefinition Height="13*" />
         </Grid.RowDefinitions>
+        <Border
+            Grid.Row="0"
+            Margin="0,-2,0,171"
+            Background="#FF0097E6"
+            BorderBrush="Black"
+            BorderThickness="1"
+            CornerRadius="0,0,20,20" />
+
         <Label
             x:Name="lbl_kuesioner"
             Width="232"
@@ -148,7 +156,7 @@
             Source="doctor.png"
             Stretch="Fill" Grid.Row="1" />
         <Button
-            Margin="220,224,378,158"
+            Margin="194,224,404,158"
             Content=""
             Style="{StaticResource InformButton}" Grid.RowSpan="2">
             <Button.Background>
@@ -158,7 +166,7 @@
             </Button.Background>
         </Button>
         <Image
-            Margin="256,19,406,226"
+            Margin="232,19,430,226"
             Source="doctor (1).png"
             Stretch="Fill" Grid.Row="1" />
         <Label
@@ -173,14 +181,14 @@
         <Label
             Grid.Row="1"
             Width="116"
-            Height="24"
-            Margin="232,121,0,0"
+            Height="29"
+            Margin="208,121,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Dr. Deddy Cahyadi"
+            Content="Dr. Mudi Taylor"
             FontWeight="Bold" />
         <Button
-            Margin="44,92,412,101"
+            Margin="44,123,412,70"
             Click="Button_Click"
             Content="Cari dokter hewan terdekat"
             FontSize="14"
@@ -193,8 +201,55 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Image Margin="671,10,10,162" Source="User_icon_BLACK-01.png" Stretch="Fill"/>
-        <Label Content="Hai Budy..!!" HorizontalAlignment="Left" Margin="592,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Image Margin="674,4,16,177" Source="User_icon_BLACK-01.png" Stretch="Fill"/>
+        <Label Content="Hai Budy..!!" HorizontalAlignment="Left" Margin="583,14,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="White"/>
+        <Label Content="Animal Savior" HorizontalAlignment="Left" Margin="52,3,0,0" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" Foreground="White"/>
+        <Button
+            Margin="351,224,247,158"
+            Content=""
+            Style="{StaticResource InformButton}" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="1" Color="White" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image
+            Margin="389,19,273,226"
+            Source="doctor (1).png"
+            Stretch="Fill" Grid.Row="1" />
+        <Label
+            Grid.Row="1"
+            Width="116"
+            Height="29"
+            Margin="365,121,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Prof. Dr. Ericaa "
+            FontWeight="Bold" />
+        <Button
+            Margin="508,224,90,158"
+            Content=""
+            Style="{StaticResource InformButton}" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="1" Color="White" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label
+            Grid.Row="1"
+            Width="116"
+            Height="29"
+            Margin="522,121,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Dr. Bambang S"
+            FontWeight="Bold" />
+        <Image
+            Margin="542,19,120,226"
+            Source="doctor.png"
+            Stretch="Fill" Grid.Row="1" />
 
     </Grid>
 </Page>
