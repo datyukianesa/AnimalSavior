@@ -18,7 +18,6 @@ using AnimalSavior.DAO;
 namespace AnimalSavior.View
 {
     /// <summary>
-    /// Interaction logic for loginNew.xaml
     /// </summary>
     public partial class loginView : Page
     {
@@ -48,7 +47,7 @@ namespace AnimalSavior.View
             {
                 MessageBox.Show("Selamat datang "+ user.Username);
 
-                Uri uri = new Uri("View/editprofileview.xaml", UriKind.Relative);
+                Uri uri = new Uri("View/userprofileview.xaml", UriKind.Relative);
                 this.NavigationService.Navigate(uri);
             }
             else

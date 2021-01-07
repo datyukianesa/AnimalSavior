@@ -18,7 +18,7 @@ namespace AnimalSavior.DAO
             this.conn = conn;
         }
 
-        public int save(klinikModel klinik)
+        public int save(klinikDAO klinik)
         {
             str = "insert into klinik(klinik_nama, klinik_alamat) values (@1, @2)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
@@ -30,7 +30,7 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int update(klinikModel klinik)
+        public int update(klinikDAO klinik)
         {
             str = "update klinik set klinik_nama = @1, klinik_alamat = @2 where id_klinik = @3";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
@@ -43,7 +43,7 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int delete(klinikModel klinik)
+        public int delete(klinikDAO klinik)
         {
             str = "delete from klinik where id_klinik = @1";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))

@@ -28,5 +28,12 @@ namespace AnimalSavior.Model
             get { return password; }
             set { password = value; }
         }
+
+        private string pet;
+        public string Pet
+        {
+            get { return pet; }
+            set { pet = value; }
+        }
     }
 }

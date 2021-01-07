@@ -22,10 +22,7 @@ namespace AnimalSavior.View
     /// </summary>
     public partial class petListView : Page
     {
-        private connection conn = null;
-        private petDAO petDAO = null;
-
-        private int result = 0;
+        
         public petListView()
         {
             InitializeComponent();

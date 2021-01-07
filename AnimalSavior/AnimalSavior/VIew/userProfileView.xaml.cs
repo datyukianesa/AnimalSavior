@@ -33,6 +33,7 @@ namespace AnimalSavior.View
             conn = connection.GetInstance();
 
             userDAO = new userDAO(conn.GetConnection());
+            getInfo();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -42,7 +43,7 @@ namespace AnimalSavior.View
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("View/petlistview.xaml", UriKind.Relative);
+            Uri uri = new Uri("View/editprofileview.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
         }
 
@@ -51,7 +52,19 @@ namespace AnimalSavior.View
             userModel user = new userModel();
 
             user.IdUser = ConfigurationManager.AppSettings["userid"];
-            
+            result = userDAO.getUsername(user);
+
+            if(result == 1)
+            {
+                textBox_Copy1.Text = user.Username;
+                userDAO.getPet(user);
+                textBox_Copy2.Text = user.Pet;
+                lbl_keanu.Content = user.Username;
+            }
+            else
+            {
+                MessageBox.Show("Failed to load!");
+            }
         }
     }
 }

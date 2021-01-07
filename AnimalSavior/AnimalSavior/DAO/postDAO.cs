@@ -18,7 +18,7 @@ namespace AnimalSavior.DAO
             this.conn = conn;
         }
 
-        public int save(postDAO komen)
+        public int save(postDAO post)
         {
             str = "insert into post(post_judul, post_isi, post_waktu, id_user) values (@1, @2, @3, @4)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
@@ -32,7 +32,7 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int update(postDAO komen)
+        public int update(postDAO post)
         {
             str = "update post set post_judul = @1, post_isi = @2, post_waktu = @3 where id_post = @4";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
@@ -46,7 +46,7 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int delete(postDAO komen)
+        public int delete(postDAO post)
         {
             str = "delete from post where post_id = @1";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))

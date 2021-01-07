@@ -85,5 +85,17 @@ namespace AnimalSavior.DAO
             }
             return petlist;
         }
+
+        private petModel datamap(MySqlDataAdapter dr)
+        {
+            petModel pet = new petModel();
+            str = "delete from pet where id_pet = @1";
+            using (MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@1", "a");
+
+                return pet;
+            }
+        }
     }
 }

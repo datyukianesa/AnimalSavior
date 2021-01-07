@@ -32,19 +32,6 @@
             FontSize="28"
             FontWeight="Bold"
             Foreground="White" />
-        <ListView
-            x:Name="lst_pet"
-            Width="210"
-            Height="201"
-            Margin="65,114,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn />
-                </GridView>
-            </ListView.View>
-        </ListView>
         <Label
             x:Name="lbl_alamatEmail"
             Width="124"
@@ -68,6 +55,13 @@
             Content="Tampilkan"
             FontSize="16"
             Foreground="White" />
+        <DataGrid
+            x:Name="dataGrid"
+            Width="250"
+            Height="217"
+            Margin="65,114,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" />
 
     </Grid>
 </Page>
