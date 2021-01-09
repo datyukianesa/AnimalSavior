@@ -244,5 +244,11 @@
   <ItemGroup>
     <Resource Include="pencil.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="doctor %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="doctor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
