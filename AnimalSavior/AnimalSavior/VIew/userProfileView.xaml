@@ -171,7 +171,7 @@
                 Grid.RowSpan="2"
                 Width="156"
                 Height="34"
-                Margin="306,10,0,0"
+                Margin="542,10,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Content="Profil Anda"
@@ -287,7 +287,7 @@
                 TextWrapping="Wrap"><Run Text="Jl. Lorem ipsum Dolor Sit Amet " /><LineBreak /><Run Text="Rt 4 Rw3, Free Day Fun, " /><LineBreak /><Run Text="Yogyakarta." /></TextBlock>
             <Button
                 Grid.RowSpan="2"
-                Margin="37,11,606,423"
+                Margin="19,11,624,423"
                 Content="&lt;- Kembali"
                 FontFamily="Sogoe ui"
                 FontSize="15"

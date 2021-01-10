@@ -117,6 +117,9 @@
     <Compile Include="DAO\petDAO.cs" />
     <Compile Include="DAO\postDAO.cs" />
     <Compile Include="DAO\userDAO.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\klinikModel.cs" />
     <Compile Include="Model\komenModel.cs" />
     <Compile Include="Model\pemeriksaanModel.cs" />
@@ -148,18 +151,14 @@
     <Compile Include="View\userProfileView.xaml.cs">
       <DependentUpon>userProfileView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\cariDokterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,6 +242,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="doctor %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="doctor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
