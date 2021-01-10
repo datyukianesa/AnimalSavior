@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using AnimalSavior.Model;
 using MySql.Data.MySqlClient;
 using System.Configuration;
-//using MySqlConnector;
 
 namespace AnimalSavior.DAO
 {

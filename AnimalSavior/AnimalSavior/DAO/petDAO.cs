@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using AnimalSavior.Model;
+using System.Configuration;
 
 namespace AnimalSavior.DAO
 {
@@ -23,10 +24,10 @@ namespace AnimalSavior.DAO
             str = "insert into pet(pet_nama, pet_info, pet_jenis, id_user) values (@1, @2, @3, @4)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
-                cmd.Parameters.AddWithValue("@2", "a");
-                cmd.Parameters.AddWithValue("@3", "a");
-                cmd.Parameters.AddWithValue("@4", "a");
+                cmd.Parameters.AddWithValue("@1", pet.Petnama);
+                cmd.Parameters.AddWithValue("@2", pet.PetInfo);
+                cmd.Parameters.AddWithValue("@3", pet.PetJenis);
+                cmd.Parameters.AddWithValue("@4", ConfigurationManager.AppSettings["userid"]);
 
                 return cmd.ExecuteNonQuery();
             }
@@ -37,10 +38,10 @@ namespace AnimalSavior.DAO
             str = "update pet set pet_nama = @1, pet_info = @2, pet_jenis = @3 where id_pet = @4";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
-                cmd.Parameters.AddWithValue("@2", "a");
-                cmd.Parameters.AddWithValue("@3", "a");
-                cmd.Parameters.AddWithValue("@4", "a");
+                cmd.Parameters.AddWithValue("@1", pet.Petnama);
+                cmd.Parameters.AddWithValue("@2", pet.PetInfo);
+                cmd.Parameters.AddWithValue("@3", pet.PetJenis);
+                cmd.Parameters.AddWithValue("@4", pet.IdPet);
 
                 return cmd.ExecuteNonQuery();
             }
@@ -51,7 +52,7 @@ namespace AnimalSavior.DAO
             str = "delete from pet where id_pet = @1";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
+                cmd.Parameters.AddWithValue("@1", pet.IdPet);
 
                 return cmd.ExecuteNonQuery();
             }

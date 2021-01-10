@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalSavior.Model
 {
-    class komenModel
+    public class komenModel
     {
         private string id_komen;
         public string IdKomen
