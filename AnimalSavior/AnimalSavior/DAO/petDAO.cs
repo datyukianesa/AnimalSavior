@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using AnimalSavior.Model;
 using System.Configuration;
+using System.Data;
 
 namespace AnimalSavior.DAO
 {
@@ -76,6 +77,7 @@ namespace AnimalSavior.DAO
 
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
+                cmd.Parameters.AddWithValue("@a", ConfigurationManager.AppSettings["userid"]);
                 using(MySqlDataReader read = cmd.ExecuteReader())
                 {
                     while (read.Read())
@@ -87,15 +89,22 @@ namespace AnimalSavior.DAO
             return petlist;
         }
 
-        private petModel datamap(MySqlDataAdapter dr)
+        public DataSet datamap(petModel petModel)
         {
             petModel pet = new petModel();
-            str = "delete from pet where id_pet = @1";
+            str = "select pet_nama as 'Nama Pet', pet_jenis as 'Jenis', pet_info as 'Info' from pet where id_user = @a";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", "a");
+                cmd.Parameters.AddWithValue("@a", ConfigurationManager.AppSettings["userid"]);
 
-                return pet;
+                DataTable table = new DataTable();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+
+                da.Fill(ds, "loadData");
+
+                return ds;
+
             }
         }
 

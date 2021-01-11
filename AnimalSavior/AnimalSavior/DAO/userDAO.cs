@@ -88,6 +88,7 @@ namespace AnimalSavior.DAO
                 cmd.Parameters.AddWithValue("@1", user.IdUser);
 
                 var reader = cmd.ExecuteReader();
+                reader.Read();
                 if (reader.HasRows)
                 {
                     user.Username = reader["username"].ToString();
@@ -110,9 +111,11 @@ namespace AnimalSavior.DAO
                 cmd.Parameters.AddWithValue("@1", user.IdUser);
 
                 var reader = cmd.ExecuteReader();
+                reader.Read();
                 if (reader.HasRows)
                 {
                     ConfigurationManager.AppSettings["petid"] = reader["id_pet"].ToString();
+                    user.Pet = reader["pet_jenis"].ToString();
                     reader.Close();
                     return 1;
                 }

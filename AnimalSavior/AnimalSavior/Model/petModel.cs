@@ -37,5 +37,11 @@ namespace AnimalSavior.Model
             set { pet_jenis = value; }
         }
 
+        private string id_user;
+        public string IdUser
+        {
+            get { return id_user; }
+            set { id_user = value; }
+        }
     }
 }

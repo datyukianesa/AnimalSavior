@@ -14,6 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AnimalSavior.DAO;
 using AnimalSavior.Model;
+using System.Configuration;
+using System.Data;
+using MySql.Data.MySqlClient;
 
 namespace AnimalSavior.View
 {
@@ -22,10 +25,19 @@ namespace AnimalSavior.View
     /// </summary>
     public partial class petListView : Page
     {
-        
+        private connection conn = null;
+        private petDAO petDAO = null;
+
+        private int result = 0;
+
         public petListView()
         {
             InitializeComponent();
+
+            conn = connection.GetInstance();
+            petDAO = new petDAO(conn.GetConnection());
+
+            filltolst();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -33,9 +45,13 @@ namespace AnimalSavior.View
             
         }
 
-        private void filltolst(petModel pet)
+        private void filltolst()
         {
-                        
+            petModel pet = new petModel();
+
+            pet.IdUser = ConfigurationManager.AppSettings["userid"];
+
+            dataGrid.DataContext = petDAO.datamap(pet);
         }
     }
 }
