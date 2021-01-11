@@ -131,7 +131,7 @@
             x:Name="lbl_kuesioner"
             Width="233"
             Height="38"
-            Margin="45,145,0,0"
+            Margin="9,151,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Rekomendasi Dokter"
@@ -139,7 +139,7 @@
             FontSize="20"
             FontWeight="Bold" />
         <Button
-            Margin="48,185,638,272"
+            Margin="12,191,674,266"
             Content=""
             Style="{StaticResource InformButton}">
             <Button.Background>
@@ -149,11 +149,11 @@
             </Button.Background>
         </Button>
         <Image
-            Margin="73,209,664,296"
+            Margin="37,215,700,290"
             Source="/AnimalSavior;component/doctor.png"
             Stretch="Fill" />
         <Button
-            Margin="173,185,512,272"
+            Margin="137,191,548,266"
             Content=""
             Style="{StaticResource InformButton}">
             <Button.Background>
@@ -163,13 +163,13 @@
             </Button.Background>
         </Button>
         <Image
-            Margin="200,209,536,296"
+            Margin="164,215,572,290"
             Source="/AnimalSavior;component/doctor (1).png"
             Stretch="Fill" />
         <Label
             Width="116"
             Height="26"
-            Margin="42,305,0,0"
+            Margin="6,311,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Dr. Deddy Cahyadi"
@@ -177,13 +177,13 @@
         <Label
             Width="98"
             Height="24"
-            Margin="178,305,0,0"
+            Margin="142,311,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Dr. Mudi Taylor"
             FontWeight="Bold" />
         <Button
-            Margin="48,81,386,448"
+            Margin="12,87,422,442"
             Content="Cari dokter hewan terdekat"
             FontSize="14"
             FontWeight="Normal"
@@ -196,7 +196,7 @@
             </Button.Background>
         </Button>
         <Button
-            Margin="297,185,390,272"
+            Margin="261,191,426,266"
             Content=""
             Style="{StaticResource InformButton}">
             <Button.Background>
@@ -206,19 +206,19 @@
             </Button.Background>
         </Button>
         <Image
-            Margin="322,209,414,296"
+            Margin="286,215,450,290"
             Source="/AnimalSavior;component/doctor (1).png"
             Stretch="Fill" />
         <Label
             Width="101"
             Height="24"
-            Margin="298,305,0,0"
+            Margin="262,311,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Prof. Dr. Ericaa "
             FontWeight="Bold" />
         <Button
-            Margin="419,185,267,272"
+            Margin="383,191,303,266"
             Content=""
             Style="{StaticResource InformButton}">
             <Button.Background>
@@ -230,13 +230,13 @@
         <Label
             Width="107"
             Height="24"
-            Margin="419,307,0,0"
+            Margin="383,313,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Dr. Bambang S"
             FontWeight="Bold" />
         <Image
-            Margin="445,205,292,298"
+            Margin="409,211,328,292"
             Source="/AnimalSavior;component/doctor.png"
             Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
             <Image.RenderTransform>
@@ -252,7 +252,7 @@
             x:Name="lbl_kuesioner_Copy"
             Width="233"
             Height="34"
-            Margin="38,335,0,0"
+            Margin="2,341,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Tips and Trick"
@@ -260,7 +260,7 @@
             FontSize="20"
             FontWeight="Bold" />
         <Button
-            Margin="48,369,638,86"
+            Margin="12,375,674,80"
             Content=""
             Style="{StaticResource InformButton}">
             <Button.Background>
@@ -270,7 +270,7 @@
             </Button.Background>
         </Button>
         <Image
-            Margin="73,393,664,110"
+            Margin="37,399,700,104"
             Source="/AnimalSavior;component/doctor.png"
             Stretch="Fill" />
 

@@ -162,9 +162,8 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="569" Margin="221,0,0,0" VerticalAlignment="Top" Width="795" Background="#FFCFCBCB">
-            <Frame Source="View/Dashboard/Homepage.xaml" />
-        </Grid>
+
+        <Frame Source="View/Dashboard/Homepage.xaml" Margin="211,1,0,2" />
 
 
     </Grid>
