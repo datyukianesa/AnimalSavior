@@ -101,5 +101,27 @@ namespace AnimalSavior.DAO
                 }
             }
         }
+
+        public int getPet(userModel user)
+        {
+            str = "select * from pet where id_user = @1 limit 1";
+            using (MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@1", user.IdUser);
+
+                var reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    ConfigurationManager.AppSettings["petid"] = reader["id_pet"].ToString();
+                    reader.Close();
+                    return 1;
+                }
+                else
+                {
+                    reader.Close();
+                    return 0;
+                }
+            }
+        }
     }
 }

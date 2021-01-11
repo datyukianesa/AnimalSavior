@@ -63,7 +63,7 @@ namespace AnimalSavior.View
             }
             else
             {
-                MessageBox.Show("Failed to load!");
+                MessageBox.Show("Failed to pet!");
             }
         }
     }
