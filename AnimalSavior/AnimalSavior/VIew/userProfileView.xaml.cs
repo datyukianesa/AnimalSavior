@@ -47,24 +47,24 @@ namespace AnimalSavior.View
             this.NavigationService.Navigate(uri);
         }
 
-        //private void getInfo()
-        //{
-            //userModel user = new userModel();
+        private void getInfo()
+        {
+            userModel user = new userModel();
 
-            //user.IdUser = ConfigurationManager.AppSettings["userid"];
-            //result = userDAO.getUsername(user);
+            user.IdUser = ConfigurationManager.AppSettings["userid"];
+            result = userDAO.getUsername(user);
 
-            //if(result == 1)
-            //{
-                //textBox_Copy1.Text = user.Username;
-                //userDAO.getPet(user);
-                //textBox_Copy2.Text = user.Pet;
-                //lbl_keanu.Content = user.Username;
-            //}
-            //else
-            //{
-                //MessageBox.Show("Failed to load!");
-            //}
-        //}
+            if(result == 1)
+            {
+                textBox_Copy1.Text = user.Username;
+                userDAO.getPet(user);
+                textBox_Copy2.Text = user.Pet;
+                lbl_keanu.Content = user.Username;
+            }
+            else
+            {
+                MessageBox.Show("Failed to load!");
+            }
+        }
     }
 }
