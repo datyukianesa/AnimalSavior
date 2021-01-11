@@ -3,14 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AnimalSavior.View"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        x:Class="AnimalSavior.View.MainWindow_New"
+        xmlns:local="clr-namespace:AnimalSavior"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="AnimalSavior.dashboardNew"
         mc:Ignorable="d" ResizeMode="NoResize"
-        Title="MainWindow_New" 
+        Title="dashboardNew" 
         Height="600"
-        Width="1024"
-        >
+        Width="1024">
     <Window.Resources>
         <Style x:Key="MyFocusVisual">
             <Setter Property="Control.Template">
@@ -120,7 +118,7 @@
     </Window.Resources>
     <Grid>
 
-        <Grid Margin="0,1,814,0">
+        <Grid Margin="0,1,812,2">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="LightGray" Offset="1"/>
@@ -143,7 +141,7 @@
                 <!--<Hyperlink NavigateUri="UriOfPageToNavigateTo.xaml">
                     Navigate to Another Page
                 </Hyperlink>-->
-                
+
                 <Button Margin="10" Background="#FF0097E6" BorderBrush="#FF0097E6" Height="32" Foreground="White">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
@@ -164,162 +162,10 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Border
-            Grid.Row="0"
-            Margin="202,-1,0,514"
-            Background="#FF0097E6"
-            BorderBrush="#FF0097E6"
-            BorderThickness="1"
-            CornerRadius="0,0,20,20" />
-        <Image Margin="951,7,20,524" Source="User_icon_BLACK-01.png" Stretch="Fill"/>
-        <Label Content="Hai Budy..!!" HorizontalAlignment="Left" Margin="862,15,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="White" Height="30"/>
-        <Label Content="Animal Savior" HorizontalAlignment="Left" Margin="225,0,0,0" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" Foreground="White" Height="42"/>
-        <Label
-            x:Name="lbl_kuesioner"
-            Width="233"
-            Height="38"
-            Margin="247,142,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Rekomendasi Dokter"
-            FontFamily="Arial rounded"
-            FontSize="20"
-            FontWeight="Bold" />
-        <Button
-            Margin="250,182,659,277"
-            Content=""
-            Style="{StaticResource InformButton}">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="1" Color="White" />
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Image
-            Margin="275,206,685,301"
-            Source="doctor.png"
-            Stretch="Fill" />
-        <Button
-            Margin="375,182,533,277"
-            Content=""
-            Style="{StaticResource InformButton}">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="1" Color="White" />
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Image
-            Margin="402,206,557,301"
-            Source="doctor (1).png"
-            Stretch="Fill" />
-        <Label
-            Width="116"
-            Height="26"
-            Margin="244,302,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Dr. Deddy Cahyadi"
-            FontWeight="Bold" />
-        <Label
-            Width="98"
-            Height="24"
-            Margin="380,302,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Dr. Mudi Taylor"
-            FontWeight="Bold" />
-        <Button
-            Margin="250,78,407,453"
-            Content="Cari dokter hewan terdekat"
-            FontSize="14"
-            FontWeight="Normal"
-            Foreground="#FF7E7676"
-            Style="{StaticResource InformButton}">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="1" Color="#FFDAD5D5" />
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button
-            Margin="499,182,411,277"
-            Content=""
-            Style="{StaticResource InformButton}">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="1" Color="White" />
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Image
-            Margin="524,206,435,301"
-            Source="doctor (1).png"
-            Stretch="Fill" />
-        <Label
-            Width="101"
-            Height="24"
-            Margin="500,302,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Prof. Dr. Ericaa "
-            FontWeight="Bold" />
-        <Button
-            Margin="621,182,288,277"
-            Content=""
-            Style="{StaticResource InformButton}">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="1" Color="White" />
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Label
-            Width="107"
-            Height="24"
-            Margin="621,304,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Dr. Bambang S"
-            FontWeight="Bold" />
-        <Image
-            Margin="647,202,313,303"
-            Source="doctor.png"
-            Stretch="Fill" RenderTransformOrigin="0.5,0.5" >
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.839"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-0.487"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Label
-            x:Name="lbl_kuesioner_Copy"
-            Width="233"
-            Height="34"
-            Margin="240,332,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Tips and Trick"
-            FontFamily="Arial rounded"
-            FontSize="20"
-            FontWeight="Bold" />
-        <Button
-            Margin="250,366,659,91"
-            Content=""
-            Style="{StaticResource InformButton}">
-            <Button.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="1" Color="White" />
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Image
-            Margin="275,390,685,115"
-            Source="doctor.png"
-            Stretch="Fill" />
+        <Grid HorizontalAlignment="Left" Height="569" Margin="221,0,0,0" VerticalAlignment="Top" Width="795" Background="#FFCFCBCB">
+            <Frame Source="View/Dashboard/Homepage.xaml" />
+        </Grid>
+
 
     </Grid>
 </Window>

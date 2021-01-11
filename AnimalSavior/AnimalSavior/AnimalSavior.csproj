@@ -125,6 +125,9 @@
     <Compile Include="DAO\petDAO.cs" />
     <Compile Include="DAO\postDAO.cs" />
     <Compile Include="DAO\userDAO.cs" />
+    <Compile Include="dashboardNew.xaml.cs">
+      <DependentUpon>dashboardNew.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,9 @@
     <Compile Include="Model\userModel.cs" />
     <Compile Include="View\cariDokterView.xaml.cs">
       <DependentUpon>cariDokterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard\Homepage.xaml.cs">
+      <DependentUpon>Homepage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\editProfileView.xaml.cs">
       <DependentUpon>editProfileView.xaml</DependentUpon>
@@ -163,11 +169,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="dashboardNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\cariDokterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dashboard\Homepage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
