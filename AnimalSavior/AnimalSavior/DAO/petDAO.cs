@@ -28,7 +28,7 @@ namespace AnimalSavior.DAO
                 cmd.Parameters.AddWithValue("@1", pet.Petnama);
                 cmd.Parameters.AddWithValue("@2", pet.PetInfo);
                 cmd.Parameters.AddWithValue("@3", pet.PetJenis);
-                cmd.Parameters.AddWithValue("@4", ConfigurationManager.AppSettings["userid"]);
+                cmd.Parameters.AddWithValue("@4", pet.IdUser);
 
                 return cmd.ExecuteNonQuery();
             }

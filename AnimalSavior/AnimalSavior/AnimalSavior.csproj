@@ -156,6 +156,9 @@
     <Compile Include="View\loginView.xaml.cs">
       <DependentUpon>loginView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\petAddView.xaml.cs">
+      <DependentUpon>petAddView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\petListView.xaml.cs">
       <DependentUpon>petListView.xaml</DependentUpon>
     </Compile>
@@ -198,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\loginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\petAddView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

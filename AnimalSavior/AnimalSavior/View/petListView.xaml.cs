@@ -55,7 +55,8 @@ namespace AnimalSavior.View
 
         private void bt_tambah_Copy_Click(object sender, RoutedEventArgs e)
         {
-
+            Uri uri = new Uri("View/petAddView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
 
         private void bt_edit_Click(object sender, RoutedEventArgs e)
