@@ -38,7 +38,8 @@ namespace AnimalSavior.View
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            Uri uri = new Uri("View/petListView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -63,7 +64,7 @@ namespace AnimalSavior.View
             }
             else
             {
-                MessageBox.Show("Failed to pet!");
+                MessageBox.Show("Failed to load pet!");
             }
         }
     }
