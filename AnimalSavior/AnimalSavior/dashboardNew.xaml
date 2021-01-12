@@ -40,7 +40,7 @@
                 <Button x:Name="btnHomepage" Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White" Click="btnHomepage_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="HOMEPAGE" FontFamily="Champagne &amp; Limousines"/>
+                        <TextBlock HorizontalAlignment="Center" Text="LOGIN" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
                 <Button Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White">

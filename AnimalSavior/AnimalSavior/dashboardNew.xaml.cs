@@ -24,7 +24,6 @@ namespace AnimalSavior
         {
             InitializeComponent();
             cusMainContent.Source = new Uri("View/Dashboard/Homepage.xaml", UriKind.Relative);
-            //this.DataContext = frame;
         }
 
         private void btnHomepage_Click(object sender, RoutedEventArgs e)
