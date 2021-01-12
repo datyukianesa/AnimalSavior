@@ -33,7 +33,7 @@ namespace AnimalSavior.View
             conn = connection.GetInstance();
 
             userDAO = new userDAO(conn.GetConnection());
-            //getInfo();
+            getInfo();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

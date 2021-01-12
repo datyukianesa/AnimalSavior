@@ -9,113 +9,11 @@
         Title="dashboardNew" 
         Height="600"
         Width="1024">
+    
     <Window.Resources>
-        <Style x:Key="MyFocusVisual">
-            <Setter Property="Control.Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Control}">
-                        <Grid Margin="3,2">
-                            <Rectangle
-                                x:Name="r1"
-                                Stroke="Black"
-                                StrokeDashArray="2 2"
-                                StrokeThickness="1" />
-                            <Border
-                                x:Name="border"
-                                Width="{TemplateBinding ActualWidth}"
-                                Height="{TemplateBinding ActualHeight}"
-                                BorderThickness="1"
-                                CornerRadius="5" />
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style x:Key="ShadowStyle">
-            <Setter Property="Control.Foreground" Value="LightGray" />
-        </Style>
-
-        <Style x:Key="InformButton" TargetType="{x:Type Button}">
-            <Setter Property="OverridesDefaultStyle" Value="True" />
-            <Setter Property="Margin" Value="2" />
-            <Setter Property="FontFamily" Value="Verdana" />
-            <Setter Property="FontSize" Value="11px" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                        <GradientStop Offset="0.2" Color="#FFFFD190" />
-                        <GradientStop Offset="0.85" Color="Orange" />
-                        <GradientStop Offset="1" Color="#FFFFD190" />
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border
-                            x:Name="border"
-                            Padding="4,2"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="DarkGray"
-                            BorderThickness="1"
-                            CornerRadius="10">
-                            <Grid>
-                                <ContentPresenter
-                                    x:Name="contentShadow"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Style="{StaticResource ShadowStyle}">
-                                    <ContentPresenter.RenderTransform>
-                                        <TranslateTransform X="1.0" Y="1.0" />
-                                    </ContentPresenter.RenderTransform>
-                                </ContentPresenter>
-                                <ContentPresenter
-                                    x:Name="content"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center" />
-                            </Grid>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
-                                <Setter Property="Foreground" Value="#FF4788c8" />
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background">
-                                    <Setter.Value>
-                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                            <GradientStop Offset="0.35" Color="#FFFFD190" />
-                                            <GradientStop Offset="0.95" Color="Orange" />
-                                            <GradientStop Offset="1" Color="#FFFFD190" />
-                                        </LinearGradientBrush>
-                                    </Setter.Value>
-                                </Setter>
-                                <Setter TargetName="content" Property="RenderTransform">
-                                    <Setter.Value>
-                                        <TranslateTransform Y="1.0" />
-                                    </Setter.Value>
-                                </Setter>
-                            </Trigger>
-                            <Trigger Property="IsDefaulted" Value="True">
-                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
-                            </Trigger>
-                            <Trigger Property="IsFocused" Value="True">
-                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
-                                <Setter Property="Foreground" Value="Gray" />
-                            </Trigger>
-
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+        
     </Window.Resources>
+    
     <Grid>
 
         <Grid Margin="0,1,812,2">
@@ -138,23 +36,20 @@
             </Grid>
 
             <StackPanel Grid.Row="1">
-                <!--<Hyperlink NavigateUri="UriOfPageToNavigateTo.xaml">
-                    Navigate to Another Page
-                </Hyperlink>-->
 
-                <Button Margin="10" Background="#FF0097E6" BorderBrush="#FF0097E6" Height="32" Foreground="White">
+                <Button x:Name="btnHomepage" Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White" Click="btnHomepage_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="ViewDashboard" VerticalAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" Text="DASBOR" FontFamily="Champagne &amp; Limousines"/>
+                        <TextBlock HorizontalAlignment="Center" Text="HOMEPAGE" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
-                <Button Margin="10" Background="#FF0097E6" BorderBrush="#FF0097E6" Height="32" Foreground="White">
+                <Button Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="PROFIL PENGGUNA" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
-                <Button Margin="10" Background="#FF0097E6" BorderBrush="#FF0097E6" Height="32" Foreground="White">
+                <Button Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="CalendarTaskOutline" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="KUISIONER" FontFamily="Champagne &amp; Limousines"/>
@@ -163,7 +58,14 @@
             </StackPanel>
         </Grid>
 
-        <Frame Source="View/Dashboard/Homepage.xaml" Margin="211,1,0,2" />
+        <StackPanel>
+            <Frame Name="cusMainContent" 
+                   DataContext="MyPageInformation"
+                   Source="{Binding}" 
+                   Margin="211,1,0,2" 
+                   NavigationUIVisibility="Hidden"
+            />
+        </StackPanel>
 
 
     </Grid>

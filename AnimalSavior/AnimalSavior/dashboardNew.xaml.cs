@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AnimalSavior
@@ -22,6 +23,13 @@ namespace AnimalSavior
         public dashboardNew()
         {
             InitializeComponent();
+            cusMainContent.Source = new Uri("View/Dashboard/Homepage.xaml", UriKind.Relative);
+            //this.DataContext = frame;
+        }
+
+        private void btnHomepage_Click(object sender, RoutedEventArgs e)
+        {
+            cusMainContent.Source = new Uri("View/loginView.xaml", UriKind.Relative);
         }
     }
 }
