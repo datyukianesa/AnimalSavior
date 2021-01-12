@@ -6,11 +6,11 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="loginView"
-    Width="407"
-    Height="401"
+    Height="569"
+    Width="795"
     mc:Ignorable="d">
 
-    <Border BorderBrush="Black" BorderThickness="0.8">
+    <Border BorderThickness="0.8">
         <Grid Background="White" OpacityMask="Black">
             <Grid.RowDefinitions>
                 <RowDefinition Height="63*" />
@@ -18,26 +18,29 @@
                 <RowDefinition Height="129*" />
                 <RowDefinition Height="91*" />
             </Grid.RowDefinitions>
+            <Border
+                Grid.Row="0"
+                Margin="0,0,-2,39"
+                Background="#FF0097E6"
+                BorderBrush="#FF0097E6"
+                BorderThickness="1"
+                CornerRadius="0,0,20,20" />
             <TextBox
                 x:Name="log_username"
-                Grid.Row="1"
-                Grid.RowSpan="2"
-                Grid.ColumnSpan="2"
-                Width="282"
-                Margin="63,69,0,0"
+                Width="371"
+                Margin="230,81,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 AutomationProperties.IsRequiredForForm="True"
                 FontFamily="Bahnschrift Light"
-                FontSize="20"
+                FontSize="24"
                 Text="loremipsum@gmail.com"
-                TextWrapping="Wrap" />
+                TextWrapping="Wrap" Grid.Row="1" Height="33" />
             <Button
                 x:Name="log_button"
-                Grid.Row="3"
                 Width="282"
                 Height="38"
-                Margin="0,0,60,0"
+                Margin="0,196,253,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Background="#FF0097E6"
@@ -46,44 +49,23 @@
                 FontSize="16"
                 Foreground="White"
                 IsDefault="True"
-                OpacityMask="Black" />
-            <Border
-                Grid.Row="0"
-                Margin="0,-2,0,12"
-                Background="#FF0097E6"
-                BorderBrush="Black"
-                BorderThickness="1"
-                CornerRadius="0,0,20,20" />
-            <Label
-                x:Name="lbl_userProfile"
-                Width="119"
-                Height="46"
-                Margin="154,10,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Masuk"
-                FontFamily="Sogoe ui"
-                FontSize="28"
-                FontWeight="Bold"
-                Foreground="White" />
+                OpacityMask="Black" Grid.Row="2" Grid.RowSpan="2" />
             <TextBox
                 x:Name="log_password"
-                Grid.Row="2"
-                Width="282"
-                Height="25"
-                Margin="63,36,0,0"
+                Width="371"
+                Height="33"
+                Margin="230,79,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                FontSize="20"
+                FontSize="24"
                 IsEnabled="True"
                 Text="****************"
-                TextWrapping="Wrap" />
+                TextWrapping="Wrap" Grid.Row="2" />
             <Button
                 x:Name="log_regist"
-                Grid.Row="3"
                 Width="282"
                 Height="38"
-                Margin="0,50,60,0"
+                Margin="0,58,253,0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Background="#FF0097E6"
@@ -92,7 +74,41 @@
                 FontSize="16"
                 Foreground="White"
                 IsDefault="True"
-                OpacityMask="Black" />
+                OpacityMask="Black" Grid.Row="3" />
+            <Label
+                x:Name="lbl_userProfile"
+                Width="120"
+                Height="46"
+                Margin="342,6,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Masuk"
+                FontFamily="Sogoe ui"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="White" />
+            <Label
+                x:Name="lbl_kuesioner"
+                Width="233"
+                Height="34"
+                Margin="229,40,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Username"
+                FontFamily="Arial rounded"
+                FontSize="20"
+                FontWeight="Bold" Grid.Row="1" />
+            <Label
+                x:Name="lbl_kuesioner_Copy"
+                Width="233"
+                Height="34"
+                Margin="230,42,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Password"
+                FontFamily="Arial rounded"
+                FontSize="20"
+                FontWeight="Bold" Grid.Row="2" />
         </Grid>
     </Border>
 </Page>

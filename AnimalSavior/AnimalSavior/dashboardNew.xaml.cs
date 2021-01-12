@@ -23,12 +23,12 @@ namespace AnimalSavior
         public dashboardNew()
         {
             InitializeComponent();
-            cusMainContent.Source = new Uri("View/Dashboard/Homepage.xaml", UriKind.Relative);
+            cusMainContent.Source = new Uri("View/loginView.xaml", UriKind.Relative);
         }
 
         private void btnHomepage_Click(object sender, RoutedEventArgs e)
         {
-            cusMainContent.Source = new Uri("View/loginView.xaml", UriKind.Relative);
+            //cusMainContent.Source = new Uri("View/loginView.xaml", UriKind.Relative);
         }
     }
 }
