@@ -102,9 +102,7 @@ namespace AnimalSavior.DAO
                 DataSet ds = new DataSet();
 
                 da.Fill(ds, "loadData");
-
                 return ds;
-
             }
         }
 

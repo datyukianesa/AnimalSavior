@@ -12,8 +12,115 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="MyFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Control}">
+                        <Grid Margin="3,2">
+                            <Rectangle
+                                x:Name="r1"
+                                Stroke="Black"
+                                StrokeDashArray="2 2"
+                                StrokeThickness="1" />
+                            <Border
+                                x:Name="border"
+                                Width="{TemplateBinding ActualWidth}"
+                                Height="{TemplateBinding ActualHeight}"
+                                BorderThickness="1"
+                                CornerRadius="2" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
-    <Grid Background="White">
+        <Style x:Key="ShadowStyle">
+            <Setter Property="Control.Foreground" Value="LightGray" />
+        </Style>
+
+        <Style x:Key="InformButton" TargetType="{x:Type Button}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="FontSize" Value="11px" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisual}" />
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Offset="0.2" Color="#FFFFD190" />
+                        <GradientStop Offset="0.85" Color="Orange" />
+                        <GradientStop Offset="1" Color="#FFFFD190" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name="border"
+                            Padding="4,2"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="DarkGray"
+                            BorderThickness="1"
+                            CornerRadius="15">
+                            <Grid>
+                                <ContentPresenter
+                                    x:Name="contentShadow"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Style="{StaticResource ShadowStyle}">
+                                    <ContentPresenter.RenderTransform>
+                                        <TranslateTransform X="1.0" Y="1.0" />
+                                    </ContentPresenter.RenderTransform>
+                                </ContentPresenter>
+                                <ContentPresenter
+                                    x:Name="content"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF4788c8" />
+                                <Setter Property="Foreground" Value="#FF4788c8" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Offset="0.35" Color="#FFFFD190" />
+                                            <GradientStop Offset="0.95" Color="Orange" />
+                                            <GradientStop Offset="1" Color="#FFFFD190" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter TargetName="content" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <TranslateTransform Y="1.0" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsDefaulted" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FF282828" />
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.7" />
+                                <Setter Property="Foreground" Value="Gray" />
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Margin="0,0,-126,0" Background="White">
         <Border
             Grid.Row="0"
             Margin="0,-2,0,345"
@@ -44,21 +151,20 @@
             FontSize="16"
             FontWeight="Bold" />
         <Button
-            x:Name="button"
-            Width="252"
+            x:Name="bt_tambah"
+            Width="149"
             Height="42"
-            Margin="63,336,0,0"
+            Margin="374,114,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
-            Click="button_Click"
-            Content="Tampilkan"
+            Content="Tambah Pet Baru"
             FontSize="16"
             Foreground="White" />
         <DataGrid
             x:Name="dataGrid"
-            Width="250"
+            Width="304"
             Height="217"
             Margin="65,114,0,0"
             HorizontalAlignment="Left"
@@ -68,5 +174,53 @@
                 <materialDesign:DataGridComboBoxColumn />
             </DataGrid.Columns>
         </DataGrid>
+        <Button
+            x:Name="bt_tambah_Copy"
+            Width="149"
+            Height="42"
+            Margin="374,114,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#FF0097E6"
+            BorderBrush="White"
+            Content="Tambah Pet Baru"
+            FontSize="16"
+            Foreground="White" Click="bt_tambah_Copy_Click" />
+        <Button
+            x:Name="bt_edit"
+            Width="149"
+            Height="42"
+            Margin="374,161,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#FF0097E6"
+            BorderBrush="White"
+            Content="Ubah Data Pet"
+            FontSize="16"
+            Foreground="White" Click="bt_edit_Click" />
+        <Button
+            x:Name="bt_del"
+            Width="149"
+            Height="42"
+            Margin="374,208,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="#FF0097E6"
+            BorderBrush="White"
+            Content="Hapus Data Pet"
+            FontSize="16"
+            Foreground="White" Click="bt_del_Click" />
+        <Button
+            Margin="10,11,430,356"
+            Content="&lt;- Kembali"
+            FontSize="15"
+            IsDefault="True"
+            Style="{StaticResource InformButton}" FontFamily="Sogoe ui" Click="Button_Click_1">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="1" Color="White" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

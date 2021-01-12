@@ -28,8 +28,6 @@ namespace AnimalSavior.View
         private connection conn = null;
         private petDAO petDAO = null;
 
-        private int result = 0;
-
         public petListView()
         {
             InitializeComponent();
@@ -40,18 +38,34 @@ namespace AnimalSavior.View
             filltolst();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void filltolst()
+        public void filltolst()
         {
             petModel pet = new petModel();
 
             pet.IdUser = ConfigurationManager.AppSettings["userid"];
 
             dataGrid.DataContext = petDAO.datamap(pet);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("View/userProfileView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
+        }
+
+        private void bt_tambah_Copy_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bt_edit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bt_del_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
