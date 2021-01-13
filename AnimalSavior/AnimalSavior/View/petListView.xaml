@@ -169,11 +169,24 @@
             Margin="65,114,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            AutoGenerateColumns="False"
             ItemsSource="{Binding loadData}"
             SelectionChanged="dataGrid_SelectionChanged"
             SelectionMode="Extended">
             <DataGrid.Columns>
-                <materialDesign:DataGridComboBoxColumn />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button
+                                Name="b1"
+                                Click="b1_Click"
+                                Content="Edit" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Binding="{Binding Petnama}" Header="Nama Pet" />
+                <DataGridTextColumn Binding="{Binding PetJenis}" Header="Jenis Pet" />
+                <DataGridTextColumn Binding="{Binding PetInfo}" Header="Info" />
             </DataGrid.Columns>
         </DataGrid>
         <Button

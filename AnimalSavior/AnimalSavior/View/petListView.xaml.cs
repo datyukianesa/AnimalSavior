@@ -28,6 +28,7 @@ namespace AnimalSavior.View
         private connection conn = null;
         private petDAO petDAO = null;
 
+        private int result = 0;
         public petListView()
         {
             InitializeComponent();
@@ -41,9 +42,21 @@ namespace AnimalSavior.View
         public void filltolst()
         {
             petModel pet = new petModel();
-            DataSet ds = new DataSet();
+            /*DataSet ds = new DataSet();
             ds = petDAO.datamap(pet);
-            dataGrid.DataContext = ds;;
+            dataGrid.DataContext = ds;;*/
+
+            pet.IdUser = ConfigurationManager.AppSettings["userid"];
+            result = petDAO.getInfo(pet);
+
+            if(result == 1)
+            {
+                dataGrid.ItemsSource = petDAO.getPet(pet);
+            }
+            else
+            {
+                MessageBox.Show("Gagal menampilkan data!");
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -77,6 +90,16 @@ namespace AnimalSavior.View
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void bt_edit_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void b1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

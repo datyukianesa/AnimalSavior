@@ -45,11 +45,6 @@ namespace AnimalSavior.Model
             set { id_user = value; }
         }
 
-        public ObservableCollection<petModel> getPet()
-        {
-            var pet = new ObservableCollection<petModel>();
-            pet.Add(new petModel() { IdPet = id_pet, Petnama = pet_nama, PetInfo = pet_info, PetJenis = pet_jenis, IdUser = id_user });
-            return pet;
-        }
+        
     }
 }

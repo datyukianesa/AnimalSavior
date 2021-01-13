@@ -22,6 +22,38 @@ namespace AnimalSavior.DAO
             this.conn = conn;
         }
 
+        public ObservableCollection<petModel> getPet(petModel petModel)
+        {
+            var pet = new ObservableCollection<petModel>();
+            pet.Add(new petModel() { Petnama = petModel.Petnama, PetJenis = petModel.PetJenis, PetInfo = petModel.PetInfo });
+            return pet;
+        }
+
+        public int getInfo(petModel pet)
+        {
+            str = "select pet_nama, pet_jenis, pet_info from pet where id_user = @1";
+            using(MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@1", pet.IdUser);
+                var read = cmd.ExecuteReader();
+                read.Read();
+
+                if (read.HasRows)
+                {
+                    pet.Petnama = read["pet_nama"].ToString();
+                    pet.PetJenis = read["pet_jenis"].ToString();
+                    pet.PetInfo = read["pet_info"].ToString();
+                    getPet(pet);
+
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
         public int save(petModel pet)
         {
             str = "insert into pet(pet_nama, pet_info, pet_jenis, id_user) values (@1, @2, @3, @4)";
@@ -92,11 +124,10 @@ namespace AnimalSavior.DAO
 
         public DataSet datamap(petModel petModel)
         {
-            petModel pet = new petModel();
             str = "select pet_nama as 'Nama Pet', pet_jenis as 'Jenis', pet_info as 'Info' from pet where id_user = @a";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@a", ConfigurationManager.AppSettings["userid"]);
+                cmd.Parameters.AddWithValue("@a", petModel.IdUser);
 
                 DataTable table = new DataTable();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -106,23 +137,6 @@ namespace AnimalSavior.DAO
                 return ds;
             }
         }
-
-        public DataSet getPet(petModel petModel)
-        {
-            petModel pet = new petModel();
-            str = "select pet_nama as 'Nama Pet' from pet where id_user = @a";
-            using (MySqlCommand cmd = new MySqlCommand(str, conn))
-            {
-                cmd.Parameters.AddWithValue("@a", pet.IdUser);
-
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-
-                da.Fill(ds, "loadData");
-                return ds;
-            }
-        }
-
         public int getData(petModel pet)
         {
             str = "select pet_nama as 'Nama Pet', pet_jenis as 'Jenis Pet', pet_info as 'Pet Info' from pet where id_pet = @a";
