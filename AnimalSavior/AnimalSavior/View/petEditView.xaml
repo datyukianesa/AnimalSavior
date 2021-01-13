@@ -166,7 +166,7 @@
             BorderBrush="White"
             Content="Simpan Data Pet"
             FontSize="16"
-            Foreground="White" />
+            Foreground="White" Click="bt_tambah_Copy_Click" />
         <Button
             Margin="12,14,620,521"
             Click="Button_Click_1"

@@ -55,15 +55,45 @@ namespace AnimalSavior.View
                 cb_jenis.SelectedItem = pet.PetJenis;
                 rtb_info.Document.Blocks.Add(new Paragraph(new Run(pet.PetInfo)));
             }
-            else
-            {
-
-            }
         }
 
         private void saveData()
         {
+            petModel pet = new petModel();
 
+            TextRange text = new TextRange(
+                    rtb_info.Document.ContentStart,
+                    rtb_info.Document.ContentEnd
+                );
+
+            pet.IdPet = "1";
+            pet.Petnama = tb_nama.Text;
+            pet.PetJenis = cb_jenis.Text;
+            pet.PetInfo = text.Text;
+            result = petDAO.update(pet);
+
+            if (result > 0)
+            {
+                MessageBox.Show("Berhasil menyimpan data baru!");
+                clear();
+            }
+            else
+            {
+                MessageBox.Show("Gagal menyimpan data!");
+                clear();
+            }
+        }
+
+        private void clear()
+        {
+            tb_nama.Text = "";
+            cb_jenis.SelectedItem = default;
+            rtb_info.Document.Blocks.Clear();
+        }
+
+        private void bt_tambah_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            saveData();
         }
     }
 }
