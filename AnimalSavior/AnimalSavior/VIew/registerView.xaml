@@ -120,14 +120,14 @@
                 x:Name="log_username"
                 Grid.Row="1"
                 Width="371"
-                Margin="230,81,0,0"
+                Margin="230,74,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 AutomationProperties.IsRequiredForForm="True"
                 FontFamily="Bahnschrift Light"
                 FontSize="24"
                 Text="loremipsum@gmail.com"
-                TextWrapping="Wrap" Height="33" />
+                TextWrapping="Wrap" Height="40" />
             <Button
                 x:Name="log_button"
                 Grid.Row="2"
@@ -180,8 +180,8 @@
             <PasswordBox
                 x:Name="log_password"
                 Width="372"
-                Height="33"
-                Margin="229,81,0,0"
+                Height="38"
+                Margin="229,76,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Password="akwjdnaw" FontSize="24" Grid.Row="2" />

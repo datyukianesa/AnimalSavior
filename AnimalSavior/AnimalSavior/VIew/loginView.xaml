@@ -135,14 +135,14 @@
             <TextBox
                 x:Name="log_username"
                 Width="371"
-                Margin="230,81,0,0"
+                Margin="230,74,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 AutomationProperties.IsRequiredForForm="True"
                 FontFamily="Sogoe UI"
                 FontSize="24"
                 Text="loremipsum@gmail.com"
-                TextWrapping="Wrap" Grid.Row="1" Height="33" />
+                TextWrapping="Wrap" Grid.Row="1" Height="40" />
             <Button
                 x:Name="log_button"
                 Width="282"
@@ -208,8 +208,8 @@
             <PasswordBox
                 x:Name="log_password"
                 Width="372"
-                Height="33"
-                Margin="229,81,0,0"
+                Height="38"
+                Margin="229,76,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Password="akwjdnaw" FontSize="24" Grid.Row="2" />

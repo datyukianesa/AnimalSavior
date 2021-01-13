@@ -49,8 +49,8 @@
             <PasswordBox
                 x:Name="passfield"
                 Width="372"
-                Height="32"
-                Margin="209,266,0,0"
+                Height="41"
+                Margin="209,257,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Password="akwjdnaw" FontSize="24" />
