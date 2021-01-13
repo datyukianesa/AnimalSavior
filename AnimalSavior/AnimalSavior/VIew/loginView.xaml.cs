@@ -40,7 +40,7 @@ namespace AnimalSavior.View
             userModel user = new userModel();
 
             user.Username = log_username.Text;
-            user.Password = log_password.Text;
+            user.Password = log_password.Password;
 
             result = userDAO.login(user);
             if(result == 1)
@@ -61,7 +61,7 @@ namespace AnimalSavior.View
         private void clear()
         {
             log_username.Text = "";
-            log_password.Text = "";
+            log_password.Password = "";
         }
 
         private void log_regist_Click(object sender, RoutedEventArgs e)

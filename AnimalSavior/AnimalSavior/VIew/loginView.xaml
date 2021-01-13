@@ -157,17 +157,6 @@
                 Foreground="White"
                 IsDefault="True"
                 OpacityMask="Black" Grid.Row="2" Grid.RowSpan="2" />
-            <TextBox
-                x:Name="log_password"
-                Width="371"
-                Height="33"
-                Margin="230,79,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                FontSize="24"
-                IsEnabled="True"
-                Text="****************"
-                TextWrapping="Wrap" Grid.Row="2" />
             <Button
                 x:Name="log_regist"
                 Width="282"
@@ -216,6 +205,14 @@
                 FontFamily="Arial rounded"
                 FontSize="20"
                 FontWeight="Bold" Grid.Row="2" />
+            <PasswordBox
+                x:Name="log_password"
+                Width="372"
+                Height="33"
+                Margin="229,81,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Password="akwjdnaw" FontSize="24" Grid.Row="2" />
         </Grid>
     </Border>
 </Page>
