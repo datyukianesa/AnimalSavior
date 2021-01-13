@@ -150,6 +150,9 @@
     <Compile Include="View\hewanSakitView.xaml.cs">
       <DependentUpon>hewanSakitView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\login_WIN.xaml.cs">
+      <DependentUpon>login_WIN.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\selfTreatmentView.xaml.cs">
       <DependentUpon>selfTreatmentView.xaml</DependentUpon>
     </Compile>
@@ -196,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\hewanSakitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\login_WIN.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

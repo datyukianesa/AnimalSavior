@@ -1,0 +1,102 @@
+﻿<Window x:Class="AnimalSavior.View.login_WIN"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimalSavior.View"
+        mc:Ignorable="d"
+        Title="login_WIN" 
+        ResizeMode="NoResize"
+        Height="569"
+        Width="795">
+    <Grid>
+        <Border
+            Grid.Row="0"
+            Margin="0,0,0,480"
+            Background="#FF0097E6"
+            BorderBrush="#FF0097E6"
+            BorderThickness="1"
+            CornerRadius="0,0,20,20" />
+        <TextBox
+            x:Name="log_username"
+            Width="371"
+            Margin="230,171,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            AutomationProperties.IsRequiredForForm="True"
+            FontFamily="Sogoe UI"
+            FontSize="24"
+            Text="loremipsum@gmail.com"
+            TextWrapping="Wrap" Height="40" />
+        <Button
+            x:Name="log_button"
+            Width="282"
+            Height="38"
+            Margin="0,426,247,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Background="#FF0097E6"
+            Content="Masuk"
+            FontSize="16"
+            Foreground="White"
+            IsDefault="True"
+            OpacityMask="Black" 
+            />
+        <Button
+            x:Name="log_regist"
+            Width="282"
+            Height="38"
+            Margin="0,486,247,0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Background="#FF0097E6"
+            Content="Daftar"
+            FontSize="16"
+            Foreground="White"
+            IsDefault="True"
+            OpacityMask="Black" />
+        <Label
+            x:Name="lbl_userProfile"
+            Width="120"
+            Height="46"
+            Margin="342,6,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Masuk"
+            FontFamily="Sogoe ui"
+            FontSize="28"
+            FontWeight="Bold"
+            Foreground="White" />
+        <Label
+            x:Name="lbl_kuesioner"
+            Width="233"
+            Height="34"
+            Margin="229,137,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Username"
+            FontFamily="Arial rounded"
+            FontSize="20"
+            FontWeight="Bold" />
+        <Label
+            x:Name="lbl_kuesioner_Copy"
+            Width="233"
+            Height="34"
+            Margin="230,272,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Password"
+            FontFamily="Arial rounded"
+            FontSize="20"
+            FontWeight="Bold" />
+        <PasswordBox
+            x:Name="log_password"
+            Width="372"
+            Height="38"
+            Margin="229,306,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Password="akwjdnaw" FontSize="24" />
+
+    </Grid>
+</Window>

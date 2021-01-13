@@ -7,10 +7,8 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="listPetView"
-    Width="407"
-    Height="401"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    Height="569"
+    Width="795"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="MyFocusVisual">
@@ -120,19 +118,20 @@
         </Style>
     </Page.Resources>
 
-    <Grid Margin="0,0,-126,0" Background="White">
+    <Grid Background="White" OpacityMask="Black">
         <Border
             Grid.Row="0"
-            Margin="0,-2,0,345"
+            Margin="0,0,0,511"
             Background="#FF0097E6"
-            BorderBrush="Black"
+            BorderBrush="#FF0097E6"
             BorderThickness="1"
             CornerRadius="0,0,20,20" />
+
         <Label
-            x:Name="lbl_userProfile"
-            Width="197"
+            x:Name="lbl_userProfile_Copy"
+            Width="196"
             Height="46"
-            Margin="110,10,0,0"
+            Margin="292,8,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Daftar Hewan"
@@ -144,29 +143,17 @@
             x:Name="lbl_alamatEmail"
             Width="124"
             Height="32"
-            Margin="65,77,0,0"
+            Margin="188,132,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Daftar Hewan:"
             FontSize="16"
-            FontWeight="Bold" />
-        <Button
-            x:Name="bt_tambah"
-            Width="149"
-            Height="42"
-            Margin="374,114,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF0097E6"
-            BorderBrush="White"
-            Content="Tambah Pet Baru"
-            FontSize="16"
-            Foreground="White" />
+            FontWeight="Bold" RenderTransformOrigin="0.25,1.703" />
         <DataGrid
             x:Name="dataGrid"
-            Width="290"
-            Height="217"
-            Margin="65,114,0,0"
+            Width="316"
+            Height="244"
+            Margin="188,186,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutoGenerateColumns="False"
@@ -179,7 +166,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button
-                                Name="b1"
+                                x:Name="b1"
                                 Click="b1_Click"
                                 Content="Edit" />
                         </DataTemplate>
@@ -202,9 +189,9 @@
         </DataGrid>
         <Button
             x:Name="bt_tambah_Copy"
-            Width="163"
+            Width="164"
             Height="42"
-            Margin="360,114,0,0"
+            Margin="527,153,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF0097E6"
@@ -214,7 +201,7 @@
             FontSize="16"
             Foreground="White" />
         <Button
-            Margin="10,11,430,356"
+            Margin="10,10,692,525"
             Click="Button_Click_1"
             Content="&lt;- Kembali"
             FontFamily="Sogoe ui"
@@ -227,5 +214,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+
     </Grid>
 </Page>

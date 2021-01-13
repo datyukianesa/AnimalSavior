@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="hewanSakitView"
-    Width="795"
     Height="569"
+    Width="795"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="MyFocusVisual">
