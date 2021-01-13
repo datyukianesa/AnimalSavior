@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 using AnimalSavior.Model;
 using System.Configuration;
 using System.Data;
+using System.Collections.ObjectModel;
 
 namespace AnimalSavior.DAO
 {
@@ -14,6 +15,7 @@ namespace AnimalSavior.DAO
     {
         private MySqlConnection conn;
         private string str = string.Empty;
+        public ObservableCollection<string> list = new ObservableCollection<string>();
 
         public petDAO(MySqlConnection conn)
         {
@@ -105,7 +107,23 @@ namespace AnimalSavior.DAO
                 return ds;
             }
         }
-
         
+        public void getpet(petModel petModel)
+        {
+            petModel pet = new petModel();
+
+            str = "select pet_nama as 'Nama Pet' from pet where id_user = @1";
+            using(MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@1", pet.IdUser);
+                using (MySqlDataReader read = cmd.ExecuteReader())
+                {
+                    foreach (string s in read)
+                    {
+                        list.Add(s);
+                    }
+                }
+            }
+        }
     }
 }

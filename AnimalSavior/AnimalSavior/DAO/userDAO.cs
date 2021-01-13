@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AnimalSavior.Model;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using System.Data;
 
 namespace AnimalSavior.DAO
 {
@@ -124,6 +125,21 @@ namespace AnimalSavior.DAO
                     reader.Close();
                     return 0;
                 }
+            }
+        }
+
+        public DataSet getDokter(userModel userModel)
+        {
+            userModel user = new userModel();
+            str = "select username as 'Nama Dokter' from user where id_role = 1";
+            using(MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                DataTable table = new DataTable();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+
+                da.Fill(ds, "loadData");
+                return ds;
             }
         }
     }

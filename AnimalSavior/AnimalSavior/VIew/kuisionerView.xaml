@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="kuisionerView"
-    Height="569"
     Width="795"
+    Height="569"
     mc:Ignorable="d">
 
     <Grid Background="White">
@@ -23,8 +23,9 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Nama Penyakit"
+            FontFamily="Arial Rounded"
             FontSize="20"
-            FontWeight="Bold" FontFamily="Arial Rounded" />
+            FontWeight="Bold" />
         <ComboBox
             x:Name="comboBox"
             Width="312"
@@ -32,7 +33,8 @@
             Margin="233,162,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            BorderBrush="#FF125873" FontSize="24">
+            BorderBrush="#FF125873"
+            FontSize="24">
             <ComboBox.Background>
                 <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Offset="0" Color="#FF20D0CE" />
@@ -46,6 +48,8 @@
         </ComboBox>
         <TextBlock
             x:Name="textBlock"
+            Grid.Row="1"
+            Grid.RowSpan="2"
             Width="312"
             Height="136"
             Margin="233,31,0,0"
@@ -54,9 +58,10 @@
             VerticalAlignment="Top"
             Background="#FFDEDEDE"
             Foreground="Black"
-            TextWrapping="Wrap" Grid.Row="1" Grid.RowSpan="2"><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /><LineBreak /><Run Text="- Lorem Ipsum dolor sit" /><Run Text=" " /><Run Text="amet" /><LineBreak /><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /></TextBlock>
+            TextWrapping="Wrap"><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /><LineBreak /><Run Text="- Lorem Ipsum dolor sit" /><Run Text=" " /><Run Text="amet" /><LineBreak /><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /></TextBlock>
         <Button
             x:Name="kuesioner_button"
+            Grid.Row="2"
             Width="248"
             Height="38"
             Margin="263,164,0,0"
@@ -65,7 +70,7 @@
             Background="#FF0097E6"
             BorderBrush="White"
             Content="Submit"
-            Foreground="White" Grid.Row="2" />
+            Foreground="White" />
         <Border
             Grid.Row="0"
             Margin="0,0,0,177"
@@ -86,13 +91,15 @@
             FontWeight="Bold"
             Foreground="White" />
         <Label
+            Grid.RowSpan="2"
             Width="190"
             Height="32"
             Margin="233,219,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Cara Mengatasi"
+            FontFamily="Arial Rounded"
             FontSize="20"
-            FontWeight="Bold" FontFamily="Arial Rounded" Grid.RowSpan="2" />
+            FontWeight="Bold" />
     </Grid>
 </Page>

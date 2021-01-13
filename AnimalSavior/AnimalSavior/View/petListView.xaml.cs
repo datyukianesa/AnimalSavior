@@ -66,7 +66,12 @@ namespace AnimalSavior.View
 
         private void bt_del_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult msresult = System.Windows.MessageBox.Show("Akan menghapus data pet", "Hapus data", System.Windows.MessageBoxButton.YesNo);
 
+            if(msresult == MessageBoxResult.Yes)
+            {
+                
+            }
         }
     }
 }

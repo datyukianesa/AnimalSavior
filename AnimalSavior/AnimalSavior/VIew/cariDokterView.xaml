@@ -4,10 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:AnimalSavior.View"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="loginView"
-    Height="468"
     Width="735.5"
+    Height="468"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="MyFocusVisual">
@@ -131,54 +132,62 @@
                 <RowDefinition Height="91*" />
             </Grid.RowDefinitions>
             <Border
-            Grid.Row="0"
-            Margin="0,-2,0,24"
-            Background="#FF0097E6"
-            BorderBrush="Black"
-            BorderThickness="1"
-            CornerRadius="0,0,20,20" Grid.ColumnSpan="3" />
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                Margin="0,-2,0,24"
+                Background="#FF0097E6"
+                BorderBrush="Black"
+                BorderThickness="1"
+                CornerRadius="0,0,20,20" />
             <Button
-            Grid.Row="3"
-            Grid.ColumnSpan="2"
-            Margin="277,43,266,20"
-            Content="Kunjungi Klinik"
-            FontSize="18"
-            IsDefault="True"
-            Style="{StaticResource InformButton}">
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Margin="277,43,266,20"
+                Click="Button_Click"
+                Content="Pilih Dokter"
+                FontSize="18"
+                IsDefault="True"
+                Style="{StaticResource InformButton}">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                         <GradientStop Offset="1" Color="#FFCFCFCF" />
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Image
-            Grid.Row="1"
-            Grid.RowSpan="2"
-            Grid.ColumnSpan="2"
-            Margin="204,0,180,43"
-            Source="/AnimalSavior;component/thumbnail.jpg"
-            Stretch="Fill" />
             <Label
-            Grid.Row="2"
-            Grid.ColumnSpan="2"
-            Margin="294,155,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Jl. KM 0 Jogjakarta........"
-            FontWeight="Bold" Grid.RowSpan="2" />
-            <Label Content="Cari dokter hewan" HorizontalAlignment="Left" Margin="228,2,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" FontWeight="Bold" FontSize="28"/>
+                Grid.ColumnSpan="2"
+                Margin="228,2,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Cari dokter hewan"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="White" />
             <Button
-            Margin="37,11,590,35"
-            Content="&lt;- Kembali"
-            FontSize="15"
-            IsDefault="True"
-            Style="{StaticResource InformButton}" FontFamily="Sogoe ui" Grid.ColumnSpan="2">
+                Grid.ColumnSpan="2"
+                Margin="37,11,590,35"
+                Content="&lt;- Kembali"
+                FontFamily="Sogoe ui"
+                FontSize="15"
+                IsDefault="True"
+                Style="{StaticResource InformButton}">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                         <GradientStop Offset="1" Color="White" />
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+            <DataGrid
+                x:Name="dataGrid"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="2"
+                Width="262"
+                Height="252"
+                Margin="246,10,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                ItemsSource="{Binding loadData}" />
         </Grid>
     </Border>
 </Page>

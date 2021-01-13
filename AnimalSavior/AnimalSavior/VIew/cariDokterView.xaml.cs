@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AnimalSavior.DAO;
+using AnimalSavior.Model;
 
 namespace AnimalSavior
 {
@@ -20,9 +22,29 @@ namespace AnimalSavior
     /// </summary>
     public partial class cariDokterView : Page
     {
+        private connection conn = null;
+        private userDAO userDAO = null;
+
+        private int result = 0;
         public cariDokterView()
         {
             InitializeComponent();
+
+            conn = connection.GetInstance();
+            userDAO = new userDAO(conn.GetConnection());
+
+            filltolst();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void filltolst()
+        {
+            userModel user = new userModel();
+            dataGrid.DataContext = userDAO.getDokter(user);
         }
     }
 }

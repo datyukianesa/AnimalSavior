@@ -164,7 +164,7 @@
             Foreground="White" />
         <DataGrid
             x:Name="dataGrid"
-            Width="304"
+            Width="290"
             Height="217"
             Margin="65,114,0,0"
             HorizontalAlignment="Left"
@@ -176,46 +176,51 @@
         </DataGrid>
         <Button
             x:Name="bt_tambah_Copy"
-            Width="149"
+            Width="163"
             Height="42"
-            Margin="374,114,0,0"
+            Margin="360,114,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
+            Click="bt_tambah_Copy_Click"
             Content="Tambah Pet Baru"
             FontSize="16"
-            Foreground="White" Click="bt_tambah_Copy_Click" />
+            Foreground="White" />
         <Button
             x:Name="bt_edit"
-            Width="149"
+            Width="163"
             Height="42"
-            Margin="374,161,0,0"
+            Margin="360,161,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
+            Click="bt_edit_Click"
             Content="Ubah Data Pet"
             FontSize="16"
-            Foreground="White" Click="bt_edit_Click" />
+            Foreground="White" />
         <Button
             x:Name="bt_del"
-            Width="149"
+            Width="163"
             Height="42"
-            Margin="374,208,0,0"
+            Margin="360,208,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
+            Click="bt_del_Click"
             Content="Hapus Data Pet"
             FontSize="16"
-            Foreground="White" Click="bt_del_Click" />
+            Foreground="White" />
         <Button
             Margin="10,11,430,356"
+            Click="Button_Click_1"
             Content="&lt;- Kembali"
+            FontFamily="Sogoe ui"
             FontSize="15"
             IsDefault="True"
-            Style="{StaticResource InformButton}" FontFamily="Sogoe ui" Click="Button_Click_1">
+            Style="{StaticResource InformButton}">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />

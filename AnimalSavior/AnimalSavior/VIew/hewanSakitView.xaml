@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="hewanSakitView"
-    Height="569"
     Width="795"
+    Height="569"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="MyFocusVisual">
@@ -134,9 +134,10 @@
         <Button
             Margin="38,13,663,188"
             Content="&lt;- Kembali"
+            FontFamily="Sogoe ui"
             FontSize="15"
             IsDefault="True"
-            Style="{StaticResource InformButton}" FontFamily="Sogoe ui">
+            Style="{StaticResource InformButton}">
             <Button.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="1" Color="White" />
@@ -145,6 +146,7 @@
         </Button>
         <Button
             x:Name="btn_cariDokter"
+            Grid.RowSpan="2"
             Width="222"
             Height="54"
             Margin="287,198,0,0"
@@ -154,9 +156,10 @@
             BorderBrush="White"
             Content="Cari Dokter"
             FontSize="16"
-            Foreground="White" Grid.RowSpan="2" />
+            Foreground="White" />
         <Button
             x:Name="btn_pengobatan"
+            Grid.Row="2"
             Width="222"
             Height="54"
             Margin="287,51,0,0"
@@ -166,8 +169,15 @@
             BorderBrush="White"
             Content="Pengobatan Mandiri"
             FontSize="16"
-            Foreground="White" Grid.Row="2" />
-        <Label Content="Pengobatan" HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="28"/>
+            Foreground="White" />
+        <Label
+            Margin="320,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Pengobatan"
+            FontSize="28"
+            FontWeight="Bold"
+            Foreground="White" />
 
     </Grid>
 </Page>
