@@ -23,7 +23,7 @@ namespace AnimalSavior
         public dashboardNew()
         {
             InitializeComponent();
-            cusMainContent.Source = new Uri("View/hewanSakitView.xaml", UriKind.Relative);
+            cusMainContent.Source = new Uri("View/userProfileView.xaml", UriKind.Relative);
         }
 
         private void btnHomepage_Click(object sender, RoutedEventArgs e)

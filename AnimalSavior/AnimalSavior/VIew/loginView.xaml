@@ -216,16 +216,6 @@
                 FontFamily="Arial rounded"
                 FontSize="20"
                 FontWeight="Bold" Grid.Row="2" />
-            <Label
-                x:Name="lbl_alamatEmail"
-                Width="124"
-                Height="32"
-                Margin="-396,9,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Content="Password"
-                FontSize="16"
-                FontWeight="Bold" Grid.Row="2" />
         </Grid>
     </Border>
 </Page>
