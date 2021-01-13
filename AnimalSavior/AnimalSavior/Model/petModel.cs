@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,13 @@ namespace AnimalSavior.Model
         {
             get { return id_user; }
             set { id_user = value; }
+        }
+
+        public ObservableCollection<petModel> getPet()
+        {
+            var pet = new ObservableCollection<petModel>();
+            pet.Add(new petModel() { IdPet = id_pet, Petnama = pet_nama, PetInfo = pet_info, PetJenis = pet_jenis, IdUser = id_user });
+            return pet;
         }
     }
 }

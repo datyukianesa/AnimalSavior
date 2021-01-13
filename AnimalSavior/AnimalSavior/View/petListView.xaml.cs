@@ -41,7 +41,9 @@ namespace AnimalSavior.View
         public void filltolst()
         {
             petModel pet = new petModel();
-            dataGrid.DataContext = petDAO.datamap(pet);
+            DataSet ds = new DataSet();
+            ds = petDAO.datamap(pet);
+            dataGrid.DataContext = ds;;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -70,6 +72,11 @@ namespace AnimalSavior.View
             {
                 
             }
+        }
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
         }
     }
 }
