@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AnimalSavior.DAO;
 using AnimalSavior.Model;
+using System.Configuration;
 
 
 namespace AnimalSavior.View
@@ -46,7 +47,7 @@ namespace AnimalSavior.View
         private void loadData()
         {
             petModel pet = new petModel();
-            pet.IdPet = "1";
+            pet.IdPet = ConfigurationManager.AppSettings["petid"];
             result = petDAO.getData(pet);
 
             if(result == 1)
@@ -66,7 +67,7 @@ namespace AnimalSavior.View
                     rtb_info.Document.ContentEnd
                 );
 
-            pet.IdPet = "1";
+            pet.IdPet = ConfigurationManager.AppSettings["petid"];
             pet.Petnama = tb_nama.Text;
             pet.PetJenis = cb_jenis.Text;
             pet.PetInfo = text.Text;

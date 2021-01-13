@@ -170,6 +170,7 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             AutoGenerateColumns="False"
+            CanUserAddRows="False"
             ItemsSource="{Binding loadData}"
             SelectionChanged="dataGrid_SelectionChanged"
             SelectionMode="Extended">
@@ -181,6 +182,16 @@
                                 Name="b1"
                                 Click="b1_Click"
                                 Content="Edit" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button
+                                x:Name="b_del"
+                                Click="b_del_Click"
+                                Content="Hapus" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -200,32 +211,6 @@
             BorderBrush="White"
             Click="bt_tambah_Copy_Click"
             Content="Tambah Pet Baru"
-            FontSize="16"
-            Foreground="White" />
-        <Button
-            x:Name="bt_edit"
-            Width="163"
-            Height="42"
-            Margin="360,161,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF0097E6"
-            BorderBrush="White"
-            Click="bt_edit_Click"
-            Content="Ubah Data Pet"
-            FontSize="16"
-            Foreground="White" />
-        <Button
-            x:Name="bt_del"
-            Width="163"
-            Height="42"
-            Margin="360,208,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FF0097E6"
-            BorderBrush="White"
-            Click="bt_del_Click"
-            Content="Hapus Data Pet"
             FontSize="16"
             Foreground="White" />
         <Button

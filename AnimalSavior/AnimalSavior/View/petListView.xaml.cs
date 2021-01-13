@@ -71,35 +71,40 @@ namespace AnimalSavior.View
             this.NavigationService.Navigate(uri);
         }
 
-        private void bt_edit_Click(object sender, RoutedEventArgs e)
-        {
-            Uri uri = new Uri("View/petEditView.xaml", UriKind.Relative);
-            this.NavigationService.Navigate(uri);
-        }
-
-        private void bt_del_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBoxResult msresult = System.Windows.MessageBox.Show("Akan menghapus data pet", "Hapus data", System.Windows.MessageBoxButton.YesNo);
-
-            if(msresult == MessageBoxResult.Yes)
-            {
-                
-            }
-        }
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
         }
 
-        private void bt_edit_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void b1_Click(object sender, RoutedEventArgs e)
         {
+            petModel pet = dataGrid.SelectedItem as petModel;
+            MessageBoxResult msresult = System.Windows.MessageBox.Show("Akan mengedit " + pet.Petnama, "Hapus data", System.Windows.MessageBoxButton.YesNo);
 
+            if (msresult == MessageBoxResult.Yes)
+            {
+                ConfigurationManager.AppSettings["petid"] = pet.IdPet;
+                Uri uri = new Uri("View/petEditView.xaml", UriKind.Relative);
+                this.NavigationService.Navigate(uri);
+            }
+        }
+
+        private void b_del_Click(object sender, RoutedEventArgs e)
+        {
+            petModel pet = dataGrid.SelectedItem as petModel;
+            MessageBoxResult msresult = System.Windows.MessageBox.Show("Akan menghapus " + pet.Petnama, "Hapus data", System.Windows.MessageBoxButton.YesNo);
+
+            if (msresult == MessageBoxResult.Yes)
+            {
+                
+                result = petDAO.delete(pet);
+                if(result > 0)
+                {
+                    MessageBox.Show("Berhasil menghapus data!");
+                    filltolst();
+                }
+            }
         }
     }
 }

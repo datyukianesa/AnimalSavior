@@ -16,6 +16,7 @@ namespace AnimalSavior.DAO
         private MySqlConnection conn;
         private string str = string.Empty;
         public ObservableCollection<string> list = new ObservableCollection<string>();
+        private string hitung;
 
         public petDAO(MySqlConnection conn)
         {
@@ -25,13 +26,15 @@ namespace AnimalSavior.DAO
         public ObservableCollection<petModel> getPet(petModel petModel)
         {
             var pet = new ObservableCollection<petModel>();
-            pet.Add(new petModel() { Petnama = petModel.Petnama, PetJenis = petModel.PetJenis, PetInfo = petModel.PetInfo });
+            pet.Add(new petModel() { Petnama = petModel.Petnama, PetJenis = petModel.PetJenis, PetInfo = petModel.PetInfo , IdPet = petModel.IdPet, IdUser = petModel.IdUser});
             return pet;
         }
 
         public int getInfo(petModel pet)
         {
-            str = "select pet_nama, pet_jenis, pet_info from pet where id_user = @1";
+            count(pet);
+            int hit = Int32.Parse(hitung);
+            str = "select * from pet where id_user = @1";
             using(MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@1", pet.IdUser);
@@ -40,15 +43,17 @@ namespace AnimalSavior.DAO
 
                 if (read.HasRows)
                 {
+                    pet.IdPet = read["id_pet"].ToString();
                     pet.Petnama = read["pet_nama"].ToString();
                     pet.PetJenis = read["pet_jenis"].ToString();
                     pet.PetInfo = read["pet_info"].ToString();
                     getPet(pet);
-
+                    read.Close();
                     return 1;
                 }
                 else
                 {
+                    read.Close();
                     return 0;
                 }
             }
@@ -158,6 +163,29 @@ namespace AnimalSavior.DAO
                 else
                 {
                     reader.Close();
+                    return 0;
+                }
+            }
+        }
+
+        public int count(petModel pet)
+        {
+            str = "select count(*) as jumlah from pet where id_user = @1";
+            using(MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@1", pet.IdUser);
+                var read = cmd.ExecuteReader();
+                read.Read();
+
+                if (read.HasRows)
+                {
+                    hitung = read["jumlah"].ToString();
+                    read.Close();
+                    return 1;
+                }
+                else
+                {
+                    read.Close();
                     return 0;
                 }
             }
