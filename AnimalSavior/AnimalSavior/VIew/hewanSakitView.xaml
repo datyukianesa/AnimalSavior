@@ -118,6 +118,10 @@
     </Page.Resources>
 
     <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="397*" />
+            <ColumnDefinition Width="398*" />
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="173*" />
             <RowDefinition Height="34*" />
@@ -125,6 +129,7 @@
         </Grid.RowDefinitions>
         <Border
             Grid.Row="0"
+            Grid.ColumnSpan="2"
             Margin="0,0,0,177"
             Background="#FF0097E6"
             BorderBrush="#FF0097E6"
@@ -132,7 +137,7 @@
             CornerRadius="0,0,20,20" />
 
         <Button
-            Margin="38,13,663,188"
+            Margin="38,13,265,188"
             Content="&lt;- Kembali"
             FontFamily="Sogoe ui"
             FontSize="15"
@@ -147,6 +152,7 @@
         <Button
             x:Name="btn_cariDokter"
             Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
             Width="222"
             Height="54"
             Margin="287,198,0,0"
@@ -160,6 +166,7 @@
         <Button
             x:Name="btn_pengobatan"
             Grid.Row="2"
+            Grid.ColumnSpan="2"
             Width="222"
             Height="54"
             Margin="287,51,0,0"
@@ -171,6 +178,7 @@
             FontSize="16"
             Foreground="White" />
         <Label
+            Grid.ColumnSpan="2"
             Margin="320,0,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
@@ -178,6 +186,33 @@
             FontSize="28"
             FontWeight="Bold"
             Foreground="White" />
+
+        <Label
+            x:Name="lbl_alamatEmail"
+            Grid.ColumnSpan="2"
+            Width="124"
+            Height="32"
+            Margin="335,100,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
+            Content="Pilih Hewan"
+            FontSize="16"
+            FontWeight="Bold" />
+        <ListView
+            x:Name="lv_hewan"
+            Grid.ColumnSpan="2"
+            Width="300"
+            Height="42"
+            Margin="247,137,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn />
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Page>

@@ -24,8 +24,6 @@ namespace AnimalSavior
     {
         private connection conn = null;
         private userDAO userDAO = null;
-
-        private int result = 0;
         public cariDokterView()
         {
             InitializeComponent();

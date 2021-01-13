@@ -66,20 +66,19 @@ namespace AnimalSavior.DAO
             petModel pet = new petModel();
             pet.Petnama = read["pet_nama"] is DBNull ?
                 string.Empty : read["pet_nama"].ToString();
-            pet.PetJenis = read["pet_jenis"] is DBNull ?
-                string.Empty : read["pet_jenis"].ToString();
 
             return pet;
         }
 
-        public List<petModel> GetAll()
+        public List<petModel> GetAll(petModel petmodel)
         {
+            petModel pet = new petModel();
             List<petModel> petlist = new List<petModel>();
-            str = "select pet_nama, pet_info, pet_jenis from pet where id_user = @1";
+            str = "select pet_nama from pet where id_user = @1";
 
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@a", ConfigurationManager.AppSettings["userid"]);
+                cmd.Parameters.AddWithValue("@1", pet.IdUser);
                 using(MySqlDataReader read = cmd.ExecuteReader())
                 {
                     while (read.Read())
@@ -107,21 +106,45 @@ namespace AnimalSavior.DAO
                 return ds;
             }
         }
-        
-        public void getpet(petModel petModel)
+
+        public DataSet getPet(petModel petModel)
         {
             petModel pet = new petModel();
-
-            str = "select pet_nama as 'Nama Pet' from pet where id_user = @1";
-            using(MySqlCommand cmd = new MySqlCommand(str, conn))
+            str = "select pet_nama as 'Nama Pet' from pet where id_user = @a";
+            using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", pet.IdUser);
-                using (MySqlDataReader read = cmd.ExecuteReader())
+                cmd.Parameters.AddWithValue("@a", pet.IdUser);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+
+                da.Fill(ds, "loadData");
+                return ds;
+            }
+        }
+
+        public int getData(petModel pet)
+        {
+            str = "select pet_nama as 'Nama Pet', pet_jenis as 'Jenis Pet', pet_info as 'Pet Info' from pet where id_pet = @a";
+            using (MySqlCommand cmd = new MySqlCommand(str, conn))
+            {
+                cmd.Parameters.AddWithValue("@a", pet.IdPet);
+
+                var reader = cmd.ExecuteReader();
+                reader.Read();
+
+                if (reader.HasRows)
                 {
-                    foreach (string s in read)
-                    {
-                        list.Add(s);
-                    }
+                    pet.Petnama = reader["Nama Pet"].ToString();
+                    pet.PetInfo = reader["Pet Info"].ToString();
+                    pet.PetJenis = reader["Jenis Pet"].ToString();
+                    reader.Close();
+                    return 1;
+                }
+                else
+                {
+                    reader.Close();
+                    return 0;
                 }
             }
         }

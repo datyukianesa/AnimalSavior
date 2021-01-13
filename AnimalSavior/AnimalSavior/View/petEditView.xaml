@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="AnimalSavior.View.petAddView"
+    x:Class="AnimalSavior.View.petEditView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -139,7 +139,7 @@
             Margin="306,10,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Tambah Hewan"
+            Content="Edit Hewan"
             FontFamily="Sogoe ui"
             FontSize="28"
             FontWeight="Bold"
@@ -164,8 +164,7 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
-            Click="bt_tambah_Copy_Click"
-            Content="Tambah Pet Baru"
+            Content="Simpan Data Pet"
             FontSize="16"
             Foreground="White" />
         <Button
