@@ -8,6 +8,8 @@
     Title="kuisionerView"
     Width="795"
     Height="569"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    Loaded="Page_Loaded"
     mc:Ignorable="d">
 
     <Grid Background="White">
@@ -22,7 +24,7 @@
             Margin="233,128,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Nama Penyakit"
+            Content="Gejala"
             FontFamily="Arial Rounded"
             FontSize="20"
             FontWeight="Bold" />
@@ -34,17 +36,15 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             BorderBrush="#FF125873"
-            FontSize="24">
+            DisplayMemberPath="Gejala"
+            FontSize="24"
+            ItemsSource="{Binding}">
             <ComboBox.Background>
                 <LinearGradientBrush MappingMode="RelativeToBoundingBox" StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Offset="0" Color="#FF20D0CE" />
                     <GradientStop Offset="1" Color="#FF125873" />
                 </LinearGradientBrush>
             </ComboBox.Background>
-            <ComboBoxItem />
-            <ComboBoxItem />
-            <ComboBoxItem />
-            <ComboBoxItem />
         </ComboBox>
         <TextBlock
             x:Name="textBlock"
@@ -58,7 +58,7 @@
             VerticalAlignment="Top"
             Background="#FFDEDEDE"
             Foreground="Black"
-            TextWrapping="Wrap"><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /><LineBreak /><Run Text="- Lorem Ipsum dolor sit" /><Run Text=" " /><Run Text="amet" /><LineBreak /><Run Text="- " /><Run Text="Lorem Ipsum dolor sit amet" /></TextBlock>
+            TextWrapping="Wrap"><Run Text="- " /><Run Text="{Binding Path=SelectedItem.Description, ElementName=comboBox}" /><LineBreak /></TextBlock>
         <Button
             x:Name="kuesioner_button"
             Grid.Row="2"
@@ -77,19 +77,20 @@
             Background="#FF0097E6"
             BorderBrush="#FF0097E6"
             BorderThickness="1"
-            CornerRadius="0,0,20,20" />
-        <Label
-            x:Name="lbl_userProfile"
-            Width="148"
-            Height="46"
-            Margin="342,6,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Content="Kuisioner"
-            FontFamily="Sogoe ui"
-            FontSize="28"
-            FontWeight="Bold"
-            Foreground="White" />
+            CornerRadius="0,0,20,20">
+            <Label
+                x:Name="lbl_userProfile"
+                Width="148"
+                Height="46"
+                Margin="310,9,335,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Content="Self-Care"
+                FontFamily="Sogoe ui"
+                FontSize="28"
+                FontWeight="Bold"
+                Foreground="White" />
+        </Border>
         <Label
             Grid.RowSpan="2"
             Width="190"

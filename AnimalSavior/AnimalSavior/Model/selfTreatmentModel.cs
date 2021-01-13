@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AnimalSavior.Model
 {
-    public class komenModel
+    public class selfTreatmentModel
     {
         private string id_komen;
         public string IdKomen
@@ -28,5 +29,8 @@ namespace AnimalSavior.Model
             get { return komen_timestamp; }
             set { komen_timestamp = value; }
         }
+
+        public string Gejala { get; set; }
+        public string Description { get; set; }
     }
 }

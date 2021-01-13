@@ -19,7 +19,7 @@ namespace AnimalSavior.DAO
             this.conn = conn;
         }
 
-        public int save(komenModel komen)
+        public int save(selfTreatmentModel komen)
         {
             str = "insert into komen(komen_isi, komen_timestamp, id_user, id_post) values (@1, @2, @3, @4)";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
@@ -33,7 +33,7 @@ namespace AnimalSavior.DAO
             }
         }
 
-        public int delete(komenModel komen)
+        public int delete(selfTreatmentModel komen)
         {
             str = "delete from komen where id_komen = @1";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))

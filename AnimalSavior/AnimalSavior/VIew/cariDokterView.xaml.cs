@@ -36,13 +36,21 @@ namespace AnimalSavior
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Telah memberi info kepada dokter!");
+            Uri uri = new Uri("View/hewanSakitView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
 
         private void filltolst()
         {
             userModel user = new userModel();
             dataGrid.DataContext = userDAO.getDokter(user);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("View/hewanSakitView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
     }
 }

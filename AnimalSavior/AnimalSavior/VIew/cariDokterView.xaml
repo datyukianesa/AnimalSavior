@@ -170,7 +170,7 @@
                 FontFamily="Sogoe ui"
                 FontSize="15"
                 IsDefault="True"
-                Style="{StaticResource InformButton}">
+                Style="{StaticResource InformButton}" Click="Button_Click_1">
                 <Button.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                         <GradientStop Offset="1" Color="White" />
@@ -187,6 +187,8 @@
                 Margin="246,10,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
+                AutoGenerateColumns="False"
+                CanUserAddRows="False"
                 ItemsSource="{Binding loadData}" />
         </Grid>
     </Border>

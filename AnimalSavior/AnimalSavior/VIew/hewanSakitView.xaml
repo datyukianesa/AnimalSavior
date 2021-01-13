@@ -160,6 +160,7 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
+            Click="btn_cariDokter_Click"
             Content="Cari Dokter"
             FontSize="16"
             Foreground="White" />
@@ -174,6 +175,7 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
+            Click="btn_pengobatan_Click"
             Content="Pengobatan Mandiri"
             FontSize="16"
             Foreground="White" />

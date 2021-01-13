@@ -50,5 +50,16 @@ namespace AnimalSavior
 
         }
 
+        private void btn_cariDokter_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("View/cariDokterView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
+        }
+
+        private void btn_pengobatan_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("View/selfTreatmentView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
+        }
     }
 }

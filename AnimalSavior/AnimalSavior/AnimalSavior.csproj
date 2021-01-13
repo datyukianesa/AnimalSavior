@@ -132,7 +132,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\klinikModel.cs" />
-    <Compile Include="Model\komenModel.cs" />
+    <Compile Include="Model\selfTreatmentModel.cs" />
     <Compile Include="Model\pemeriksaanModel.cs" />
     <Compile Include="Model\petModel.cs" />
     <Compile Include="Model\postModel.cs" />
@@ -150,8 +150,8 @@
     <Compile Include="View\hewanSakitView.xaml.cs">
       <DependentUpon>hewanSakitView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\kuisionerView.xaml.cs">
-      <DependentUpon>kuisionerView.xaml</DependentUpon>
+    <Compile Include="View\selfTreatmentView.xaml.cs">
+      <DependentUpon>selfTreatmentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\loginView.xaml.cs">
       <DependentUpon>loginView.xaml</DependentUpon>
@@ -199,7 +199,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\kuisionerView.xaml">
+    <Page Include="View\selfTreatmentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
