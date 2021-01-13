@@ -216,7 +216,7 @@
                 Margin="457,87,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Content="Email Address"
+                Content="Username"
                 FontSize="18"
                 FontWeight="Bold" />
             <TextBox
@@ -251,6 +251,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontSize="20"
+                IsReadOnly="True"
                 Text="Kelinci"
                 TextWrapping="Wrap" />
             <Label

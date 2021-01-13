@@ -43,6 +43,7 @@ namespace AnimalSavior.DAO
 
                 if (read.HasRows)
                 {
+                    
                     pet.IdPet = read["id_pet"].ToString();
                     pet.Petnama = read["pet_nama"].ToString();
                     pet.PetJenis = read["pet_jenis"].ToString();
@@ -98,9 +99,8 @@ namespace AnimalSavior.DAO
             }
         }
 
-        private petModel Mapping (MySqlDataReader read)
+        private petModel Mapping (MySqlDataReader read, petModel pet)
         {
-            petModel pet = new petModel();
             pet.Petnama = read["pet_nama"] is DBNull ?
                 string.Empty : read["pet_nama"].ToString();
 
@@ -109,18 +109,17 @@ namespace AnimalSavior.DAO
 
         public List<petModel> GetAll(petModel petmodel)
         {
-            petModel pet = new petModel();
             List<petModel> petlist = new List<petModel>();
             str = "select pet_nama from pet where id_user = @1";
 
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
-                cmd.Parameters.AddWithValue("@1", pet.IdUser);
+                cmd.Parameters.AddWithValue("@1", petmodel.IdUser);
                 using(MySqlDataReader read = cmd.ExecuteReader())
                 {
                     while (read.Read())
                     {
-                        petlist.Add(Mapping(read));
+                        petlist.Add(Mapping(read, petmodel));
                     }
                 }
             }
@@ -129,7 +128,7 @@ namespace AnimalSavior.DAO
 
         public DataSet datamap(petModel petModel)
         {
-            str = "select pet_nama as 'Nama Pet', pet_jenis as 'Jenis', pet_info as 'Info' from pet where id_user = @a";
+            str = "select pet_nama as 'Nama Pet' from pet where id_user = @a";
             using (MySqlCommand cmd = new MySqlCommand(str, conn))
             {
                 cmd.Parameters.AddWithValue("@a", petModel.IdUser);

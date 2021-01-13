@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using AnimalSavior.DAO;
 using AnimalSavior.Model;
 using System.Configuration;
+using System.Collections.ObjectModel;
 
 namespace AnimalSavior
 {
@@ -32,6 +33,7 @@ namespace AnimalSavior
             conn = connection.GetInstance();
             petDAO = new petDAO(conn.GetConnection());
 
+            fillcb();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -39,28 +41,14 @@ namespace AnimalSavior
 
         }
 
-        /*private void filllv(petModel pet)
+        private void fillcb()
         {
-            int id = lv_hewan.Items.Count + 1;
+            petModel pet = new petModel();
 
-            ListViewItem item = new ListViewItem();
+            pet.IdUser = ConfigurationManager.AppSettings["userid"];
+            cb_hewan.DataContext = petDAO.datamap(pet);
 
-            item.DataContext = pet.Petnama;
-            lv_hewan.Items.Add(item);
         }
 
-        private void loadpetlist()
-        {
-            petModel petModel = new petModel();
-
-            petModel.IdUser = ConfigurationManager.AppSettings["userid"];
-            lv_hewan.Items.Clear();
-
-            List<petModel> petlist = petDAO.GetAll(petModel);
-            foreach(petModel pet in petlist)
-            {
-                filllv(pet);
-            }
-        }*/
     }
 }

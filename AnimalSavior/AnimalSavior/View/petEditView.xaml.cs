@@ -77,11 +77,15 @@ namespace AnimalSavior.View
             {
                 MessageBox.Show("Berhasil menyimpan data baru!");
                 clear();
+                Uri uri = new Uri("View/petListView.xaml", UriKind.Relative);
+                this.NavigationService.Navigate(uri);
             }
             else
             {
                 MessageBox.Show("Gagal menyimpan data!");
                 clear();
+                Uri uri = new Uri("View/petListView.xaml", UriKind.Relative);
+                this.NavigationService.Navigate(uri);
             }
         }
 

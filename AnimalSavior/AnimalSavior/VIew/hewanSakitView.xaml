@@ -199,20 +199,18 @@
             Content="Pilih Hewan"
             FontSize="16"
             FontWeight="Bold" />
-        <ListView
-            x:Name="lv_hewan"
+
+        <ComboBox
+            x:Name="cb_hewan"
             Grid.ColumnSpan="2"
             Width="300"
             Height="42"
             Margin="247,137,0,0"
             HorizontalAlignment="Left"
-            VerticalAlignment="Top">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn />
-                </GridView>
-            </ListView.View>
-        </ListView>
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            FontSize="16"
+            ItemsSource="{Binding pet_list}" />
 
     </Grid>
 </Page>

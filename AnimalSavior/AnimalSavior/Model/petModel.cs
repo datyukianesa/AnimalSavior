@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using AnimalSavior.Model;
 
 namespace AnimalSavior.Model
 {
-    public class petModel
+    public class petModel : INotifyPropertyChanged
     {
         private string id_pet;
         public string IdPet
@@ -39,12 +40,24 @@ namespace AnimalSavior.Model
         }
 
         private string id_user;
+
         public string IdUser
         {
             get { return id_user; }
             set { id_user = value; }
         }
 
-        
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private ObservableCollection<string> pet_list;
+        public ObservableCollection<string> Petlist
+        {
+            get { return pet_list; }
+            set
+            {
+                pet_list = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("pet_list"));
+            }
+        }
     }
 }
