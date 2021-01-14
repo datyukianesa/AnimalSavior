@@ -38,7 +38,7 @@ namespace AnimalSavior
 
         private void btn_selfTreat_Click(object sender, RoutedEventArgs e)
         {
-            cusMainContent.Source = new Uri("View/selftTreatmentView.xaml", UriKind.Relative);
+            cusMainContent.Source = new Uri("View/selfTreatmentView.xaml", UriKind.Relative);
         }
     }
 }
