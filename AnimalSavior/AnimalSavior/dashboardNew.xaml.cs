@@ -31,9 +31,14 @@ namespace AnimalSavior
             //cusMainContent.Source = new Uri("View/loginView.xaml", UriKind.Relative);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btn_userProf_Click(object sender, RoutedEventArgs e)
         {
-            cusMainContent.Source = new Uri("View/hewanSakitView.xaml", UriKind.Relative);
+            cusMainContent.Source = new Uri("View/userProfileView.xaml", UriKind.Relative);
+        }
+
+        private void btn_selfTreat_Click(object sender, RoutedEventArgs e)
+        {
+            cusMainContent.Source = new Uri("View/selfTreatmentView.xaml", UriKind.Relative);
         }
     }
 }
