@@ -26,11 +26,6 @@ namespace AnimalSavior
             cusMainContent.Source = new Uri("View/loginView.xaml", UriKind.Relative);
         }
 
-        private void btnHomepage_Click(object sender, RoutedEventArgs e)
-        {
-            //cusMainContent.Source = new Uri("View/loginView.xaml", UriKind.Relative);
-        }
-
         private void btn_userProf_Click(object sender, RoutedEventArgs e)
         {
             cusMainContent.Source = new Uri("View/userProfileView.xaml", UriKind.Relative);
@@ -39,6 +34,21 @@ namespace AnimalSavior
         private void btn_selfTreat_Click(object sender, RoutedEventArgs e)
         {
             cusMainContent.Source = new Uri("View/selfTreatmentView.xaml", UriKind.Relative);
+        }
+
+        private void btn_petAdd_Click(object sender, RoutedEventArgs e)
+        {
+            cusMainContent.Source = new Uri("View/petAddView.xaml", UriKind.Relative);
+        }
+
+        private void btn_petList_Click(object sender, RoutedEventArgs e)
+        {
+            cusMainContent.Source = new Uri("View/petListView.xaml", UriKind.Relative);
+        }
+
+        private void btn_treatment_Click(object sender, RoutedEventArgs e)
+        {
+            cusMainContent.Source = new Uri("View/hewanSakitView.xaml", UriKind.Relative);
         }
     }
 }
