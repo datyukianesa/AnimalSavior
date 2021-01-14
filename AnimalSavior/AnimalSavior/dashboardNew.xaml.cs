@@ -50,5 +50,15 @@ namespace AnimalSavior
         {
             cusMainContent.Source = new Uri("View/hewanSakitView.xaml", UriKind.Relative);
         }
+
+        private void btn_petEdit_Click(object sender, RoutedEventArgs e)
+        {
+            cusMainContent.Source = new Uri("View/petEditView.xaml", UriKind.Relative);
+        }
+
+        private void btn_find_Click(object sender, RoutedEventArgs e)
+        {
+            cusMainContent.Source = new Uri("View/cariDokterView.xaml", UriKind.Relative);
+        }
     }
 }

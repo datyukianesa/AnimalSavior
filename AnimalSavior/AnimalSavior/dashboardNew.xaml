@@ -40,7 +40,7 @@
                 <Button x:Name="btn_userProf" Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White" Click="btn_userProf_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center" Margin="-3,0,0,1"/>
-                        <TextBlock HorizontalAlignment="Center" Text="USER PROFILE" FontFamily="Champagne &amp; Limousines" Margin="18,0,-2,0" Width="134"/>
+                        <TextBlock HorizontalAlignment="Center" Text="USER PROFILE" FontFamily="Champagne &amp; Limousines" Margin="30,0,-14,0" Width="134"/>
                     </Grid>
                 </Button>
                 <Button x:Name="btn_selfTreat" Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White" Click="btn_selfTreat_Click">
@@ -61,10 +61,22 @@
                         <TextBlock HorizontalAlignment="Center" Text="PET LIST" FontFamily="Champagne &amp; Limousines"/>
                     </Grid>
                 </Button>
+                <Button x:Name="btn_petEdit" Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White" Click="btn_petEdit_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="CalendarEdit" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="PET EDIT" FontFamily="Champagne &amp; Limousines" Margin="36,0,34,0"/>
+                    </Grid>
+                </Button>
                 <Button x:Name="btn_treatment" Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White" Click="btn_treatment_Click">
                     <Grid Width="150">
                         <materialDesign:PackIcon Kind="CardsHeart" VerticalAlignment="Center"/>
                         <TextBlock HorizontalAlignment="Center" Text="TREATMENT" FontFamily="Champagne &amp; Limousines" Margin="36,0,34,0"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="btn_find" Margin="10" Background="#FF0097E6" BorderBrush="{x:Null}" Height="32" Foreground="White" Click="btn_find_Click">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="FileFindOutline" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="FIND A DOCTOR" FontFamily="Champagne &amp; Limousines" Margin="25,0,-1,0" Width="126"/>
                     </Grid>
                 </Button>
             </StackPanel>
