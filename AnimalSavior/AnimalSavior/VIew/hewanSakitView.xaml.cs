@@ -16,6 +16,7 @@ using AnimalSavior.DAO;
 using AnimalSavior.Model;
 using System.Configuration;
 using System.Collections.ObjectModel;
+using System.Data;
 
 namespace AnimalSavior
 {
@@ -33,7 +34,7 @@ namespace AnimalSavior
             conn = connection.GetInstance();
             petDAO = new petDAO(conn.GetConnection());
 
-            fillcb();
+            filldg();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,13 +42,14 @@ namespace AnimalSavior
 
         }
 
-        private void fillcb()
+        private void filldg()
         {
             petModel pet = new petModel();
 
             pet.IdUser = ConfigurationManager.AppSettings["userid"];
-            cb_hewan.DataContext = petDAO.datamap(pet);
-
+            DataSet ds = new DataSet();
+            ds = petDAO.datamap(pet);
+            dataGrid.DataContext = ds;
         }
 
         private void btn_cariDokter_Click(object sender, RoutedEventArgs e)
