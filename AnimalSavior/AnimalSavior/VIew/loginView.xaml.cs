@@ -34,6 +34,7 @@ namespace AnimalSavior.View
             conn = connection.GetInstance();
 
             userDAO = new userDAO(conn.GetConnection());
+            log_username.Focus();
         }
 
         private void reg_button_Click(object sender, RoutedEventArgs e)
