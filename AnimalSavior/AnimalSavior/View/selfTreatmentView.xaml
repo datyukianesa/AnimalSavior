@@ -9,7 +9,6 @@
     Width="795"
     Height="569"
     DataContext="{Binding RelativeSource={RelativeSource Self}}"
-    Loaded="Page_Loaded"
     mc:Ignorable="d">
 
     <Grid Background="White">
@@ -28,30 +27,6 @@
             FontFamily="Arial Rounded"
             FontSize="20"
             FontWeight="Bold" />
-        <ComboBox
-            x:Name="comboBox"
-            Width="312"
-            Height="22"
-            Margin="233,162,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            BorderBrush="#FF125873"
-            DisplayMemberPath="Gejala"
-            FontSize="24"
-            ItemsSource="{Binding}" Background="#FFDEDEDE"/>
-        <TextBlock
-            x:Name="textBlock"
-            Grid.Row="1"
-            Grid.RowSpan="2"
-            Width="312"
-            Height="136"
-            Margin="233,31,0,0"
-            Padding="5,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Background="#FFDEDEDE"
-            Foreground="Black"
-            TextWrapping="Wrap"><Run Text="- " /><Run Text="{Binding Path=SelectedItem.Description, ElementName=comboBox}" /><LineBreak /></TextBlock>
         <Button
             x:Name="kuesioner_button"
             Grid.Row="2"
@@ -62,8 +37,8 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
-            Content="Submit"
-            Foreground="White" />
+            Content="Kembali"
+            Foreground="White" Click="kuesioner_button_Click" />
         <Border
             Grid.Row="0"
             Margin="0,0,0,177"
@@ -95,5 +70,31 @@
             FontFamily="Arial Rounded"
             FontSize="20"
             FontWeight="Bold" />
+        <ComboBox
+            x:Name="comboBox"
+            Width="312"
+            Height="49"
+            Margin="233,165,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            FontSize="16">
+            <ComboBoxItem Content="Keracunan" IsSelected="True" />
+            <ComboBoxItem Content="Rabies" />
+        </ComboBox>
+        <RichTextBox
+            x:Name="richTextBox"
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Width="312"
+            Height="136"
+            Margin="233,31,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph />
+            </FlowDocument>
+        </RichTextBox>
     </Grid>
 </Page>

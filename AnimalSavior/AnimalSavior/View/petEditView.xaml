@@ -164,9 +164,10 @@
             VerticalAlignment="Top"
             Background="#FF0097E6"
             BorderBrush="White"
+            Click="bt_tambah_Copy_Click"
             Content="Simpan Data Pet"
             FontSize="16"
-            Foreground="White" Click="bt_tambah_Copy_Click" />
+            Foreground="White" />
         <Button
             Margin="12,14,620,521"
             Click="Button_Click_1"
@@ -208,13 +209,7 @@
         <RichTextBox
             x:Name="rtb_info"
             Margin="166,364,259,78"
-            FontSize="24">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="" />
-                </Paragraph>
-            </FlowDocument>
-        </RichTextBox>
+            FontSize="24" />
         <Label
             x:Name="lbl_alamatEmail_Copy"
             Width="154"

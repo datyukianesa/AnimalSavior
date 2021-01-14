@@ -55,7 +55,7 @@ namespace AnimalSavior.View
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            listGejala = new ObservableCollection<selfTreatmentModel>()
+            /*listGejala = new ObservableCollection<selfTreatmentModel>()
             {
                 new selfTreatmentModel()
                 {
@@ -67,9 +67,30 @@ namespace AnimalSavior.View
                     Gejala = "Rabies",
                     Description = "Menginfeksi sistem saraf pusat hewan berdarah panas seperti anjing, kucing, kelelawar, dan lainnya. Virus rabies dikeluarkan bersama air liur hewan yang terinfeksi dan ditularkan melalui gigitan atau jilatan."
                 }
-            };
+            };*/
 
-            comboBox.Items.Add(listGejala);
+            comboBox.Items.Add("Keracunan");
+            comboBox.Items.Add("Rabies");
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(comboBox.SelectedItem.ToString() == "Keracunan")
+            {
+                richTextBox.Document.Blocks.Clear();
+                richTextBox.Document.Blocks.Add(new Paragraph(new Run( "Kamu bisa melihat instruksi pada label kemasan produk. Jika label memerintahkanmu untuk cuci tangan dengan sabun dan air, kamu bisa membilas kulit hewan peliharaanmu dengan sabun dan air juga.")));
+            }
+            else if (comboBox.SelectedItem.ToString() == "Rabies")
+            {
+                richTextBox.Document.Blocks.Clear();
+                richTextBox.Document.Blocks.Add(new Paragraph(new Run("Menginfeksi sistem saraf pusat hewan berdarah panas seperti anjing, kucing, kelelawar, dan lainnya. Virus rabies dikeluarkan bersama air liur hewan yang terinfeksi dan ditularkan melalui gigitan atau jilatan.")));
+            }
+        }
+
+        private void kuesioner_button_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("View/hewanSakitView.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
     }
 }
