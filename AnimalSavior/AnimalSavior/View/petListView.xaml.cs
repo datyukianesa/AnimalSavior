@@ -44,7 +44,7 @@ namespace AnimalSavior.View
             petModel pet = new petModel();
             /*DataSet ds = new DataSet();
             ds = petDAO.datamap(pet);
-            dataGrid.DataContext = ds;;*/
+            dataGrid.DataContext = ds;*/
 
             pet.IdUser = ConfigurationManager.AppSettings["userid"];
             result = petDAO.getInfo(pet);
