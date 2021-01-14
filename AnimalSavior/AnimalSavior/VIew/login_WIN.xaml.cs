@@ -36,6 +36,11 @@ namespace AnimalSavior.View
             userDAO = new userDAO(conn.GetConnection());
         }
 
+        private void log_button_Click()
+        {
+
+        }
+
         //private void log_button_Click(object sender, RoutedEventArgs e)
         //{
         //    userModel user = new userModel();

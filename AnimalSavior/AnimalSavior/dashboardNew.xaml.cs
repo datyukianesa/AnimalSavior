@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace AnimalSavior
 {
@@ -39,6 +40,22 @@ namespace AnimalSavior
         private void btn_selfTreat_Click(object sender, RoutedEventArgs e)
         {
             cusMainContent.Source = new Uri("View/selfTreatmentView.xaml", UriKind.Relative);
+        }
+
+        public void check()
+        {
+            if (ConfigurationManager.AppSettings["userid"] != "0")
+            {
+                btn_selfTreat.IsEnabled = true;
+                btn_userProf.IsEnabled = true;
+                btnHomepage.IsEnabled = false;
+            }
+            else
+            {
+                btn_selfTreat.IsEnabled = false;
+                btn_userProf.IsEnabled = false;
+                btnHomepage.IsEnabled = true;
+            }
         }
     }
 }

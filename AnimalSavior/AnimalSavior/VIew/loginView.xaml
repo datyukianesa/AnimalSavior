@@ -6,8 +6,8 @@
     xmlns:local="clr-namespace:AnimalSavior.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="loginView"
-    Height="569"
     Width="795"
+    Height="569"
     mc:Ignorable="d">
     <Page.Resources>
         <Style x:Key="MyFocusVisual">
@@ -134,17 +134,29 @@
                 CornerRadius="0,0,20,20" />
             <TextBox
                 x:Name="log_username"
+                Grid.Row="1"
                 Width="371"
+                Height="40"
                 Margin="230,74,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 AutomationProperties.IsRequiredForForm="True"
                 FontFamily="Sogoe UI"
                 FontSize="24"
-                Text="loremipsum@gmail.com"
-                TextWrapping="Wrap" Grid.Row="1" Height="40" />
+                TextWrapping="Wrap" />
+            <PasswordBox
+                x:Name="log_password"
+                Grid.Row="2"
+                Width="372"
+                Height="38"
+                Margin="229,76,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontSize="24" />
             <Button
                 x:Name="log_button"
+                Grid.Row="2"
+                Grid.RowSpan="2"
                 Width="282"
                 Height="38"
                 Margin="0,196,253,0"
@@ -156,9 +168,10 @@
                 FontSize="16"
                 Foreground="White"
                 IsDefault="True"
-                OpacityMask="Black" Grid.Row="2" Grid.RowSpan="2" />
+                OpacityMask="Black" />
             <Button
                 x:Name="log_regist"
+                Grid.Row="3"
                 Width="282"
                 Height="38"
                 Margin="0,58,253,0"
@@ -170,7 +183,7 @@
                 FontSize="16"
                 Foreground="White"
                 IsDefault="True"
-                OpacityMask="Black" Grid.Row="3" />
+                OpacityMask="Black" />
             <Label
                 x:Name="lbl_userProfile"
                 Width="120"
@@ -185,6 +198,7 @@
                 Foreground="White" />
             <Label
                 x:Name="lbl_kuesioner"
+                Grid.Row="1"
                 Width="233"
                 Height="34"
                 Margin="229,40,0,0"
@@ -193,9 +207,10 @@
                 Content="Username"
                 FontFamily="Arial rounded"
                 FontSize="20"
-                FontWeight="Bold" Grid.Row="1" />
+                FontWeight="Bold" />
             <Label
                 x:Name="lbl_kuesioner_Copy"
+                Grid.Row="2"
                 Width="233"
                 Height="34"
                 Margin="230,42,0,0"
@@ -204,15 +219,8 @@
                 Content="Password"
                 FontFamily="Arial rounded"
                 FontSize="20"
-                FontWeight="Bold" Grid.Row="2" />
-            <PasswordBox
-                x:Name="log_password"
-                Width="372"
-                Height="38"
-                Margin="229,76,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Password="akwjdnaw" FontSize="24" Grid.Row="2" />
+                FontWeight="Bold" />
+
         </Grid>
     </Border>
 </Page>
